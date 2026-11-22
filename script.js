@@ -3,25 +3,66 @@ const dialog = document.getElementById("project-dialog");
 const dialogContent = dialog.querySelector(".dialog-content");
 
 function renderProjects() {
-  grid.innerHTML = portfolio.projects.map((project, index) => `
-    <article class="project-card" tabindex="0" role="button" aria-label="Open ${project.title}" data-index="${index}">
-      <div class="project-visual">
-        <span class="visual-label">${project.label}</span>
-        <div class="visual-shape"></div>
-        <div class="visual-type ${project.visualStyle === "serif" ? "serif" : ""}">${project.visualTitle}</div>
-        <span class="visual-corner">${project.corner}</span>
-      </div>
-      <div class="project-info">
-        <div><h3>${project.title}</h3><p>${project.category}</p><span class="project-open">VIEW CASE STUDY ↗</span></div>
-        <span class="project-number">${project.number} / 05</span>
-      </div>
-    </article>`).join("");
+  const grid = document.getElementById("projects-grid") || document.querySelector(".projects-grid");
+  if (!grid || !portfolio?.projects) return;
 
-  document.querySelectorAll(".project-card").forEach(card => {
-    const open = () => showProject(Number(card.dataset.index));
-    card.addEventListener("click", open);
-    card.addEventListener("keydown", event => {
-      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); open(); }
+  grid.classList.add("proj-accordion");
+  grid.innerHTML = portfolio.projects.map((p, i) => {
+    const num = String(i + 1).padStart(2, "0");
+    // Grab best preview image available on each project
+    const thumb =
+      p.coverImage ||
+      p.image ||
+      p.sections?.hero?.logoImage ||
+      p.sections?.hero?.portraitImage ||
+      p.assets?.[0]?.image ||
+      "";
+
+    return `
+      <article class="pa-panel ${i === 0 ? "is-expanded" : ""}" data-index="${i}">
+        <div class="pa-top">
+          <span class="pa-num">${num}</span>
+          <span class="pa-tag">${p.category || p.tag || "CASE STUDY"}</span>
+        </div>
+
+        <div class="pa-body">
+          <div class="pa-info">
+            <h3>${p.title}</h3>
+            <p>${p.summary || p.description || ""}</p>
+            <button type="button" class="pa-open-btn" data-open="${i}">
+              OPEN CASE STUDY ↗
+            </button>
+          </div>
+
+          <div class="pa-visual">
+            ${
+              thumb
+                ? `<img src="${thumb}" alt="${p.title}" loading="lazy">`
+                : `<div class="pa-placeholder"><span>${num}</span><small>${p.title}</small></div>`
+            }
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  const panels = Array.from(grid.querySelectorAll(".pa-panel"));
+
+  panels.forEach((panel, idx) => {
+    // Expand smoothly on hover (desktop) or tap
+    panel.addEventListener("mouseenter", () => {
+      panels.forEach(p => p.classList.remove("is-expanded"));
+      panel.classList.add("is-expanded");
+    });
+
+    panel.addEventListener("click", (e) => {
+      // If already expanded or user clicked the button, open the full modal
+      if (panel.classList.contains("is-expanded") || e.target.closest(".pa-open-btn")) {
+        showProject(idx);
+      } else {
+        panels.forEach(p => p.classList.remove("is-expanded"));
+        panel.classList.add("is-expanded");
+      }
     });
   });
 }
