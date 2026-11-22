@@ -18,16 +18,26 @@
   </head>
   <body>
     <div class="grain"></div>
-    <header class="topbar">
-      <a class="wordmark" href="#home">Ishwari K<span>✳</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work <sup>05</sup></a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-contact">Let's talk <span>↗</span></a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-    </header>
+    <header class="site-nav-wrap">
+    <nav class="site-nav" aria-label="Primary Navigation">
+      <a class="sn-brand" href="#home">
+        <span class="sn-logo">ishwari<span class="sn-star">*</span></span>
+        <span class="sn-status"><i class="sn-dot"></i> OPEN TO WORK</span>
+      </a>
 
+      <div class="sn-links" id="nav-links">
+        <a href="#work"><span>01</span> WORK</a>
+        <a href="#process"><span>02</span> PROCESS</a>
+        <a href="#about"><span>03</span> ABOUT</a>
+      </div>
+
+      <div class="sn-actions">
+        <a class="sn-cta" href="#contact">LET'S TALK ↗</a>
+        <button class="sn-burger" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </nav>
+  </header>
+  
     <main id="home"> 
       <!-- 3D EXPLODING INTRO CARD STACK -->
     <section class="intro-burst-section" id="intro-burst">
