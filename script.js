@@ -3,22 +3,28 @@ const dialog = document.getElementById("project-dialog");
 const dialogContent = dialog.querySelector(".dialog-content");
 
 function renderProjects() {
-  const grid = document.getElementById("projects-grid") || document.querySelector(".projects-grid");
+  const workSection = document.getElementById("work");
+  const grid =
+    document.getElementById("projects-grid") ||
+    document.getElementById("work-grid") ||
+    document.getElementById("project-grid") ||
+    workSection?.querySelector("[id*='grid'], [class*='grid']");
   if (!grid || !portfolio?.projects) return;
 
   grid.classList.add("proj-accordion");
-  grid.innerHTML = portfolio.projects.map((p, i) => {
-    const num = String(i + 1).padStart(2, "0");
-    // Grab best preview image available on each project
-    const thumb =
-      p.coverImage ||
-      p.image ||
-      p.sections?.hero?.logoImage ||
-      p.sections?.hero?.portraitImage ||
-      p.assets?.[0]?.image ||
-      "";
+  grid.innerHTML = portfolio.projects
+    .map((p, i) => {
+      const num = String(i + 1).padStart(2, "0");
+      // Grab best preview image available on each project
+      const thumb =
+        p.coverImage ||
+        p.image ||
+        p.sections?.hero?.logoImage ||
+        p.sections?.hero?.portraitImage ||
+        p.assets?.[0]?.image ||
+        "";
 
-    return `
+      return `
       <article class="pa-panel ${i === 0 ? "is-expanded" : ""}" data-index="${i}">
         <div class="pa-top">
           <span class="pa-num">${num}</span>
@@ -44,23 +50,27 @@ function renderProjects() {
         </div>
       </article>
     `;
-  }).join("");
+    })
+    .join("");
 
   const panels = Array.from(grid.querySelectorAll(".pa-panel"));
 
   panels.forEach((panel, idx) => {
     // Expand smoothly on hover (desktop) or tap
     panel.addEventListener("mouseenter", () => {
-      panels.forEach(p => p.classList.remove("is-expanded"));
+      panels.forEach((p) => p.classList.remove("is-expanded"));
       panel.classList.add("is-expanded");
     });
 
     panel.addEventListener("click", (e) => {
       // If already expanded or user clicked the button, open the full modal
-      if (panel.classList.contains("is-expanded") || e.target.closest(".pa-open-btn")) {
+      if (
+        panel.classList.contains("is-expanded") ||
+        e.target.closest(".pa-open-btn")
+      ) {
         showProject(idx);
       } else {
-        panels.forEach(p => p.classList.remove("is-expanded"));
+        panels.forEach((p) => p.classList.remove("is-expanded"));
         panel.classList.add("is-expanded");
       }
     });
@@ -118,12 +128,16 @@ function showProject(index) {
             <p class="profile-role">${s.profile.title}</p>
             <p class="dialog-body">${s.profile.bio}</p>
             <div class="profile-stats">
-              ${s.profile.stats.map(st => `
+              ${s.profile.stats
+                .map(
+                  (st) => `
                 <div class="stat-pill">
                   <strong>${st.value}</strong>
                   <span>${st.label}</span>
                 </div>
-              `).join("")}
+              `,
+                )
+                .join("")}
             </div>
           </div>
           <figure class="profile-proof-shot">
@@ -160,12 +174,16 @@ function showProject(index) {
         </div>
         <p class="dialog-body">${s.featuredCarousel.description}</p>
         <div class="carousel-strip">
-          ${s.featuredCarousel.slides.map((src, i) => `
+          ${s.featuredCarousel.slides
+            .map(
+              (src, i) => `
             <div class="carousel-slide">
               <span class="slide-num">0${i + 1}</span>
               <img src="${src}" alt="Carousel Slide ${i + 1}" onerror="this.style.display='none'">
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -184,7 +202,9 @@ function showProject(index) {
 
         <h4 class="sub-label">COLOR PALETTE</h4>
         <div class="swatch-grid">
-          ${s.brandSystem.colors.map(c => `
+          ${s.brandSystem.colors
+            .map(
+              (c) => `
             <div class="swatch-card">
               <div class="swatch-color" style="background:${c.hex}"></div>
               <div class="swatch-meta">
@@ -193,19 +213,25 @@ function showProject(index) {
                 <span>${c.role}</span>
               </div>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
 
         <h4 class="sub-label">TYPOGRAPHY SYSTEM</h4>
         <div class="type-grid">
-          ${s.brandSystem.typography.map(t => `
+          ${s.brandSystem.typography
+            .map(
+              (t) => `
             <div class="type-card">
               <span class="type-role">${t.role}</span>
               <div class="type-specimen">Aa Bb Cc — 0123</div>
               <strong>${t.fontName}</strong>
               <p>${t.usage}</p>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -213,12 +239,16 @@ function showProject(index) {
         <span class="cs-tag">${s.systemPillars.tag}</span>
         <h3>${s.systemPillars.heading}</h3>
         <div class="pillars-grid">
-          ${s.systemPillars.pillars.map(pl => `
+          ${s.systemPillars.pillars
+            .map(
+              (pl) => `
             <div class="pillar-card">
               <strong>${pl.title}</strong>
               <p>${pl.detail}</p>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -232,16 +262,20 @@ function showProject(index) {
         </div>
         <p class="dialog-body">${s.featuredReels.description}</p>
         <div class="carousel-strip">
-          ${s.featuredReels.slides.map((src, i) => `
+          ${s.featuredReels.slides
+            .map(
+              (src, i) => `
             <div class="carousel-slide">
               <span class="slide-num">0${i + 1}</span>
               <img src="${src}" alt="Reel Thumbnail ${i + 1}" onerror="this.closest('.carousel-slide').style.display='none'">
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
     `;
-  
+
     dialog.scrollTop = 0;
     dialog.showModal();
     return;
@@ -348,7 +382,9 @@ function showProject(index) {
         <figure class="roam-frame" style="margin:20px 0">
         </figure>
         <div class="roam-swatch-grid">
-          ${s.colorSystem.swatches.map(c => `
+          ${s.colorSystem.swatches
+            .map(
+              (c) => `
             <div class="swatch-card">
               <div class="swatch-color" style="background:${c.hex}"></div>
               <div class="swatch-meta">
@@ -358,7 +394,9 @@ function showProject(index) {
                 <span>CMYK ${c.cmyk}</span>
               </div>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -368,12 +406,16 @@ function showProject(index) {
         <h3>${s.packaging.heading}</h3>
         <p class="dialog-body">${s.packaging.description}</p>
         <div class="roam-gallery-3">
-          ${s.packaging.items.map(item => `
+          ${s.packaging.items
+            .map(
+              (item) => `
             <figure class="roam-frame">
               <img src="${item.src}" alt="${item.caption}">
               <figcaption>${item.caption}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -383,12 +425,16 @@ function showProject(index) {
         <h3>${s.campaigns.heading}</h3>
         <p class="dialog-body">${s.campaigns.description}</p>
         <div class="roam-gallery-3">
-          ${s.campaigns.items.map(item => `
+          ${s.campaigns.items
+            .map(
+              (item) => `
             <figure class="roam-frame">
               <img src="${item.src}" alt="${item.caption}">
               <figcaption>${item.caption}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -397,12 +443,16 @@ function showProject(index) {
         <span class="cs-tag">${s.extendedGallery.tag}</span>
         <h3>${s.extendedGallery.heading}</h3>
         <div class="roam-gallery-2">
-          ${s.extendedGallery.items.map(item => `
+          ${s.extendedGallery.items
+            .map(
+              (item) => `
             <figure class="roam-frame">
               <img src="${item.src}" alt="${item.caption}" onerror="this.closest('figure').style.display='none'">
               <figcaption>${item.caption}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
     `;
@@ -455,7 +505,9 @@ function showProject(index) {
         <span class="cs-tag">${s.modules.tag}</span>
         <h3>${s.modules.heading}</h3>
         <div class="pillars-grid">
-          ${s.modules.steps.map(m => `
+          ${s.modules.steps
+            .map(
+              (m) => `
             <div class="pillar-card br-module-card">
               <div>
                 <span class="cs-tag">${m.step}</span>
@@ -463,10 +515,12 @@ function showProject(index) {
                 <p>${m.detail}</p>
               </div>
               <div class="br-tags">
-                ${m.tags.map(t => `<span>${t}</span>`).join("")}
+                ${m.tags.map((t) => `<span>${t}</span>`).join("")}
               </div>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -474,12 +528,16 @@ function showProject(index) {
         <span class="cs-tag">${s.designSystem.tag}</span>
         <h3>${s.designSystem.heading}</h3>
         <div class="pillars-grid">
-          ${s.designSystem.principles.map(pr => `
+          ${s.designSystem.principles
+            .map(
+              (pr) => `
             <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
               <strong>${pr.title}</strong>
               <p>${pr.detail}</p>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
     `;
@@ -527,12 +585,16 @@ function showProject(index) {
           </div>
         </div>
         <div class="pillars-grid">
-          ${s.strategy.pillars.map(pl => `
+          ${s.strategy.pillars
+            .map(
+              (pl) => `
             <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
               <strong>${pl.title}</strong>
               <p>${pl.detail}</p>
             </div>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -546,12 +608,16 @@ function showProject(index) {
           <figcaption>${s.productLine.featuredSet.caption}</figcaption>
         </figure>
         <div class="roam-gallery-3">
-          ${s.productLine.skus.map(sku => `
+          ${s.productLine.skus
+            .map(
+              (sku) => `
             <figure class="roam-frame">
               <img src="${sku.src}" alt="${sku.title}">
               <figcaption><strong>${sku.title}</strong><br>${sku.desc}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -561,12 +627,16 @@ function showProject(index) {
         <h3>${s.sensory.heading}</h3>
         <p class="dialog-body">${s.sensory.description}</p>
         <div class="roam-gallery-2">
-          ${s.sensory.items.map(item => `
+          ${s.sensory.items
+            .map(
+              (item) => `
             <figure class="roam-frame">
               <img src="${item.src}" alt="${item.caption}" style="aspect-ratio:4/5;object-fit:cover">
               <figcaption>${item.caption}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
 
@@ -586,12 +656,16 @@ function showProject(index) {
         <span class="cs-tag">${s.extendedGallery.tag}</span>
         <h3>${s.extendedGallery.heading}</h3>
         <div class="roam-gallery-2">
-          ${s.extendedGallery.items.map(item => `
+          ${s.extendedGallery.items
+            .map(
+              (item) => `
             <figure class="roam-frame">
               <img src="${item.src}" alt="${item.caption}" onerror="this.closest('figure').style.display='none'">
               <figcaption>${item.caption}</figcaption>
             </figure>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
       </section>
     `;
@@ -613,43 +687,61 @@ function showProject(index) {
   dialog.showModal();
 }
 
-document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+document
+  .querySelector(".dialog-close")
+  .addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) dialog.close();
+});
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".topbar nav");
 menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
-nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => nav.classList.remove("open")));
+nav
+  .querySelectorAll("a")
+  .forEach((link) =>
+    link.addEventListener("click", () => nav.classList.remove("open")),
+  );
 
-document.querySelectorAll('a[href^="mailto:"]').forEach(el => el.href = `mailto:${portfolio.email}`);
+document
+  .querySelectorAll('a[href^="mailto:"]')
+  .forEach((el) => (el.href = `mailto:${portfolio.email}`));
 const linkedinEl = document.getElementById("linkedin-link");
 if (linkedinEl) linkedinEl.href = portfolio.linkedin;
 const instagramEl = document.getElementById("instagram-link");
 if (instagramEl) instagramEl.href = portfolio.instagram;
-document.querySelectorAll(".wordmark").forEach(mark => mark.innerHTML = `${portfolio.name.split(" ").map(word => word[0]).join("").slice(0,2).toUpperCase()}<span>✳</span>`);
+document.querySelectorAll(".wordmark").forEach(
+  (mark) =>
+    (mark.innerHTML = `${portfolio.name
+      .split(" ")
+      .map((word) => word[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase()}<span>✳</span>`),
+);
 
 renderProjects();
 
 // INTERACTIVE CREATIVE JOURNEY CURVE
 (() => {
-  const stage = document.getElementById('journey-stage');
-  const line = document.getElementById('journey-active-line');
-  const shadowLine = document.getElementById('journey-shadow-line');
-  const marker = document.getElementById('journey-marker');
-  const nodes = Array.from(document.querySelectorAll('.journey-node'));
-  const actEl = document.getElementById('jbs-act');
-  const titleEl = document.getElementById('jbs-title');
-  const descEl = document.getElementById('jbs-desc');
-  const counterEl = document.getElementById('jb-counter');
-  const prevBtn = document.getElementById('jb-prev');
-  const nextBtn = document.getElementById('jb-next');
+  const stage = document.getElementById("journey-stage");
+  const line = document.getElementById("journey-active-line");
+  const shadowLine = document.getElementById("journey-shadow-line");
+  const marker = document.getElementById("journey-marker");
+  const nodes = Array.from(document.querySelectorAll(".journey-node"));
+  const actEl = document.getElementById("jbs-act");
+  const titleEl = document.getElementById("jbs-title");
+  const descEl = document.getElementById("jbs-desc");
+  const counterEl = document.getElementById("jb-counter");
+  const prevBtn = document.getElementById("jb-prev");
+  const nextBtn = document.getElementById("jb-next");
 
   if (!stage || !line || !nodes.length) return;
 
   let currentIndex = 2;
   const totalLength = line.getTotalLength();
 
-  [line, shadowLine].forEach(p => {
+  [line, shadowLine].forEach((p) => {
     if (!p) return;
     p.style.strokeDasharray = totalLength;
     p.style.strokeDashoffset = totalLength;
@@ -659,10 +751,10 @@ renderProjects();
     currentIndex = (idx + nodes.length) % nodes.length;
     const node = nodes[currentIndex];
 
-    nodes.forEach(n => n.classList.remove('is-active'));
-    node.classList.add('is-active');
+    nodes.forEach((n) => n.classList.remove("is-active"));
+    node.classList.add("is-active");
 
-    const progress = parseFloat(node.dataset.progress || '0.5');
+    const progress = parseFloat(node.dataset.progress || "0.5");
     const offset = totalLength * (1 - progress);
     line.style.strokeDashoffset = offset;
     if (shadowLine) shadowLine.style.strokeDashoffset = offset;
@@ -674,23 +766,29 @@ renderProjects();
     if (actEl) actEl.textContent = node.dataset.act;
     if (titleEl) titleEl.textContent = node.dataset.title;
     if (descEl) descEl.textContent = node.dataset.desc;
-    if (counterEl) counterEl.textContent = `STAGE 0${currentIndex + 1} / 0${nodes.length}`;
+    if (counterEl)
+      counterEl.textContent = `STAGE 0${currentIndex + 1} / 0${nodes.length}`;
   }
 
   nodes.forEach((node, idx) => {
-    node.addEventListener('click', () => activateStep(idx));
+    node.addEventListener("click", () => activateStep(idx));
   });
-  if (prevBtn) prevBtn.addEventListener('click', () => activateStep(currentIndex - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => activateStep(currentIndex + 1));
+  if (prevBtn)
+    prevBtn.addEventListener("click", () => activateStep(currentIndex - 1));
+  if (nextBtn)
+    nextBtn.addEventListener("click", () => activateStep(currentIndex + 1));
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        activateStep(2);
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activateStep(2);
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.3 },
+  );
 
   observer.observe(stage);
 })();
