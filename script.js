@@ -215,7 +215,7 @@ function showProject(index) {
         <p class="dialog-summary">${p.summary}</p>
       </div>
 
-      <!-- PAGE 01: HERO BRAND CONCEPT & MASCOT LOCKUP -->
+      <!-- PAGE 01: HERO MASCOT LOCKUP -->
       <section class="cs-block">
         <div class="roam-intro-split">
           <div>
@@ -228,97 +228,74 @@ function showProject(index) {
             <figcaption>Primary Mascot & Display Wordmark Lockup</figcaption>
           </figure>
         </div>
+      </section>
 
-        <!-- FULL-WIDTH PREMIUM BRAND CONCEPT BOARD -->
-        <div class="roam-concept-board">
-          <div class="rcb-header">
-            <div>
-              <span class="rcb-kicker">ROAM COFFEE CO. · ESTD 2024</span>
-              <h4>BRAND CONCEPT</h4>
-            </div>
-            <img class="rcb-header-logo" src="${s.hero.logoImage}" alt="Roam Coffee Co. Logo">
+      <!-- PAGE 02: BRAND CONCEPT & STRATEGY -->
+      <section class="cs-block">
+        <span class="cs-tag">02 / BRAND CONCEPT & STRATEGY</span>
+
+        <!-- Story + Idea + Essence -->
+        <div class="roam-strategy-top">
+          <div class="roam-story-card">
+            <span class="rcb-mini-head">THE MANIFESTO</span>
+            <h4>GOOD COFFEE. ANYWHERE. FOR THE RESTLESS.</h4>
+            <p>Roam is for the movers, thinkers and doers who find inspiration in every place they go. We believe great coffee should go wherever life takes you — to new places, new people and new ideas.</p>
+            <p>Simple, soulful and made to keep you roaming.</p>
           </div>
 
-          <div class="rcb-main-grid">
-            <div class="rcb-story">
-              <strong>GOOD COFFEE. ANYWHERE. FOR THE RESTLESS.</strong>
-              <p>Roam is for the movers, thinkers and doers who find inspiration in every place they go.</p>
-              <p>We believe great coffee should go wherever life takes you — to new places, new people and new ideas.</p>
-              <p>Simple, soulful and made to keep you roaming.</p>
-            </div>
-
-            <div class="rcb-pillar">
-              <span class="rcb-mini-head">THE IDEA</span>
-              <div class="rcb-icon">🎒</div>
+          <div class="roam-idea-stack">
+            <div class="cp-box">
+              <h4>THE IDEA</h4>
               <p>Coffee that fuels your journey — wherever you roam.</p>
             </div>
-
-            <div class="rcb-pillar">
-              <span class="rcb-mini-head">THE ESSENCE</span>
-              <div class="rcb-icon">☕</div>
+            <div class="cp-box purpose">
+              <h4>THE ESSENCE</h4>
               <p>Warm. Grounded. Comforting. Familiar. Your pause in the middle of the chaos.</p>
             </div>
-
-            <div class="rcb-personality">
-              <span class="rcb-mini-head">OUR PERSONALITY</span>
-              <ul>
-                <li><b>ADVENTUROUS</b> — We're curious by nature and love exploring more.</li>
-                <li><b>FRIENDLY</b> — Warm, approachable and easy to connect with.</li>
-                <li><b>MINDFUL</b> — We care — about people, planet and every bean.</li>
-                <li><b>AUTHENTIC</b> — No pretense. Just honest coffee done right.</li>
-              </ul>
-            </div>
           </div>
+        </div>
 
-          <div class="rcb-bottom-grid">
-            <div>
-              <span class="rcb-mini-head">INSPIRED BY</span>
-              <div class="rcb-inspired-tags">
-                <span>⛰️ The Outdoors</span>
-                <span>🧭 The Journey</span>
-                <span>☕ The Moments</span>
-                <span>🫘 The Craft</span>
-              </div>
-            </div>
-            <div>
-              <span class="rcb-mini-head">VISUAL DIRECTION</span>
-              <p>Playful yet grounded. Illustrations that feel hand-drawn, nostalgic and full of character. Earthy colors, bold shapes and a tone that feels like a good conversation over coffee.</p>
-            </div>
+        <!-- Inspired By Pills -->
+        <div class="roam-pillars-bar">
+          <span class="cs-tag" style="margin:0;">INSPIRED BY:</span>
+          <span><strong>The Outdoors</strong></span>
+          <span><strong>The Journey</strong></span>
+          <span><strong>The Moments</strong></span>
+          <span><strong>The Craft</strong></span>
+        </div>
+
+        <!-- 4 Personality Cards -->
+        <span class="cs-tag" style="margin-top:20px;">OUR PERSONALITY</span>
+        <div class="roam-personality-grid">
+          <div class="roam-trait-card">
+            <strong>Adventurous</strong>
+            <p>We're curious by nature and love exploring more.</p>
           </div>
+          <div class="roam-trait-card">
+            <strong>Friendly</strong>
+            <p>Warm, approachable and easy to connect with.</p>
+          </div>
+          <div class="roam-trait-card">
+            <strong>Mindful</strong>
+            <p>We care — about people, planet and every bean.</p>
+          </div>
+          <div class="roam-trait-card">
+            <strong>Authentic</strong>
+            <p>No pretense. Just honest coffee done right.</p>
+          </div>
+        </div>
 
-          <div class="rcb-nutshell">
-            <span class="rcb-nut-label">🫘 IN A NUTSHELL</span>
+        <!-- Visual Direction & In A Nutshell -->
+        <div class="roam-strategy-bottom">
+          <div class="roam-vd-box">
+            <span class="rcb-mini-head">VISUAL DIRECTION</span>
+            <p>Playful yet grounded. Illustrations that feel hand-drawn, nostalgic and full of character. Earthy colors, bold shapes and a tone that feels like a good conversation over coffee.</p>
+          </div>
+          <div class="roam-nutshell-card">
+            <span class="rcb-mini-head">IN A NUTSHELL</span>
             <p>Roam is more than coffee — it's a mindset. A reminder to keep moving, keep dreaming and enjoy the journey. One cup at a time.</p>
             <blockquote>“Good coffee, wherever you roam.”</blockquote>
           </div>
-        </div>
-      </section>
-      
-      <!-- PAGE 02: BRAND STRATEGY & PERSONALITY -->
-      <section class="cs-block">
-        <span class="cs-tag">${s.strategy.tag}</span>
-        <div class="cp-grid">
-          <div class="cp-box">
-            <h4>THE IDEA</h4>
-            <p>${s.strategy.idea}</p>
-          </div>
-          <div class="cp-box roam-sage-box">
-            <h4>THE ESSENCE</h4>
-            <p>${s.strategy.essence}</p>
-          </div>
-        </div>
-        <div class="roam-pillars-bar">
-          <span>INSPIRED BY:</span>
-          ${s.strategy.pillars.map(pl => `<strong>${pl}</strong>`).join("")}
-        </div>
-        <h4 class="sub-label">BRAND PERSONALITY</h4>
-        <div class="swatch-grid">
-          ${s.strategy.personality.map(per => `
-            <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
-              <strong>${per.trait}</strong>
-              <p>${per.desc}</p>
-            </div>
-          `).join("")}
         </div>
       </section>
 

@@ -165,65 +165,76 @@ a{color:inherit;text-decoration:none}.topbar{height:82px;padding:0 5.5vw;display
 /* AFTER HOURS CASE STUDY ACCENT */
 .ah-amber-box { background: #e6d5be; color: #1c211e; }
 
-/* ROAM TOP SPLIT & FULL-WIDTH BRAND CONCEPT BOARD */
-.roam-intro-split {
+/* ROAM CONSOLIDATED BRAND STRATEGY SECTION */
+.roam-strategy-top {
   display: grid;
-  grid-template-columns: 1.45fr .75fr;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 24px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  align-items: stretch;
 }
-.roam-logo-box img {
-  max-height: 220px;
-  object-fit: contain;
-  background: #f1e6d2;
-  padding: 16px;
-}
-.roam-concept-board {
+.roam-story-card {
   background: #f1e6d2;
   color: #2e3d22;
   border: 1.5px solid #2e3d22;
   border-radius: 14px;
-  padding: 26px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  box-shadow: 8px 8px 0 rgba(46, 61, 34, 0.12);
+  justify-content: center;
 }
-.rcb-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1.5px solid #2e3d22;
-  padding-bottom: 14px;
-}
-.rcb-header h4 {
-  font: 800 28px/1 var(--sans);
-  letter-spacing: -.04em;
-  margin: 4px 0 0;
+.roam-story-card h4 {
+  font: 800 18px/1.25 var(--sans);
+  letter-spacing: -.02em;
+  margin: 4px 0 12px;
   color: #2e3d22;
 }
-.rcb-header-logo {
-  height: 68px;
-  width: auto;
-  object-fit: contain;
+.roam-story-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 10px;
 }
-.rcb-main-grid {
+.roam-story-card p:last-child { margin-bottom: 0; }
+
+.roam-idea-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.roam-idea-stack .cp-box { flex: 1; }
+
+.roam-strategy-bottom {
   display: grid;
-  grid-template-columns: 1.25fr .75fr .75fr 1.25fr;
+  grid-template-columns: 1fr 1.15fr;
   gap: 16px;
-  border-bottom: 1px solid rgba(46, 61, 34, .25);
-  padding-bottom: 18px;
+  margin-top: 16px;
 }
-.rcb-story strong { font-size: 12px; line-height: 1.4; margin-bottom: 8px; display: block; }
-.rcb-story p { font-size: 12px; line-height: 1.55; margin: 0 0 8px; }
-.rcb-pillar p { font-size: 11.5px; line-height: 1.5; }
-.rcb-personality { padding: 14px 16px; }
-.rcb-personality li { font-size: 11px; line-height: 1.45; }
-.rcb-bottom-grid p { font-size: 12px; line-height: 1.55; }
-.rcb-nutshell { padding: 14px 18px; }
-.rcb-nutshell p { font-size: 11px; }
+.roam-vd-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+.roam-vd-box p { font-size: 13px; line-height: 1.6; margin: 4px 0 0; }
+
+.roam-nutshell-card {
+  background: #2e3d22;
+  color: #f1e6d2;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.roam-nutshell-card .rcb-mini-head { color: #a5ae8d; }
+.roam-nutshell-card p { font-size: 13px; line-height: 1.55; margin: 4px 0 12px; }
+.roam-nutshell-card blockquote {
+  margin: 0;
+  font: italic 700 17px/1.2 var(--serif);
+  color: #f1e6d2;
+  border-top: 1px solid rgba(241, 230, 210, .2);
+  padding-top: 10px;
+}
 
 @media (max-width: 760px) {
-  .roam-intro-split { grid-template-columns: 1fr; }
+  .roam-strategy-top, .roam-strategy-bottom { grid-template-columns: 1fr; }
 }
