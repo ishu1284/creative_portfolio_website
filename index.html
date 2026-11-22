@@ -29,6 +29,85 @@
     </header>
 
     <main id="home">
+      <!-- CREATIVE JOURNEY / PROCESS CURVE -->
+    <section class="journey-section section-wrap" id="process">
+      <div class="journey-header">
+        <div>
+          <span class="cs-tag">02 / THE CREATIVE ARC</span>
+          <h2>How Ideas Become Unmistakable.</h2>
+        </div>
+        <p class="journey-sub">Click any stage along the curve—or scroll through—to trace how we turn raw noise into a sharp, human brand world.</p>
+      </div>
+
+      <div class="journey-stage" id="journey-stage">
+        <!-- FLOATING "YOU'RE HERE" INDICATOR -->
+        <div class="journey-marker" id="journey-marker" style="left: 50%; top: 58%;">
+          <span class="jm-label">YOU'RE HERE.</span>
+          <svg class="jm-arrow" viewBox="0 0 40 48" fill="none">
+            <path d="M22 2 C14 16, 16 30, 20 44 M13 37 L20 45 L27 37" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- SVG CURVE TRACK + ANIMATED FLOAT LINE -->
+        <svg class="journey-svg" viewBox="0 0 1000 320" preserveAspectRatio="none">
+          <!-- Subtle Dashed Base Track -->
+          <path d="M 80 85 C 180 85, 220 175, 290 175 C 360 175, 420 225, 500 225 C 580 225, 640 175, 710 175 C 780 175, 820 85, 920 85"
+                fill="none" stroke="rgba(26,26,24,0.16)" stroke-width="3" stroke-dasharray="6 6"/>
+          <!-- Active Animated Line -->
+          <path id="journey-active-line"
+                d="M 80 85 C 180 85, 220 175, 290 175 C 360 175, 420 225, 500 225 C 580 225, 640 175, 710 175 C 780 175, 820 85, 920 85"
+                fill="none" stroke="#d94e34" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+
+        <!-- 5 INTERACTIVE MILESTONE NODES -->
+        <button class="journey-node" data-step="0" data-progress="0.02" data-x="8" data-y="18" style="left: 8%; top: 26.5%;">
+          <span class="jn-dot"></span>
+          <div class="jn-card">
+            <strong>01. YOU SPOT THE NOISE.</strong>
+            <p>A raw idea, a messy feed, or a product nobody notices yet.</p>
+          </div>
+        </button>
+
+        <button class="journey-node" data-step="1" data-progress="0.28" data-x="29" data-y="44" style="left: 29%; top: 54.5%;">
+          <span class="jn-dot"></span>
+          <div class="jn-card">
+            <strong>02. YOU SEE THE GAP.</strong>
+            <p>Everyone looks identical. Templates feel safe—and forgettable.</p>
+          </div>
+        </button>
+
+        <button class="journey-node is-active" data-step="2" data-progress="0.50" data-x="50" data-y="58" style="left: 50%; top: 70.3%;">
+          <span class="jn-dot"></span>
+          <div class="jn-card">
+            <strong>03. WE ASK BETTER QUESTIONS.</strong>
+            <p>Strip away the fluff. Find the tension, human hook, and visual edge.</p>
+          </div>
+        </button>
+
+        <button class="journey-node" data-step="3" data-progress="0.72" data-x="71" data-y="44" style="left: 71%; top: 54.5%;">
+          <span class="jn-dot"></span>
+          <div class="jn-card">
+            <strong>04. THE WORLD CLICKS.</strong>
+            <p>Typography, color, motion, and story lock into one unmistakable system.</p>
+          </div>
+        </button>
+
+        <button class="journey-node" data-step="4" data-progress="1.0" data-x="92" data-y="18" style="left: 92%; top: 26.5%;">
+          <span class="jn-dot"></span>
+          <div class="jn-card align-right">
+            <strong>05. YOU SHIP SOMETHING ICONIC.</strong>
+            <p>Work that stops the scroll, earns trust, and sticks in people's heads.</p>
+          </div>
+        </button>
+
+        <!-- BOTTOM ACT RULER -->
+        <div class="journey-ruler">
+          <span>ACT I · DISCOVERY</span>
+          <span>ACT II · STRATEGY & CRAFT</span>
+          <span>ACT III · LAUNCH</span>
+        </div>
+      </div>
+    </section>
       <section class="hero section-wrap">
         <div class="hero-kicker">
           <span class="pulse"></span> INDEPENDENT CREATIVE THINKER
