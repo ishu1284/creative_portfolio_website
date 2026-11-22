@@ -580,10 +580,11 @@ const nav = document.querySelector(".topbar nav");
 menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
 nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => nav.classList.remove("open")));
 
-document.getElementById("email-link").href = `mailto:${portfolio.email}`;
-document.getElementById("email-link").innerHTML = `${portfolio.email} <span>↗</span>`;
-document.getElementById("linkedin-link").href = portfolio.linkedin;
-document.getElementById("instagram-link").href = portfolio.instagram;
+document.querySelectorAll('a[href^="mailto:"]').forEach(el => el.href = `mailto:${portfolio.email}`);
+const linkedinEl = document.getElementById("linkedin-link");
+if (linkedinEl) linkedinEl.href = portfolio.linkedin;
+const instagramEl = document.getElementById("instagram-link");
+if (instagramEl) instagramEl.href = portfolio.instagram;
 document.querySelectorAll(".wordmark").forEach(mark => mark.innerHTML = `${portfolio.name.split(" ").map(word => word[0]).join("").slice(0,2).toUpperCase()}<span>✳</span>`);
 
 renderProjects();
