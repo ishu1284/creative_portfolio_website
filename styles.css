@@ -165,82 +165,65 @@ a{color:inherit;text-decoration:none}.topbar{height:82px;padding:0 5.5vw;display
 /* AFTER HOURS CASE STUDY ACCENT */
 .ah-amber-box { background: #e6d5be; color: #1c211e; }
 
-/* ROAM NATIVE BRAND CONCEPT BOARD */
+/* ROAM TOP SPLIT & FULL-WIDTH BRAND CONCEPT BOARD */
+.roam-intro-split {
+  display: grid;
+  grid-template-columns: 1.45fr .75fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.roam-logo-box img {
+  max-height: 220px;
+  object-fit: contain;
+  background: #f1e6d2;
+  padding: 16px;
+}
 .roam-concept-board {
   background: #f1e6d2;
   color: #2e3d22;
-  border: 1px solid #2e3d22;
-  border-radius: 12px;
-  padding: 20px;
+  border: 1.5px solid #2e3d22;
+  border-radius: 14px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
+  box-shadow: 8px 8px 0 rgba(46, 61, 34, 0.12);
 }
 .rcb-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1.5px solid #2e3d22;
-  padding-bottom: 10px;
-}
-.rcb-kicker { font: 9px var(--mono); letter-spacing: .08em; display: block; opacity: .8; }
-.rcb-header h4 { font: 800 22px/1 var(--sans); letter-spacing: -.03em; margin: 2px 0 0; color: #2e3d22; }
-.rcb-badge { font: 9px var(--mono); background: #2e3d22; color: #f1e6d2; padding: 4px 10px; border-radius: 99px; }
-
-.rcb-main-grid {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr .8fr 1.25fr;
-  gap: 12px;
-  border-bottom: 1px solid rgba(46, 61, 34, .25);
   padding-bottom: 14px;
 }
-.rcb-story strong { display: block; font-size: 11px; line-height: 1.35; margin-bottom: 6px; }
-.rcb-story p { font-size: 11px; line-height: 1.5; margin: 0 0 6px; opacity: .9; }
-.rcb-pillar {
-  border-left: 1px solid rgba(46, 61, 34, .25);
-  padding-left: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.rcb-header h4 {
+  font: 800 28px/1 var(--sans);
+  letter-spacing: -.04em;
+  margin: 4px 0 0;
+  color: #2e3d22;
 }
-.rcb-icon { font-size: 26px; margin: 6px 0; }
-.rcb-pillar p { font-size: 10.5px; line-height: 1.45; margin: 0; }
-.rcb-mini-head { display: block; font: 700 9px var(--mono); letter-spacing: .07em; margin-bottom: 6px; color: #2e3d22; }
-
-.rcb-personality {
-  background: #dcd5c0;
-  padding: 10px 12px;
-  border-radius: 8px;
+.rcb-header-logo {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
 }
-.rcb-personality ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-.rcb-personality li { font-size: 10px; line-height: 1.35; }
-
-.rcb-bottom-grid {
+.rcb-main-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 14px;
-  align-items: start;
+  grid-template-columns: 1.25fr .75fr .75fr 1.25fr;
+  gap: 16px;
+  border-bottom: 1px solid rgba(46, 61, 34, .25);
+  padding-bottom: 18px;
 }
-.rcb-inspired-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.rcb-inspired-tags span { font: 9px var(--mono); background: rgba(46, 61, 34, .1); padding: 4px 8px; border-radius: 6px; }
-.rcb-bottom-grid p { font-size: 11px; line-height: 1.5; margin: 0; }
-
-.rcb-nutshell {
-  background: #d5ceb8;
-  border-radius: 8px;
-  padding: 10px 14px;
-  display: grid;
-  grid-template-columns: auto 1.4fr 1fr;
-  gap: 12px;
-  align-items: center;
-}
-.rcb-nut-label { font: 700 9px var(--mono); white-space: nowrap; }
-.rcb-nutshell p { font-size: 10px; line-height: 1.4; margin: 0; }
-.rcb-nutshell blockquote { margin: 0; font: italic 700 13px/1.2 var(--serif); text-align: right; color: #2e3d22; }
+.rcb-story strong { font-size: 12px; line-height: 1.4; margin-bottom: 8px; display: block; }
+.rcb-story p { font-size: 12px; line-height: 1.55; margin: 0 0 8px; }
+.rcb-pillar p { font-size: 11.5px; line-height: 1.5; }
+.rcb-personality { padding: 14px 16px; }
+.rcb-personality li { font-size: 11px; line-height: 1.45; }
+.rcb-bottom-grid p { font-size: 12px; line-height: 1.55; }
+.rcb-nutshell { padding: 14px 18px; }
+.rcb-nutshell p { font-size: 11px; }
 
 @media (max-width: 760px) {
-  .rcb-main-grid, .rcb-bottom-grid, .rcb-nutshell { grid-template-columns: 1fr; }
-  .rcb-pillar { border-left: 0; border-top: 1px solid rgba(46, 61, 34, .25); padding: 10px 0 0; }
-  .rcb-nutshell blockquote { text-align: left; }
+  .roam-intro-split { grid-template-columns: 1fr; }
 }

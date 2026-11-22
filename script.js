@@ -215,83 +215,85 @@ function showProject(index) {
         <p class="dialog-summary">${p.summary}</p>
       </div>
 
-      <!-- PAGE 01: HERO MASCOT & BRAND CONCEPT BOARD -->
+      <!-- PAGE 01: HERO BRAND CONCEPT & MASCOT LOCKUP -->
       <section class="cs-block">
-        <span class="cs-tag">${s.hero.tag}</span>
-        <h3>${s.hero.heading}</h3>
-        <p class="dialog-body">${s.hero.description}</p>
-        <div class="roam-hero-grid">
+        <div class="roam-intro-split">
+          <div>
+            <span class="cs-tag">${s.hero.tag}</span>
+            <h3>${s.hero.heading}</h3>
+            <p class="dialog-body">${s.hero.description}</p>
+          </div>
           <figure class="roam-frame roam-logo-box">
             <img src="${s.hero.logoImage}" alt="Roam Coffee Co. Primary Mascot Logo">
             <figcaption>Primary Mascot & Display Wordmark Lockup</figcaption>
           </figure>
+        </div>
 
-          <!-- NATIVE BRAND CONCEPT BOARD -->
-          <div class="roam-concept-board">
-            <div class="rcb-header">
-              <div>
-                <span class="rcb-kicker">ROAM COFFEE CO.</span>
-                <h4>BRAND CONCEPT</h4>
-              </div>
-              <div class="rcb-badge">• ESTD 2024 •</div>
+        <!-- FULL-WIDTH PREMIUM BRAND CONCEPT BOARD -->
+        <div class="roam-concept-board">
+          <div class="rcb-header">
+            <div>
+              <span class="rcb-kicker">ROAM COFFEE CO. · ESTD 2024</span>
+              <h4>BRAND CONCEPT</h4>
+            </div>
+            <img class="rcb-header-logo" src="${s.hero.logoImage}" alt="Roam Coffee Co. Logo">
+          </div>
+
+          <div class="rcb-main-grid">
+            <div class="rcb-story">
+              <strong>GOOD COFFEE. ANYWHERE. FOR THE RESTLESS.</strong>
+              <p>Roam is for the movers, thinkers and doers who find inspiration in every place they go.</p>
+              <p>We believe great coffee should go wherever life takes you — to new places, new people and new ideas.</p>
+              <p>Simple, soulful and made to keep you roaming.</p>
             </div>
 
-            <div class="rcb-main-grid">
-              <div class="rcb-story">
-                <strong>GOOD COFFEE. ANYWHERE. FOR THE RESTLESS.</strong>
-                <p>Roam is for the movers, thinkers and doers who find inspiration in every place they go.</p>
-                <p>We believe great coffee should go wherever life takes you — to new places, new people and new ideas.</p>
-                <p>Simple, soulful and made to keep you roaming.</p>
-              </div>
-
-              <div class="rcb-pillar">
-                <span class="rcb-mini-head">THE IDEA</span>
-                <div class="rcb-icon">🎒</div>
-                <p>Coffee that fuels your journey — wherever you roam.</p>
-              </div>
-
-              <div class="rcb-pillar">
-                <span class="rcb-mini-head">THE ESSENCE</span>
-                <div class="rcb-icon">☕</div>
-                <p>Warm. Grounded. Comforting. Familiar. Your pause in the middle of the chaos.</p>
-              </div>
-
-              <div class="rcb-personality">
-                <span class="rcb-mini-head">OUR PERSONALITY</span>
-                <ul>
-                  <li><b>ADVENTUROUS</b> — We're curious by nature and love exploring more.</li>
-                  <li><b>FRIENDLY</b> — Warm, approachable and easy to connect with.</li>
-                  <li><b>MINDFUL</b> — We care — about people, planet and every bean.</li>
-                  <li><b>AUTHENTIC</b> — No pretense. Just honest coffee done right.</li>
-                </ul>
-              </div>
+            <div class="rcb-pillar">
+              <span class="rcb-mini-head">THE IDEA</span>
+              <div class="rcb-icon">🎒</div>
+              <p>Coffee that fuels your journey — wherever you roam.</p>
             </div>
 
-            <div class="rcb-bottom-grid">
-              <div>
-                <span class="rcb-mini-head">INSPIRED BY</span>
-                <div class="rcb-inspired-tags">
-                  <span>⛰️ The Outdoors</span>
-                  <span>🧭 The Journey</span>
-                  <span>☕ The Moments</span>
-                  <span>🫘 The Craft</span>
-                </div>
-              </div>
-              <div>
-                <span class="rcb-mini-head">VISUAL DIRECTION</span>
-                <p>Playful yet grounded. Illustrations that feel hand-drawn, nostalgic and full of character. Earthy colors, bold shapes and a tone that feels like a good conversation over coffee.</p>
-              </div>
+            <div class="rcb-pillar">
+              <span class="rcb-mini-head">THE ESSENCE</span>
+              <div class="rcb-icon">☕</div>
+              <p>Warm. Grounded. Comforting. Familiar. Your pause in the middle of the chaos.</p>
             </div>
 
-            <div class="rcb-nutshell">
-              <span class="rcb-nut-label">🫘 IN A NUTSHELL</span>
-              <p>Roam is more than coffee — it's a mindset. A reminder to keep moving, keep dreaming and enjoy the journey. One cup at a time.</p>
-              <blockquote>“Good coffee, wherever you roam.”</blockquote>
+            <div class="rcb-personality">
+              <span class="rcb-mini-head">OUR PERSONALITY</span>
+              <ul>
+                <li><b>ADVENTUROUS</b> — We're curious by nature and love exploring more.</li>
+                <li><b>FRIENDLY</b> — Warm, approachable and easy to connect with.</li>
+                <li><b>MINDFUL</b> — We care — about people, planet and every bean.</li>
+                <li><b>AUTHENTIC</b> — No pretense. Just honest coffee done right.</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="rcb-bottom-grid">
+            <div>
+              <span class="rcb-mini-head">INSPIRED BY</span>
+              <div class="rcb-inspired-tags">
+                <span>⛰️ The Outdoors</span>
+                <span>🧭 The Journey</span>
+                <span>☕ The Moments</span>
+                <span>🫘 The Craft</span>
+              </div>
+            </div>
+            <div>
+              <span class="rcb-mini-head">VISUAL DIRECTION</span>
+              <p>Playful yet grounded. Illustrations that feel hand-drawn, nostalgic and full of character. Earthy colors, bold shapes and a tone that feels like a good conversation over coffee.</p>
+            </div>
+          </div>
+
+          <div class="rcb-nutshell">
+            <span class="rcb-nut-label">🫘 IN A NUTSHELL</span>
+            <p>Roam is more than coffee — it's a mindset. A reminder to keep moving, keep dreaming and enjoy the journey. One cup at a time.</p>
+            <blockquote>“Good coffee, wherever you roam.”</blockquote>
           </div>
         </div>
       </section>
-
+      
       <!-- PAGE 02: BRAND STRATEGY & PERSONALITY -->
       <section class="cs-block">
         <span class="cs-tag">${s.strategy.tag}</span>
