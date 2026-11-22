@@ -444,17 +444,17 @@ const portfolio = {
             "Designed for movement—from die-cut two-cup carriers and stacked unbleached takeaway cups to frosted window decals that welcome passersby into the café.",
           items: [
             {
-              src: "assets/roam/packaging-carrier.png",
+              src: "roam/images/packaging-carrier.png",
               caption:
                 "Die-cut kraft 2-cup carrier with twin mascot illustrations",
             },
             {
-              src: "assets/roam/cups-stacked.png",
+              src: "roam/images/cups-stacked.png",
               caption:
                 "Unbleached takeaway cups & 'Sip · Roam · Repeat' sleeve system",
             },
             {
-              src: "assets/roam/storefront.png",
+              src: "roam/images/storefront.png",
               caption:
                 "Café glass storefront vinyl decal & operating hours lockup",
             },
@@ -468,15 +468,15 @@ const portfolio = {
             "Extending the mascot into retail storytelling—combining iced latte product posters, café table cards ('Pure comfort' & 'Baked cookies'), and collectible sticker packs.",
           items: [
             {
-              src: "assets/roam/poster-latte.png",
+              src: "roam/images/poster-latte.png",
               caption: "Cafe Latte product poster — layered display typography",
             },
             {
-              src: "assets/roam/poster-restless.png",
+              src: "roam/images/poster-restless.png",
               caption: "'Good coffee. Anywhere.' brand manifesto poster",
             },
             {
-              src: "assets/roam/stationery.png",
+              src: "roam/images/stationery.png",
               caption: "Café hospitality postcards & die-cut vinyl stickers",
             },
           ],
@@ -486,10 +486,10 @@ const portfolio = {
           tag: "06 / EXTENDED BRAND APPLICATIONS",
           heading: "Merchandise, Menu & Digital Rollout",
           items: [
-            { src: "assets/roam/extra-1.png", caption: "Brand Application 01" },
-            { src: "assets/roam/extra-2.png", caption: "Brand Application 02" },
-            { src: "assets/roam/extra-3.png", caption: "Brand Application 03" },
-            { src: "assets/roam/extra-4.png", caption: "Brand Application 04" },
+            { src: "roam/images/Brand Application 1.png", caption: "Brand Application 01" },
+            { src: "roam/images/Brand Application 2.png", caption: "Brand Application 02" },
+            { src: "roam/images/Brand Application 3.png", caption: "Brand Application 03" },
+            { src: "roam/images/Brand Application 4.png", caption: "Brand Application 04" },
           ],
         },
       },

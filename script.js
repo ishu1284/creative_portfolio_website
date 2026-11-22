@@ -305,7 +305,6 @@ function showProject(index) {
         <h3>Color System & Tactile Palette</h3>
         <p class="dialog-body">${s.colorSystem.description}</p>
         <figure class="roam-frame" style="margin:20px 0">
-          <img src="${s.colorSystem.boardImage}" alt="Roam Color Palette Board">
         </figure>
         <div class="roam-swatch-grid">
           ${s.colorSystem.swatches.map(c => `
