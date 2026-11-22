@@ -587,3 +587,46 @@ document.getElementById("instagram-link").href = portfolio.instagram;
 document.querySelectorAll(".wordmark").forEach(mark => mark.innerHTML = `${portfolio.name.split(" ").map(word => word[0]).join("").slice(0,2).toUpperCase()}<span>✳</span>`);
 
 renderProjects();
+
+// INTERACTIVE CREATIVE JOURNEY CURVE
+(() => {
+  const stage = document.getElementById('journey-stage');
+  const line = document.getElementById('journey-active-line');
+  const marker = document.getElementById('journey-marker');
+  const nodes = document.querySelectorAll('.journey-node');
+  if (!stage || !line || !nodes.length) return;
+
+  const totalLength = line.getTotalLength();
+  line.style.strokeDasharray = totalLength;
+  line.style.strokeDashoffset = totalLength; // starts hidden until scrolled into view
+
+  function activateNode(node) {
+    nodes.forEach(n => n.classList.remove('is-active'));
+    node.classList.add('is-active');
+
+    const progress = parseFloat(node.dataset.progress || '0.5');
+    line.style.strokeDashoffset = totalLength * (1 - progress);
+
+    if (marker) {
+      marker.style.left = `${node.dataset.x}%`;
+      marker.style.top = `${node.dataset.y}%`;
+    }
+  }
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => activateNode(node));
+  });
+
+  // Trigger smooth line draw when user scrolls to this section
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const defaultNode = document.querySelector('.journey-node.is-active') || nodes[2];
+        activateNode(defaultNode);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(stage);
+})();
