@@ -866,3 +866,185 @@ a{color:inherit;text-decoration:none}.topbar{height:82px;padding:0 5.5vw;display
     margin-top: 14px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3D EXPLODING INTRO STACK */
+.intro-burst-section {
+  min-height: 86vh;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(25, 25, 23, 0.14);
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.ib-meta {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 10px var(--mono);
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ib-stage {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+}
+
+/* CENTER PHOTO CARD */
+.ib-center-card {
+  position: relative;
+  z-index: 10;
+  width: 240px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2.5px solid #191917;
+  box-shadow: 10px 10px 0 #191917;
+  background: #f05a3c;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateZ(40px);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.ib-center-card:hover {
+  transform: translateZ(55px) scale(1.03);
+  box-shadow: 14px 14px 0 #191917;
+}
+.ib-center-card img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ib-center-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #191917;
+  background: radial-gradient(circle at 30% 25%, #ff8a65, #f05a3c);
+}
+.ib-initials {
+  font: 800 54px/1 var(--sans);
+  letter-spacing: -0.05em;
+}
+.ib-center-fallback small {
+  font: 700 10px var(--mono);
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+}
+.ib-center-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: #191917;
+  color: #f7f4ec;
+  font: 700 8.5px var(--mono);
+  letter-spacing: 0.07em;
+  padding: 5px 10px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+/* SATELLITE ILLUSTRATION / GRAPHIC CARDS */
+.ib-card {
+  position: absolute;
+  margin: 0;
+  width: 165px;
+  height: 205px;
+  border-radius: 16px;
+  border: 2px solid #191917;
+  box-shadow: 6px 6px 0 #191917;
+  background: #f7f4ec;
+  overflow: hidden;
+  pointer-events: none;
+  /* Collapsed behind center card by default */
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(0.75);
+  opacity: 0;
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0s),
+    opacity 0.55s ease var(--delay, 0s);
+}
+.ib-stage.is-exploded .ib-card {
+  transform: translate3d(var(--tx), var(--ty), var(--tz)) rotate(var(--rot)) scale(1);
+  opacity: 1;
+}
+.ib-card img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ib-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font: 800 18px/1.15 var(--sans);
+  letter-spacing: -0.02em;
+}
+
+.ib-scroll-cue {
+  text-align: center;
+}
+.ib-scroll-cue a {
+  display: inline-block;
+  font: 700 10.5px var(--mono);
+  letter-spacing: 0.09em;
+  color: #191917;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 99px;
+  border: 1.5px solid #191917;
+  background: #c6de41;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.ib-scroll-cue a:hover {
+  background: #191917;
+  color: #f7f4ec;
+  transform: translateY(2px);
+}
+
+@media (max-width: 760px) {
+  .intro-burst-section { min-height: 70vh; }
+  .ib-stage { height: 400px; }
+  .ib-center-card { width: 185px; height: 235px; }
+  .ib-card { width: 115px; height: 145px; }
+  .ib-card.c1 { --tx: -115px; --ty: -75px; }
+  .ib-card.c2 { --tx: 115px; --ty: -70px; }
+  .ib-card.c3 { --tx: -110px; --ty: 85px; }
+  .ib-card.c4 { --tx: 110px; --ty: 85px; }
+  .ib-card.c5 { --tx: 0px; --ty: -120px; }
+  .ib-card.c6 { --tx: 0px; --ty: 120px; }
+}

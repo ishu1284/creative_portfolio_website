@@ -792,3 +792,33 @@ renderProjects();
 
   observer.observe(stage);
 })();
+
+// 3D EXPLODING INTRO CARD STACK
+(() => {
+  const stage = document.getElementById("ib-stage");
+  const centerBtn = document.getElementById("ib-center-btn");
+  if (!stage || !centerBtn) return;
+
+  // Start collapsed briefly, then burst open on page load like the video
+  stage.classList.remove("is-exploded");
+  requestAnimationFrame(() => {
+    setTimeout(() => stage.classList.add("is-exploded"), 180);
+  });
+
+  // Click center portrait card to collapse/re-explode anytime
+  centerBtn.addEventListener("click", () => {
+    stage.classList.toggle("is-exploded");
+  });
+
+  // Subtle 3D perspective tilt as cursor moves across the stage
+  stage.addEventListener("mousemove", (e) => {
+    const rect = stage.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -14;
+    stage.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+  });
+
+  stage.addEventListener("mouseleave", () => {
+    stage.style.transform = "rotateX(0deg) rotateY(0deg)";
+  });
+})();
