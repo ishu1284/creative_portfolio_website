@@ -592,41 +592,63 @@ renderProjects();
 (() => {
   const stage = document.getElementById('journey-stage');
   const line = document.getElementById('journey-active-line');
+  const shadowLine = document.getElementById('journey-shadow-line');
   const marker = document.getElementById('journey-marker');
-  const nodes = document.querySelectorAll('.journey-node');
+  const nodes = Array.from(document.querySelectorAll('.journey-node'));
+  const actEl = document.getElementById('jbs-act');
+  const titleEl = document.getElementById('jbs-title');
+  const descEl = document.getElementById('jbs-desc');
+  const counterEl = document.getElementById('jb-counter');
+  const prevBtn = document.getElementById('jb-prev');
+  const nextBtn = document.getElementById('jb-next');
+
   if (!stage || !line || !nodes.length) return;
 
+  let currentIndex = 2;
   const totalLength = line.getTotalLength();
-  line.style.strokeDasharray = totalLength;
-  line.style.strokeDashoffset = totalLength; // starts hidden until scrolled into view
 
-  function activateNode(node) {
+  [line, shadowLine].forEach(p => {
+    if (!p) return;
+    p.style.strokeDasharray = totalLength;
+    p.style.strokeDashoffset = totalLength;
+  });
+
+  function activateStep(idx) {
+    currentIndex = (idx + nodes.length) % nodes.length;
+    const node = nodes[currentIndex];
+
     nodes.forEach(n => n.classList.remove('is-active'));
     node.classList.add('is-active');
 
     const progress = parseFloat(node.dataset.progress || '0.5');
-    line.style.strokeDashoffset = totalLength * (1 - progress);
+    const offset = totalLength * (1 - progress);
+    line.style.strokeDashoffset = offset;
+    if (shadowLine) shadowLine.style.strokeDashoffset = offset;
 
     if (marker) {
       marker.style.left = `${node.dataset.x}%`;
-      marker.style.top = `${node.dataset.y}%`;
+      marker.style.top = `${node.dataset.y}px`;
     }
+    if (actEl) actEl.textContent = node.dataset.act;
+    if (titleEl) titleEl.textContent = node.dataset.title;
+    if (descEl) descEl.textContent = node.dataset.desc;
+    if (counterEl) counterEl.textContent = `STAGE 0${currentIndex + 1} / 0${nodes.length}`;
   }
 
-  nodes.forEach(node => {
-    node.addEventListener('click', () => activateNode(node));
+  nodes.forEach((node, idx) => {
+    node.addEventListener('click', () => activateStep(idx));
   });
+  if (prevBtn) prevBtn.addEventListener('click', () => activateStep(currentIndex - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => activateStep(currentIndex + 1));
 
-  // Trigger smooth line draw when user scrolls to this section
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const defaultNode = document.querySelector('.journey-node.is-active') || nodes[2];
-        activateNode(defaultNode);
+        activateStep(2);
         observer.disconnect();
       }
     });
-  }, { threshold: 0.35 });
+  }, { threshold: 0.3 });
 
   observer.observe(stage);
 })();

@@ -28,86 +28,7 @@
       <button class="menu-toggle" aria-label="Open menu">☰</button>
     </header>
 
-    <main id="home">
-      <!-- CREATIVE JOURNEY / PROCESS CURVE -->
-    <section class="journey-section section-wrap" id="process">
-      <div class="journey-header">
-        <div>
-          <span class="cs-tag">02 / THE CREATIVE ARC</span>
-          <h2>How Ideas Become Unmistakable.</h2>
-        </div>
-        <p class="journey-sub">Click any stage along the curve—or scroll through—to trace how we turn raw noise into a sharp, human brand world.</p>
-      </div>
-
-      <div class="journey-stage" id="journey-stage">
-        <!-- FLOATING "YOU'RE HERE" INDICATOR -->
-        <div class="journey-marker" id="journey-marker" style="left: 50%; top: 58%;">
-          <span class="jm-label">YOU'RE HERE.</span>
-          <svg class="jm-arrow" viewBox="0 0 40 48" fill="none">
-            <path d="M22 2 C14 16, 16 30, 20 44 M13 37 L20 45 L27 37" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-
-        <!-- SVG CURVE TRACK + ANIMATED FLOAT LINE -->
-        <svg class="journey-svg" viewBox="0 0 1000 320" preserveAspectRatio="none">
-          <!-- Subtle Dashed Base Track -->
-          <path d="M 80 85 C 180 85, 220 175, 290 175 C 360 175, 420 225, 500 225 C 580 225, 640 175, 710 175 C 780 175, 820 85, 920 85"
-                fill="none" stroke="rgba(26,26,24,0.16)" stroke-width="3" stroke-dasharray="6 6"/>
-          <!-- Active Animated Line -->
-          <path id="journey-active-line"
-                d="M 80 85 C 180 85, 220 175, 290 175 C 360 175, 420 225, 500 225 C 580 225, 640 175, 710 175 C 780 175, 820 85, 920 85"
-                fill="none" stroke="#d94e34" stroke-width="4.5" stroke-linecap="round"/>
-        </svg>
-
-        <!-- 5 INTERACTIVE MILESTONE NODES -->
-        <button class="journey-node" data-step="0" data-progress="0.02" data-x="8" data-y="18" style="left: 8%; top: 26.5%;">
-          <span class="jn-dot"></span>
-          <div class="jn-card">
-            <strong>01. YOU SPOT THE NOISE.</strong>
-            <p>A raw idea, a messy feed, or a product nobody notices yet.</p>
-          </div>
-        </button>
-
-        <button class="journey-node" data-step="1" data-progress="0.28" data-x="29" data-y="44" style="left: 29%; top: 54.5%;">
-          <span class="jn-dot"></span>
-          <div class="jn-card">
-            <strong>02. YOU SEE THE GAP.</strong>
-            <p>Everyone looks identical. Templates feel safe—and forgettable.</p>
-          </div>
-        </button>
-
-        <button class="journey-node is-active" data-step="2" data-progress="0.50" data-x="50" data-y="58" style="left: 50%; top: 70.3%;">
-          <span class="jn-dot"></span>
-          <div class="jn-card">
-            <strong>03. WE ASK BETTER QUESTIONS.</strong>
-            <p>Strip away the fluff. Find the tension, human hook, and visual edge.</p>
-          </div>
-        </button>
-
-        <button class="journey-node" data-step="3" data-progress="0.72" data-x="71" data-y="44" style="left: 71%; top: 54.5%;">
-          <span class="jn-dot"></span>
-          <div class="jn-card">
-            <strong>04. THE WORLD CLICKS.</strong>
-            <p>Typography, color, motion, and story lock into one unmistakable system.</p>
-          </div>
-        </button>
-
-        <button class="journey-node" data-step="4" data-progress="1.0" data-x="92" data-y="18" style="left: 92%; top: 26.5%;">
-          <span class="jn-dot"></span>
-          <div class="jn-card align-right">
-            <strong>05. YOU SHIP SOMETHING ICONIC.</strong>
-            <p>Work that stops the scroll, earns trust, and sticks in people's heads.</p>
-          </div>
-        </button>
-
-        <!-- BOTTOM ACT RULER -->
-        <div class="journey-ruler">
-          <span>ACT I · DISCOVERY</span>
-          <span>ACT II · STRATEGY & CRAFT</span>
-          <span>ACT III · LAUNCH</span>
-        </div>
-      </div>
-    </section>
+    <main id="home"> 
       <section class="hero section-wrap">
         <div class="hero-kicker">
           <span class="pulse"></span> INDEPENDENT CREATIVE THINKER
@@ -158,6 +79,126 @@
           ><b>✳</b>
         </div>
       </section>
+      <!-- THE CREATIVE ARC — RIGHT BELOW BLACK TICKER BAR -->
+    <section class="journey-section section-wrap" id="process">
+      <div class="journey-header">
+        <div>
+          <span class="cs-tag">00 / THE CREATIVE ARC</span>
+          <h2>How raw dots become <em>impossible to ignore.</em></h2>
+        </div>
+        <div class="journey-controls">
+          <span class="jc-hint">CLICK ANY NODE OR SCRUB THE TIMELINE →</span>
+        </div>
+      </div>
+
+      <div class="journey-board" id="journey-stage">
+        <!-- TOP META BAR -->
+        <div class="jb-topbar">
+          <span>FIG. 02 — CREATIVE PROCESS ARCHITECTURE</span>
+          <span class="jb-step-counter" id="jb-counter">STAGE 03 / 05</span>
+        </div>
+
+        <!-- FLOATING "YOU'RE HERE." PILL BADGE -->
+        <div class="journey-marker" id="journey-marker" style="left: 50%; top: 205px;">
+          <span class="jm-pill">YOU'RE HERE ↓</span>
+        </div>
+
+        <!-- EXACT-COORDINATE SVG CURVE (Matches Node % Positions 1:1) -->
+        <svg class="journey-svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <!-- Dotted Guide Path -->
+          <path d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
+                fill="none" stroke="rgba(25,25,23,0.18)" stroke-width="3" stroke-dasharray="6 6"/>
+          <!-- Bold Ink Shadow Line -->
+          <path id="journey-shadow-line"
+                d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
+                fill="none" stroke="#191917" stroke-width="7" stroke-linecap="round"/>
+          <!-- Active Coral-Red Float Line -->
+          <path id="journey-active-line"
+                d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
+                fill="none" stroke="#f05a3c" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+
+        <!-- 5 PRECISION-ALIGNED NODES -->
+        <!-- Node 1: x=90 (9%), y=105 (35% of 300) -->
+        <button class="journey-node" data-step="0" data-progress="0.01" data-x="9" data-y="75"
+                data-act="ACT I · DISCOVERY" data-title="01. Spot the Noise"
+                data-desc="Every brief starts messy—scattered references, crowded feeds, and a product struggling to stand out."
+                style="left: 9%; top: 105px;">
+          <span class="jn-dot">01</span>
+          <div class="jn-label-box top-box">
+            <strong>Spot the Noise</strong>
+            <span>Raw brief & chaos</span>
+          </div>
+        </button>
+
+        <!-- Node 2: x=295 (29.5%), y=185 -->
+        <button class="journey-node" data-step="1" data-progress="0.28" data-x="29.5" data-y="155"
+                data-act="ACT I · DISCOVERY" data-title="02. Find the Tension"
+                data-desc="We audit competitors to see what everyone else is copying—then locate the exact white space they missed."
+                style="left: 29.5%; top: 185px;">
+          <span class="jn-dot">02</span>
+          <div class="jn-label-box top-box">
+            <strong>Find the Tension</strong>
+            <span>Audit & white space</span>
+          </div>
+        </button>
+
+        <!-- Node 3: x=500 (50%), y=235 -->
+        <button class="journey-node is-active" data-step="2" data-progress="0.50" data-x="50" data-y="205"
+                data-act="ACT II · STRATEGY & CRAFT" data-title="03. Ask Better Questions"
+                data-desc="Before touching layouts, we lock the human hook, point of view, and visual hierarchy that makes people care."
+                style="left: 50%; top: 235px;">
+          <span class="jn-dot">03</span>
+          <div class="jn-label-box top-box">
+            <strong>Better Questions</strong>
+            <span>Point of view & hook</span>
+          </div>
+        </button>
+
+        <!-- Node 4: x=705 (70.5%), y=185 -->
+        <button class="journey-node" data-step="3" data-progress="0.72" data-x="70.5" data-y="155"
+                data-act="ACT II · STRATEGY & CRAFT" data-title="04. Build the World"
+                data-desc="Typography, tactile color palettes, motion, and repeatable systems lock together into one cohesive identity."
+                style="left: 70.5%; top: 185px;">
+          <span class="jn-dot">04</span>
+          <div class="jn-label-box top-box">
+            <strong>Build the World</strong>
+            <span>Identity & visual system</span>
+          </div>
+        </button>
+
+        <!-- Node 5: x=910 (91%), y=105 -->
+        <button class="journey-node" data-step="4" data-progress="1.0" data-x="91" data-y="75"
+                data-act="ACT III · LAUNCH" data-title="05. Ship Iconic Work"
+                data-desc="Campaigns, web experiences, and brand worlds built to stop the scroll and stay memorable."
+                style="left: 91%; top: 105px;">
+          <span class="jn-dot">05</span>
+          <div class="jn-label-box top-box">
+            <strong>Ship Iconic Work</strong>
+            <span>Launch & real impact</span>
+          </div>
+        </button>
+
+        <!-- BOTTOM EDITORIAL SPOTLIGHT BAR + FILM RULER -->
+        <div class="jb-spotlight-bar">
+          <div class="jbs-badge" id="jbs-act">ACT II · STRATEGY & CRAFT</div>
+          <div class="jbs-copy">
+            <strong id="jbs-title">03. Ask Better Questions</strong>
+            <p id="jbs-desc">Before touching layouts, we lock the human hook, point of view, and visual hierarchy that makes people care.</p>
+          </div>
+          <div class="jbs-nav">
+            <button type="button" id="jb-prev" aria-label="Previous stage">←</button>
+            <button type="button" id="jb-next" aria-label="Next stage">→</button>
+          </div>
+        </div>
+
+        <div class="journey-ruler">
+          <span>ACT I · DISCOVERY</span>
+          <span>ACT II · STRATEGY & CRAFT</span>
+          <span>ACT III · LAUNCH</span>
+        </div>
+      </div>
+    </section>
 
       <section class="work section-wrap" id="work">
         <div class="section-heading">
