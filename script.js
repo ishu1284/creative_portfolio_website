@@ -696,12 +696,10 @@ dialog.addEventListener("click", (event) => {
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".topbar nav");
-menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
-nav
-  .querySelectorAll("a")
-  .forEach((link) =>
-    link.addEventListener("click", () => nav.classList.remove("open")),
-  );
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => nav.classList.remove("open")));
+}
 
 document
   .querySelectorAll('a[href^="mailto:"]')
@@ -793,32 +791,44 @@ renderProjects();
   observer.observe(stage);
 })();
 
-// 3D EXPLODING INTRO CARD STACK
+// 3D ROLL & POP CARD UNIVERSE
 (() => {
+  const section = document.getElementById("intro-burst");
   const stage = document.getElementById("ib-stage");
   const centerBtn = document.getElementById("ib-center-btn");
-  if (!stage || !centerBtn) return;
+  if (!section || !stage || !centerBtn) return;
 
-  // Start collapsed briefly, then burst open on page load like the video
-  stage.classList.remove("is-exploded");
-  requestAnimationFrame(() => {
-    setTimeout(() => stage.classList.add("is-exploded"), 180);
-  });
+  function triggerRollAndPop() {
+    stage.classList.remove("is-exploded");
+    centerBtn.classList.remove("is-rolling");
+    void centerBtn.offsetWidth; // force reflow so roll restarts cleanly
+    centerBtn.classList.add("is-rolling");
+    requestAnimationFrame(() => {
+      stage.classList.add("is-exploded");
+    });
+  }
 
-  // Click center portrait card to collapse/re-explode anytime
+  // Run roll + pop on page load
+  triggerRollAndPop();
+
+  // Click center card to roll & pop again (or collapse if already open)
   centerBtn.addEventListener("click", () => {
-    stage.classList.toggle("is-exploded");
+    if (stage.classList.contains("is-exploded")) {
+      stage.classList.remove("is-exploded");
+    } else {
+      triggerRollAndPop();
+    }
   });
 
-  // Subtle 3D perspective tilt as cursor moves across the stage
-  stage.addEventListener("mousemove", (e) => {
-    const rect = stage.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -14;
+  // Smooth 3D tilt across the entire hero intro area
+  section.addEventListener("mousemove", (e) => {
+    const rect = section.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 22;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -22;
     stage.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
   });
 
-  stage.addEventListener("mouseleave", () => {
+  section.addEventListener("mouseleave", () => {
     stage.style.transform = "rotateX(0deg) rotateY(0deg)";
   });
 })();
