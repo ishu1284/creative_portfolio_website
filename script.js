@@ -17,12 +17,14 @@ function renderProjects() {
       const num = String(i + 1).padStart(2, "0");
       // Grab best preview image available on each project
       const thumb =
-        p.coverImage ||
-        p.image ||
-        p.sections?.hero?.logoImage ||
-        p.sections?.hero?.portraitImage ||
-        p.assets?.[0]?.image ||
-        "";
+      p.coverImage ||
+      p.image ||
+      p.sections?.hero?.logoImage ||
+      p.sections?.hero?.portraitImage ||
+      p.sections?.showcase?.image ||
+      p.assets?.[0]?.image ||
+      p.gallery?.[0] ||
+      "";
 
       return `
       <article class="pa-panel ${i === 0 ? "is-expanded" : ""}" data-index="${i}">
