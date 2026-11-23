@@ -204,7 +204,7 @@ const portfolio = {
           tagline: "FRAGRANCES FOR WHAT COMES NEXT",
           description:
             "Rather than relying on dark, neon-lit nightlife clichés, After Hours captures the sensory threshold of dusk—warm wind through sheer linen, sun-baked limestone arches, and the lingering warmth of vanilla, amber, jasmine, and aged woods.",
-          heroImage: "After hours/hero-campaign.png",
+          heroImage: "After hours/After Hours by the Sea.png",
           caption:
             "Hero Campaign Key Visual — Eau de Parfum 50 ml (Vanilla · Amber · Jasmine · Woods)",
         },
@@ -270,22 +270,22 @@ const portfolio = {
             "Macro ingredient compositions translate invisible scent notes into visceral textures—from raw Madagascar vanilla pods dripping golden resin and white orchid blooms to weathered driftwood and sun-refracted glass.",
           items: [
             {
-              src: "assets/after-hours/vanilla-elixir.png",
+              src: "After hours/vanilla-elixir.png",
               caption:
                 "Key Note Study: Raw vanilla bean, golden nectar, white jasmine & spiced pods",
             },
             {
-              src: "assets/after-hours/driftwood.png",
+              src: "After hours/driftwood.png",
               caption:
                 "Base Note Study: Sculptural aged driftwood & warm amber refraction",
             },
             {
-              src: "assets/after-hours/bottle-angled.png",
+              src: "After hours/bottle-angled.png",
               caption:
                 "Architectural Light Study: Travertine corner shadow & caustic glass glow",
             },
             {
-              src: "assets/after-hours/bottle-hero.png",
+              src: "After hours/bottle-hero.png",
               caption:
                 "Signature Flacon Portrait: Heavy square glass, gold neck & fluted walnut cap",
             },
