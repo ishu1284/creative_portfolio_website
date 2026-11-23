@@ -204,7 +204,7 @@ const portfolio = {
           tagline: "FRAGRANCES FOR WHAT COMES NEXT",
           description:
             "Rather than relying on dark, neon-lit nightlife clichés, After Hours captures the sensory threshold of dusk—warm wind through sheer linen, sun-baked limestone arches, and the lingering warmth of vanilla, amber, jasmine, and aged woods.",
-          heroImage: "assets/after-hours/hero-campaign.png",
+          heroImage: "After hours/hero-campaign.png",
           caption:
             "Hero Campaign Key Visual — Eau de Parfum 50 ml (Vanilla · Amber · Jasmine · Woods)",
         },
@@ -240,7 +240,7 @@ const portfolio = {
           description:
             "Engineered a unified packaging architecture scaling from the flagship 50 ml Extrait & Eau de Parfum to travel and layering formats—anchored by the 5-scent Discovery Set (01 The Original, 02 The Escape, 03 The Midnight, 04 The Oasis, 05 The Noir).",
           featuredSet: {
-            src: "assets/after-hours/discovery-set.png",
+            src: "After hours/discovery-set.png",
             caption:
               "Eau de Parfum Discovery Set — 'Different moments. Same After Hours.' (5 × 10 ml curated vials)",
           },
