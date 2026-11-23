@@ -246,17 +246,17 @@ const portfolio = {
           },
           skus: [
             {
-              src: "assets/after-hours/extrait-box.png",
+              src: "After hours/Perfume 1.png",
               title: "Extrait de Parfum (50 ml)",
               desc: "Deep espresso textured carton with gold foil serif typography and walnut cap.",
             },
             {
-              src: "assets/after-hours/travel-spray.png",
+              src: "After hours/travel-spray.png",
               title: "Eau de Parfum Travel Spray (10 ml)",
               desc: "Slim cylindrical amber flacon with brushed gold atomizer and walnut cap.",
             },
             {
-              src: "assets/after-hours/body-mist.png",
+              src: "After hours/body-mist.png",
               title: "Fine Body Mist (100 ml)",
               desc: "Elongated glass silhouette styled with botanical olive leaves on porous limestone.",
             },
