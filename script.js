@@ -832,3 +832,73 @@ renderProjects();
     stage.style.transform = "rotateX(0deg) rotateY(0deg)";
   });
 })();
+// 8-THUMBNAIL STACKED COVERFLOW CAROUSEL
+(() => {
+  const stage = document.getElementById("td-stage");
+  const cards = Array.from(document.querySelectorAll(".td-card"));
+  const prevBtn = document.getElementById("td-prev");
+  const nextBtn = document.getElementById("td-next");
+  const counterEl = document.getElementById("td-counter");
+  const captionEl = document.getElementById("td-caption");
+
+  if (!stage || !cards.length) return;
+
+  let active = 0;
+  const total = cards.length;
+  let timer = null;
+
+  function renderDeck() {
+    const prev1 = (active - 1 + total) % total;
+    const prev2 = (active - 2 + total) % total;
+    const next1 = (active + 1) % total;
+    const next2 = (active + 2) % total;
+
+    cards.forEach((card, i) => {
+      card.classList.remove("is-center", "is-prev-1", "is-prev-2", "is-next-1", "is-next-2");
+      if (i === active) card.classList.add("is-center");
+      else if (i === prev1) card.classList.add("is-prev-1");
+      else if (i === next1) card.classList.add("is-next-1");
+      else if (i === prev2) card.classList.add("is-prev-2");
+      else if (i === next2) card.classList.add("is-next-2");
+    });
+
+    if (counterEl) {
+      counterEl.textContent = `${String(active + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    }
+    if (captionEl) {
+      captionEl.textContent = cards[active].dataset.title || "";
+    }
+  }
+
+  function goTo(index) {
+    active = (index + total) % total;
+    renderDeck();
+  }
+
+  function startAuto() {
+    stopAuto();
+    timer = setInterval(() => goTo(active + 1), 3000);
+  }
+
+  function stopAuto() {
+    if (timer) clearInterval(timer);
+  }
+
+  cards.forEach((card, i) => {
+    card.addEventListener("click", () => {
+      if (i !== active) {
+        goTo(i);
+        startAuto();
+      }
+    });
+  });
+
+  if (prevBtn) prevBtn.addEventListener("click", () => { goTo(active - 1); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { goTo(active + 1); startAuto(); });
+
+  stage.addEventListener("mouseenter", stopAuto);
+  stage.addEventListener("mouseleave", startAuto);
+
+  renderDeck();
+  startAuto();
+})();
