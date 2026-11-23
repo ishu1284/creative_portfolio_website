@@ -1379,3 +1379,76 @@ html {
   .ib-card.c5 { --tx: 0px; --ty: -125px; }
   .ib-card.c6 { --tx: 0px; --ty: 125px; }
 }
+/* IMPACT & OUTCOMES STRIP (ABOVE BLACK TICKER BAR) */
+.impact-strip {
+  padding-top: 8px;
+  padding-bottom: 56px;
+}
+
+.is-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 10px/1 var(--mono);
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.impact-card {
+  background: #f7f4ec;
+  color: #191917;
+  border: 2px solid #191917;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 #191917;
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.impact-card:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 8px 8px 0 #191917;
+}
+
+.impact-card.ic-lime { background: #c6de41; }
+.impact-card.ic-coral { background: #f05a3c; color: #191917; }
+.impact-card.ic-dark { background: #191917; color: #f7f4ec; }
+
+.ic-tag {
+  font: 700 9.5px/1 var(--mono);
+  letter-spacing: 0.08em;
+  opacity: 0.78;
+}
+
+.ic-num {
+  display: block;
+  font: 800 clamp(28px, 2.8vw, 38px)/1.05 var(--sans);
+  letter-spacing: -0.04em;
+  margin: 14px 0 10px;
+}
+
+.impact-card p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 920px) {
+  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .impact-grid { grid-template-columns: 1fr; }
+}
