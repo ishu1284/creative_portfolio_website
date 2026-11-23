@@ -173,122 +173,110 @@
     </div>
       </section>
       <!-- THE CREATIVE ARC — RIGHT BELOW BLACK TICKER BAR -->
-    <section class="journey-section section-wrap" id="process">
-      <div class="journey-header">
+    <!-- 00 / THE CREATIVE ARC — PERSONAL BRAND ARCHITECTURE -->
+    <section class="arc-section section-wrap" id="process">
+      <div class="arc-top-bar">
         <div>
           <span class="cs-tag">00 / THE CREATIVE ARC</span>
-          <h2>How raw dots become <em>impossible to ignore.</em></h2>
+          <h2 class="arc-headline">From person to <em>personal brand.</em></h2>
         </div>
-        <div class="journey-controls">
-          <span class="jc-hint">CLICK ANY NODE OR SCRUB THE TIMELINE →</span>
-        </div>
+        <span class="arc-prompt">EXPLORE HOW THE BRAND TAKES SHAPE →</span>
       </div>
 
-      <div class="journey-board" id="journey-stage">
-        <!-- TOP META BAR -->
-        <div class="jb-topbar">
-          <span>FIG. 02 — CREATIVE PROCESS ARCHITECTURE</span>
-          <span class="jb-step-counter" id="jb-counter">STAGE 03 / 05</span>
-        </div>
-
-        <!-- FLOATING "YOU'RE HERE." PILL BADGE -->
-        <div class="journey-marker" id="journey-marker" style="left: 50%; top: 205px;">
-          <span class="jm-pill">YOU'RE HERE ↓</span>
-        </div>
-
-        <!-- EXACT-COORDINATE SVG CURVE (Matches Node % Positions 1:1) -->
-        <svg class="journey-svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
-          <!-- Dotted Guide Path -->
-          <path d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
-                fill="none" stroke="rgba(25,25,23,0.18)" stroke-width="3" stroke-dasharray="6 6"/>
-          <!-- Bold Ink Shadow Line -->
-          <path id="journey-shadow-line"
-                d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
-                fill="none" stroke="#191917" stroke-width="7" stroke-linecap="round"/>
-          <!-- Active Coral-Red Float Line -->
-          <path id="journey-active-line"
-                d="M 90 105 C 190 105, 220 185, 295 185 C 370 185, 425 235, 500 235 C 575 235, 630 185, 705 185 C 780 185, 810 105, 910 105"
-                fill="none" stroke="#f05a3c" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-
-        <!-- 5 PRECISION-ALIGNED NODES -->
-        <!-- Node 1: x=90 (9%), y=105 (35% of 300) -->
-        <button class="journey-node" data-step="0" data-progress="0.01" data-x="9" data-y="75"
-                data-act="ACT I · DISCOVERY" data-title="01. Spot the Noise"
-                data-desc="Every brief starts messy—scattered references, crowded feeds, and a product struggling to stand out."
-                style="left: 9%; top: 105px;">
-          <span class="jn-dot">01</span>
-          <div class="jn-label-box top-box">
-            <strong>Spot the Noise</strong>
-            <span>Raw brief & chaos</span>
+      <div class="arc-board">
+        <!-- UPPER GRAPH GRID CANVAS -->
+        <div class="arc-canvas">
+          <div class="arc-canvas-meta">
+            <span>FIG. 02 — PERSONAL BRAND ARCHITECTURE</span>
+            <span class="arc-stage-pill" id="arc-stage-pill">STAGE 03 / 05</span>
           </div>
-        </button>
 
-        <!-- Node 2: x=295 (29.5%), y=185 -->
-        <button class="journey-node" data-step="1" data-progress="0.28" data-x="29.5" data-y="155"
-                data-act="ACT I · DISCOVERY" data-title="02. Find the Tension"
-                data-desc="We audit competitors to see what everyone else is copying—then locate the exact white space they missed."
-                style="left: 29.5%; top: 185px;">
-          <span class="jn-dot">02</span>
-          <div class="jn-label-box top-box">
-            <strong>Find the Tension</strong>
-            <span>Audit & white space</span>
-          </div>
-        </button>
+          <!-- SVG CURVE + INTERACTIVE NODES -->
+          <div class="arc-svg-wrap">
+            <svg class="arc-svg" viewBox="0 0 1000 230" preserveAspectRatio="none" aria-hidden="true">
+              <!-- Full dashed track -->
+              <path d="M 90 58 C 210 58, 230 108, 300 108 C 390 108, 430 165, 500 165 C 580 165, 625 118, 700 118 C 780 118, 825 65, 910 65"
+                    fill="none" stroke="rgba(25,25,23,0.22)" stroke-width="2.5" stroke-dasharray="6 6" />
+              <!-- Active progress curve -->
+              <path id="arc-progress-path"
+                    d="M 90 58 C 210 58, 230 108, 300 108 C 390 108, 430 165, 500 165 C 580 165, 625 118, 700 118 C 780 118, 825 65, 910 65"
+                    fill="none" stroke="#f05a3c" stroke-width="5" stroke-linecap="round" />
+            </svg>
 
-        <!-- Node 3: x=500 (50%), y=235 -->
-        <button class="journey-node is-active" data-step="2" data-progress="0.50" data-x="50" data-y="205"
-                data-act="ACT II · STRATEGY & CRAFT" data-title="03. Ask Better Questions"
-                data-desc="Before touching layouts, we lock the human hook, point of view, and visual hierarchy that makes people care."
-                style="left: 50%; top: 235px;">
-          <span class="jn-dot">03</span>
-          <div class="jn-label-box top-box">
-            <strong>Better Questions</strong>
-            <span>Point of view & hook</span>
-          </div>
-        </button>
+            <!-- NODE 01 -->
+            <button type="button" class="arc-node" data-step="0" style="left: 9%; top: 25%;">
+              <div class="an-label">
+                <strong>Understand the Person</strong>
+                <span>Beyond the job title.</span>
+              </div>
+              <span class="an-dot">01</span>
+            </button>
 
-        <!-- Node 4: x=705 (70.5%), y=185 -->
-        <button class="journey-node" data-step="3" data-progress="0.72" data-x="70.5" data-y="155"
-                data-act="ACT II · STRATEGY & CRAFT" data-title="04. Build the World"
-                data-desc="Typography, tactile color palettes, motion, and repeatable systems lock together into one cohesive identity."
-                style="left: 70.5%; top: 185px;">
-          <span class="jn-dot">04</span>
-          <div class="jn-label-box top-box">
-            <strong>Build the World</strong>
-            <span>Identity & visual system</span>
-          </div>
-        </button>
+            <!-- NODE 02 -->
+            <button type="button" class="arc-node" data-step="1" style="left: 30%; top: 47%;">
+              <div class="an-label">
+                <strong>Find Their Position</strong>
+                <span>Why should people follow them?</span>
+              </div>
+              <span class="an-dot">02</span>
+            </button>
 
-        <!-- Node 5: x=910 (91%), y=105 -->
-        <button class="journey-node" data-step="4" data-progress="1.0" data-x="91" data-y="75"
-                data-act="ACT III · LAUNCH" data-title="05. Ship Iconic Work"
-                data-desc="Campaigns, web experiences, and brand worlds built to stop the scroll and stay memorable."
-                style="left: 91%; top: 105px;">
-          <span class="jn-dot">05</span>
-          <div class="jn-label-box top-box">
-            <strong>Ship Iconic Work</strong>
-            <span>Launch & real impact</span>
-          </div>
-        </button>
+            <!-- NODE 03 (DEFAULT ACTIVE) -->
+            <button type="button" class="arc-node is-active" data-step="2" style="left: 50%; top: 72%;">
+              <div class="an-label">
+                <strong>Define Their Narrative</strong>
+                <span>Give their expertise a voice.</span>
+                <em class="an-here">YOU'RE HERE ✦</em>
+              </div>
+              <span class="an-dot">03</span>
+            </button>
 
-        <!-- BOTTOM EDITORIAL SPOTLIGHT BAR + FILM RULER -->
-        <div class="jb-spotlight-bar">
-          <div class="jbs-badge" id="jbs-act">ACT II · STRATEGY & CRAFT</div>
-          <div class="jbs-copy">
-            <strong id="jbs-title">03. Ask Better Questions</strong>
-            <p id="jbs-desc">Before touching layouts, we lock the human hook, point of view, and visual hierarchy that makes people care.</p>
-          </div>
-          <div class="jbs-nav">
-            <button type="button" id="jb-prev" aria-label="Previous stage">←</button>
-            <button type="button" id="jb-next" aria-label="Next stage">→</button>
+            <!-- NODE 04 -->
+            <button type="button" class="arc-node" data-step="3" style="left: 70%; top: 51%;">
+              <div class="an-label">
+                <strong>Build Their Identity</strong>
+                <span>Make their thinking recognisable.</span>
+              </div>
+              <span class="an-dot">04</span>
+            </button>
+
+            <!-- NODE 05 -->
+            <button type="button" class="arc-node" data-step="4" style="left: 91%; top: 28%;">
+              <div class="an-label">
+                <strong>Create Recognition</strong>
+                <span>Turn consistency into momentum.</span>
+              </div>
+              <span class="an-dot">05</span>
+            </button>
           </div>
         </div>
 
-        <div class="journey-ruler">
-          <span>ACT I · DISCOVERY</span>
-          <span>ACT II · STRATEGY & CRAFT</span>
-          <span>ACT III · LAUNCH</span>
+        <!-- LOWER LIME STAGE PANEL (NO EXTRA IMAGES — CLEAN 2-COLUMN + CONTROLS) -->
+        <div class="arc-lime-deck">
+          <div class="ald-left">
+            <span class="ald-act-pill" id="ald-act">ACT II · STRATEGY &amp; CRAFT</span>
+            <h3 id="ald-title">03. Define Their Narrative</h3>
+            <p id="ald-desc">Turn their expertise into a clear, compelling story people want to follow — with the right point of view, content pillars and storytelling formats.</p>
+          </div>
+
+          <div class="ald-middle">
+            <span class="ald-deliv-kicker">WHAT THIS STAGE DELIVERS</span>
+            <div class="ald-grid" id="ald-grid">
+              <!-- Populated dynamically by script.js -->
+            </div>
+          </div>
+
+          <div class="ald-controls">
+            <button type="button" class="ald-btn" id="arc-prev" aria-label="Previous stage">←</button>
+            <button type="button" class="ald-btn" id="arc-next" aria-label="Next stage">→</button>
+          </div>
+        </div>
+
+        <!-- BOTTOM DARK RULER ACT BAR -->
+        <div class="arc-ruler-footer" id="arc-ruler">
+          <button type="button" class="arf-act" data-act-step="0">ACT I · DISCOVERY</button>
+          <button type="button" class="arf-act is-active" data-act-step="2">ACT II · STRATEGY &amp; CRAFT</button>
+          <button type="button" class="arf-act" data-act-step="4">ACT III · GROWTH</button>
         </div>
       </div>
     </section>
