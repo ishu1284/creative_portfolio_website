@@ -1774,3 +1774,66 @@ html {
     margin-top: 14px;
   }
 }
+/* MASSIVE SPACE REDUCTION & ULTRA-TIGHT TRANSITIONS */
+#work {
+  padding-bottom: 24px !important;
+  margin-bottom: 0px !important;
+}
+
+.thumb-deck-section {
+  padding-top: 18px !important;  /* Reduced from 64px */
+  padding-bottom: 32px !important; /* Reduced from 64px */
+  margin-top: 0px !important;
+  border-top: 1px solid rgba(25, 25, 23, 0.08) !important;
+}
+
+/* Ensure 'More Experiments In Progress' subtext doesn't create huge padding ghost gaps */
+.experiments-indicator, 
+.more-experiments-label {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* CLEAN INFINITE SKILLS TICKER */
+.marquee-strip {
+  background: #191917;
+  color: #f7f4ec;
+  border-top: 2px solid #191917;
+  border-bottom: 2px solid #191917;
+  overflow: hidden;
+  padding: 15px 0;
+  display: flex;
+  user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: skillTicker 28s linear infinite;
+}
+
+.marquee-strip:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-content span {
+  font: 700 11.5px/1 var(--mono, monospace);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0 22px;
+  white-space: nowrap;
+}
+
+.marquee-content .mq-star {
+  color: #c6de41;
+  font-size: 15px;
+  padding: 0 4px;
+}
+
+@keyframes skillTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
