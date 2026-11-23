@@ -297,7 +297,7 @@ const portfolio = {
           heading: "From Boutique Architecture to Street-Level OOH",
           description:
             "Extending the campaign across physical touchpoints—including monolithic limestone retail displays, illuminated arched shelving, debossed stationery cards, ribboned shopping bags, and evening street posters.",
-          boardImage: "assets/after-hours/brand-universe.png",
+          boardImage: "After hours/brand-universe.png",
           caption:
             "360° Brand Ecosystem — Flagship Boutique Interior, Packaging Collateral, Engraved Cap Detail & Evening OOH",
         },
@@ -307,36 +307,28 @@ const portfolio = {
           heading: "Additional Campaign Frames & Art Direction",
           items: [
             {
-              src: "assets/after-hours/extra-1.png",
+              src: "After hours/extra 1.png",
               caption: "Campaign Frame 01",
             },
             {
-              src: "assets/after-hours/extra-2.png",
+              src: "After hours/extra 2.png",
               caption: "Campaign Frame 02",
             },
             {
-              src: "assets/after-hours/extra-3.png",
+              src: "After hours/extra 3.png",
               caption: "Campaign Frame 03",
             },
             {
-              src: "assets/after-hours/extra-4.png",
+              src: "After hours/extra 4.png",
               caption: "Campaign Frame 04",
             },
             {
-              src: "assets/after-hours/extra-5.png",
+              src: "After hours/extra 5.png",
               caption: "Campaign Frame 05",
             },
             {
-              src: "assets/after-hours/extra-6.png",
+              src: "After hours/extra 6.png",
               caption: "Campaign Frame 06",
-            },
-            {
-              src: "assets/after-hours/extra-7.png",
-              caption: "Campaign Frame 07",
-            },
-            {
-              src: "assets/after-hours/extra-8.png",
-              caption: "Campaign Frame 08",
             },
           ],
         },
