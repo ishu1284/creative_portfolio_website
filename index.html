@@ -262,7 +262,34 @@
           <div class="ald-middle">
             <span class="ald-deliv-kicker">WHAT THIS STAGE DELIVERS</span>
             <div class="ald-grid" id="ald-grid">
-              <!-- Populated dynamically by script.js -->
+              <div class="ald-item">
+                <span class="ald-icon">◎</span>
+                <div>
+                  <strong>Point of view</strong>
+                  <span>What they stand for</span>
+                </div>
+              </div>
+              <div class="ald-item">
+                <span class="ald-icon">❖</span>
+                <div>
+                  <strong>Content pillars</strong>
+                  <span>What they talk about</span>
+                </div>
+              </div>
+              <div class="ald-item">
+                <span class="ald-icon">〰</span>
+                <div>
+                  <strong>Voice &amp; tone</strong>
+                  <span>How they sound</span>
+                </div>
+              </div>
+              <div class="ald-item">
+                <span class="ald-icon">▷</span>
+                <div>
+                  <strong>Story formats</strong>
+                  <span>How they communicate</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -280,6 +307,139 @@
         </div>
       </div>
     </section>
+    <script>
+      (function () {
+        const arcStages = [
+          {
+            act: "ACT I · DISCOVERY",
+            actIndex: 0,
+            title: "01. Understand the Person",
+            desc: "Dig past the resume and surface credentials to uncover the founder's real instincts, quirks, and lived perspective.",
+            progress: 0.14,
+            deliverables: [
+              { icon: "◎", name: "Founder audit", sub: "Strengths & blind spots" },
+              { icon: "◈", name: "Audience lens", sub: "Who actually cares" },
+              { icon: "✦", name: "Core values", sub: "Non-negotiable beliefs" },
+              { icon: "▤", name: "Story bank", sub: "Real moments & proof" }
+            ]
+          },
+          {
+            act: "ACT I · DISCOVERY",
+            actIndex: 0,
+            title: "02. Find Their Position",
+            desc: "Carve out an unmistakable lane in a noisy feed so people know immediately why this voice is worth following.",
+            progress: 0.33,
+            deliverables: [
+              { icon: "⌖", name: "Category gap", sub: "Where others sound identical" },
+              { icon: "⚡", name: "Value hook", sub: "One-line reason to follow" },
+              { icon: "❖", name: "Niche framing", sub: "Authority without jargon" },
+              { icon: "↗", name: "Growth angle", sub: "High-leverage topics" }
+            ]
+          },
+          {
+            act: "ACT II · STRATEGY & CRAFT",
+            actIndex: 1,
+            title: "03. Define Their Narrative",
+            desc: "Turn their expertise into a clear, compelling story people want to follow — with the right point of view, content pillars and storytelling formats.",
+            progress: 0.54,
+            deliverables: [
+              { icon: "◎", name: "Point of view", sub: "What they stand for" },
+              { icon: "❖", name: "Content pillars", sub: "What they talk about" },
+              { icon: "〰", name: "Voice & tone", sub: "How they sound" },
+              { icon: "▷", name: "Story formats", sub: "How they communicate" }
+            ]
+          },
+          {
+            act: "ACT II · STRATEGY & CRAFT",
+            actIndex: 1,
+            title: "04. Build Their Identity",
+            desc: "Translate that voice into a repeatable visual language—typography, thumbnails, carousels, and templates people recognise before reading the handle.",
+            progress: 0.76,
+            deliverables: [
+              { icon: "Aa", name: "Type & palette", sub: "Signature visual codes" },
+              { icon: "▣", name: "Carousel system", sub: "Scannable editorial grids" },
+              { icon: "▶", name: "Thumbnail craft", sub: "High-CTR packaging" },
+              { icon: "⚙", name: "Design kit", sub: "Fast repeatable templates" }
+            ]
+          },
+          {
+            act: "ACT III · GROWTH",
+            actIndex: 2,
+            title: "05. Create Recognition",
+            desc: "Ship consistently, track what hooks attention, and compound small creative wins into lasting brand recall and inbound opportunities.",
+            progress: 1.0,
+            deliverables: [
+              { icon: "📈", name: "Retention loops", sub: "Formats that bring fans back" },
+              { icon: "✦", name: "Signature series", sub: "Repeatable hero franchises" },
+              { icon: "↺", name: "Creative iteration", sub: "Refining from CTR & views" },
+              { icon: "★", name: "Brand equity", sub: "Inbound trust at scale" }
+            ]
+          }
+        ];
+
+        const section = document.getElementById("process");
+        if (!section) return;
+
+        const nodes = Array.from(section.querySelectorAll(".arc-node"));
+        const actBtns = Array.from(section.querySelectorAll(".arf-act"));
+        const prevBtn = section.querySelector("#arc-prev");
+        const nextBtn = section.querySelector("#arc-next");
+        const stagePill = section.querySelector("#arc-stage-pill");
+        const actEl = section.querySelector("#ald-act");
+        const titleEl = section.querySelector("#ald-title");
+        const descEl = section.querySelector("#ald-desc");
+        const gridEl = section.querySelector("#ald-grid");
+        const progressPath = section.querySelector("#arc-progress-path");
+
+        let current = 2;
+        const totalLen = progressPath ? progressPath.getTotalLength() : 0;
+        if (progressPath && totalLen) {
+          progressPath.style.strokeDasharray = totalLen;
+          progressPath.style.transition = "stroke-dashoffset 0.45s cubic-bezier(0.22, 1, 0.36, 1)";
+        }
+
+        function setArcStep(idx) {
+          current = (idx + arcStages.length) % arcStages.length;
+          const s = arcStages[current];
+
+          nodes.forEach((n, i) => n.classList.toggle("is-active", i === current));
+          actBtns.forEach((b, i) => b.classList.toggle("is-active", i === s.actIndex));
+
+          if (stagePill) stagePill.textContent = `STAGE 0${current + 1} / 05`;
+          if (actEl) actEl.textContent = s.act;
+          if (titleEl) titleEl.textContent = s.title;
+          if (descEl) descEl.textContent = s.desc;
+
+          if (progressPath && totalLen) {
+            progressPath.style.strokeDashoffset = totalLen * (1 - s.progress);
+          }
+
+          if (gridEl) {
+            gridEl.innerHTML = s.deliverables
+              .map(
+                (d) => `
+                <div class="ald-item">
+                  <span class="ald-icon">${d.icon}</span>
+                  <div>
+                    <strong>${d.name}</strong>
+                    <span>${d.sub}</span>
+                  </div>
+                </div>`
+              )
+              .join("");
+          }
+        }
+
+        nodes.forEach((btn, i) => btn.addEventListener("click", () => setArcStep(i)));
+        actBtns.forEach((btn) =>
+          btn.addEventListener("click", () => setArcStep(Number(btn.dataset.actStep || 0)))
+        );
+        if (prevBtn) prevBtn.addEventListener("click", () => setArcStep(current - 1));
+        if (nextBtn) nextBtn.addEventListener("click", () => setArcStep(current + 1));
+
+        setArcStep(2);
+      })();
+    </script>
 
       <section class="work section-wrap" id="work">
         <div class="section-heading">

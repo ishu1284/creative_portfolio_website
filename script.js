@@ -1,3 +1,73 @@
+// INTERACTIVE CREATIVE JOURNEY CURVE
+(() => {
+  const stage = document.getElementById("journey-stage");
+  const line = document.getElementById("journey-active-line");
+  const shadowLine = document.getElementById("journey-shadow-line");
+  const marker = document.getElementById("journey-marker");
+  const nodes = Array.from(document.querySelectorAll(".journey-node"));
+  const actEl = document.getElementById("jbs-act");
+  const titleEl = document.getElementById("jbs-title");
+  const descEl = document.getElementById("jbs-desc");
+  const counterEl = document.getElementById("jb-counter");
+  const prevBtn = document.getElementById("jb-prev");
+  const nextBtn = document.getElementById("jb-next");
+
+  if (!stage || !line || !nodes.length) return;
+
+  let currentIndex = 2;
+  const totalLength = line.getTotalLength();
+
+  [line, shadowLine].forEach((p) => {
+    if (!p) return;
+    p.style.strokeDasharray = totalLength;
+    p.style.strokeDashoffset = totalLength;
+  });
+
+  function activateStep(idx) {
+    currentIndex = (idx + nodes.length) % nodes.length;
+    const node = nodes[currentIndex];
+
+    nodes.forEach((n) => n.classList.remove("is-active"));
+    node.classList.add("is-active");
+
+    const progress = parseFloat(node.dataset.progress || "0.5");
+    const offset = totalLength * (1 - progress);
+    line.style.strokeDashoffset = offset;
+    if (shadowLine) shadowLine.style.strokeDashoffset = offset;
+
+    if (marker) {
+      marker.style.left = `${node.dataset.x}%`;
+      marker.style.top = `${node.dataset.y}px`;
+    }
+    if (actEl) actEl.textContent = node.dataset.act;
+    if (titleEl) titleEl.textContent = node.dataset.title;
+    if (descEl) descEl.textContent = node.dataset.desc;
+    if (counterEl)
+      counterEl.textContent = `STAGE 0${currentIndex + 1} / 0${nodes.length}`;
+  }
+
+  nodes.forEach((node, idx) => {
+    node.addEventListener("click", () => activateStep(idx));
+  });
+  if (prevBtn)
+    prevBtn.addEventListener("click", () => activateStep(currentIndex - 1));
+  if (nextBtn)
+    nextBtn.addEventListener("click", () => activateStep(currentIndex + 1));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activateStep(2);
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.3 },
+  );
+
+  observer.observe(stage);
+})();
 const grid = document.getElementById("project-grid");
 const dialog = document.getElementById("project-dialog");
 const dialogContent = dialog.querySelector(".dialog-content");
@@ -721,135 +791,6 @@ document.querySelectorAll(".wordmark").forEach(
 );
 
 renderProjects();
-
-// 00 / THE CREATIVE ARC — PERSONAL BRAND ARCHITECTURE
-(() => {
-  const nodes = Array.from(document.querySelectorAll(".arc-node"));
-  const actBtns = Array.from(document.querySelectorAll(".arf-act"));
-  const prevBtn = document.getElementById("arc-prev");
-  const nextBtn = document.getElementById("arc-next");
-  const stagePill = document.getElementById("arc-stage-pill");
-  const actEl = document.getElementById("ald-act");
-  const titleEl = document.getElementById("ald-title");
-  const descEl = document.getElementById("ald-desc");
-  const gridEl = document.getElementById("ald-grid");
-  const progressPath = document.getElementById("arc-progress-path");
-
-  if (!nodes.length || !titleEl || !gridEl) return;
-
-  const stages = [
-    {
-      act: "ACT I · DISCOVERY",
-      actIndex: 0,
-      title: "01. Understand the Person",
-      desc: "Dig past the resume and surface credentials to uncover the founder's real instincts, quirks, and lived perspective.",
-      progress: 0.14,
-      deliverables: [
-        { icon: "◎", name: "Founder audit", sub: "Strengths & blind spots" },
-        { icon: "◈", name: "Audience lens", sub: "Who actually cares" },
-        { icon: "✦", name: "Core values", sub: "Non-negotiable beliefs" },
-        { icon: "▤", name: "Story bank", sub: "Real moments & proof" }
-      ]
-    },
-    {
-      act: "ACT I · DISCOVERY",
-      actIndex: 0,
-      title: "02. Find Their Position",
-      desc: "Carve out an unmistakable lane in a noisy feed so people know immediately why this voice is worth following.",
-      progress: 0.33,
-      deliverables: [
-        { icon: "⌖", name: "Category gap", sub: "Where others sound identical" },
-        { icon: "⚡", name: "Value hook", sub: "One-line reason to follow" },
-        { icon: "❖", name: "Niche framing", sub: "Authority without jargon" },
-        { icon: "↗", name: "Growth angle", sub: "High-leverage topics" }
-      ]
-    },
-    {
-      act: "ACT II · STRATEGY & CRAFT",
-      actIndex: 1,
-      title: "03. Define Their Narrative",
-      desc: "Turn their expertise into a clear, compelling story people want to follow — with the right point of view, content pillars and storytelling formats.",
-      progress: 0.54,
-      deliverables: [
-        { icon: "◎", name: "Point of view", sub: "What they stand for" },
-        { icon: "❖", name: "Content pillars", sub: "What they talk about" },
-        { icon: "〰", name: "Voice & tone", sub: "How they sound" },
-        { icon: "▷", name: "Story formats", sub: "How they communicate" }
-      ]
-    },
-    {
-      act: "ACT II · STRATEGY & CRAFT",
-      actIndex: 1,
-      title: "04. Build Their Identity",
-      desc: "Translate that voice into a repeatable visual language—typography, thumbnails, carousels, and templates people recognise before reading the handle.",
-      progress: 0.76,
-      deliverables: [
-        { icon: "Aa", name: "Type & palette", sub: "Signature visual codes" },
-        { icon: "▣", name: "Carousel system", sub: "Scannable editorial grids" },
-        { icon: "▶", name: "Thumbnail craft", sub: "High-CTR packaging" },
-        { icon: "⚙", name: "Design kit", sub: "Fast repeatable templates" }
-      ]
-    },
-    {
-      act: "ACT III · GROWTH",
-      actIndex: 2,
-      title: "05. Create Recognition",
-      desc: "Ship consistently, track what hooks attention, and compound small creative wins into lasting brand recall and inbound opportunities.",
-      progress: 1.0,
-      deliverables: [
-        { icon: "📈", name: "Retention loops", sub: "Formats that bring fans back" },
-        { icon: "✦", name: "Signature series", sub: "Repeatable hero franchises" },
-        { icon: "↺", name: "Creative iteration", sub: "Refining from CTR & views" },
-        { icon: "★", name: "Brand equity", sub: "Inbound trust at scale" }
-      ]
-    }
-  ];
-
-  let current = 2; // Start on Stage 03 ("Define Their Narrative")
-  const totalLen = progressPath ? progressPath.getTotalLength() : 0;
-  if (progressPath && totalLen) {
-    progressPath.style.strokeDasharray = totalLen;
-  }
-
-  function renderStage(idx) {
-    current = (idx + stages.length) % stages.length;
-    const s = stages[current];
-
-    nodes.forEach((n, i) => n.classList.toggle("is-active", i === current));
-    actBtns.forEach((b, i) => b.classList.toggle("is-active", i === s.actIndex));
-
-    if (stagePill) stagePill.textContent = `STAGE 0${current + 1} / 05`;
-    if (actEl) actEl.textContent = s.act;
-    if (titleEl) titleEl.textContent = s.title;
-    if (descEl) descEl.textContent = s.desc;
-
-    if (progressPath && totalLen) {
-      progressPath.style.strokeDashoffset = totalLen * (1 - s.progress);
-    }
-
-    gridEl.innerHTML = s.deliverables
-      .map(
-        (d) => `
-        <div class="ald-item">
-          <span class="ald-icon">${d.icon}</span>
-          <div>
-            <strong>${d.name}</strong>
-            <span>${d.sub}</span>
-          </div>
-        </div>`
-      )
-      .join("");
-  }
-
-  nodes.forEach((btn, i) => btn.addEventListener("click", () => renderStage(i)));
-  actBtns.forEach((btn) =>
-    btn.addEventListener("click", () => renderStage(Number(btn.dataset.actStep || 0)))
-  );
-  if (prevBtn) prevBtn.addEventListener("click", () => renderStage(current - 1));
-  if (nextBtn) nextBtn.addEventListener("click", () => renderStage(current + 1));
-
-  renderStage(2);
-})();
 
 // 3D ROLL & POP CARD UNIVERSE
 (() => {
