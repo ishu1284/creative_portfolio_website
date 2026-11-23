@@ -1837,3 +1837,157 @@ html {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+/* DYNAMIC PROCESS & METHOD SECTION (POST-THUMBNAILS) */
+.method-section {
+  padding-top: 56px;
+  padding-bottom: 72px;
+  border-top: 1px solid rgba(25, 25, 23, 0.14);
+}
+
+.method-container {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* LEFT: THE TACTILE IMAGE FRAME */
+.method-visual-frame {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.method-img-box {
+  margin: 0;
+  position: relative;
+  background: #191917;
+  border: 2.5px solid #191917;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0 #191917;
+  overflow: hidden;
+  transform: rotate(-2deg);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.method-visual-frame:hover .method-img-box {
+  transform: rotate(0deg) scale(1.01);
+  box-shadow: 14px 14px 0 #c6de41; /* Pops into lime on hover! */
+}
+
+.method-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+.m-stamp {
+  background: #191917;
+  color: #f7f4ec;
+  font: 700 8px/1 var(--mono);
+  letter-spacing: 0.1em;
+  padding: 8px 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Float Badges Overlay */
+.method-badge {
+  position: absolute;
+  top: 16px;
+  left: -8px;
+  z-index: 5;
+  background: #f05a3c;
+  color: #fff;
+  border: 1.5px solid #191917;
+  box-shadow: 3px 3px 0 #191917;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font: 700 9px var(--mono);
+  letter-spacing: 0.08em;
+  transform: rotate(-4deg);
+}
+
+/* RIGHT: UNBOXING THE STEPS */
+.method-content h2 {
+  font: 800 clamp(28px, 3.4vw, 40px)/1.1 var(--sans);
+  letter-spacing: -0.035em;
+  margin: 10px 0 16px;
+  color: #191917;
+}
+.method-content h2 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.method-intro {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(25, 25, 23, 0.78);
+  margin-bottom: 32px;
+}
+
+/* VERTICAL WORKFLOW LIST */
+.method-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.m-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 12px 14px 16px 8px;
+  border-bottom: 1.5px solid rgba(25, 25, 23, 0.1);
+  transition: border-color 0.25s ease;
+}
+
+.m-step:last-child {
+  border-bottom: 0;
+}
+
+.m-step:hover {
+  border-color: #191917;
+}
+
+.m-step-num {
+  font: 800 24px/1 var(--serif);
+  font-style: italic;
+  color: #f05a3c;
+  padding-top: 2px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.m-step:hover .m-step-num {
+  transform: scale(1.18);
+  color: #c6de41; /* Pops into lime on hover */
+}
+
+.m-step-text h3 {
+  font: 800 15px/1.2 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+  color: #191917;
+}
+
+.m-step-text p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(25, 25, 23, 0.82);
+}
+
+@media (max-width: 820px) {
+  .method-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .method-visual-frame {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
