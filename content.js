@@ -186,7 +186,7 @@ const portfolio = {
       outcome: "A growth story rooted in people, not just performance metrics.",
     },
     {
-      number: "03",
+      image: "After hours/extra 5.png",
       title: "After Hours",
       category: "Luxury Fragrance / Campaign Direction / Art & Packaging World",
       visualTitle: "AFTER<br>HOURS",
