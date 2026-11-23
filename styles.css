@@ -501,19 +501,15 @@ a{color:inherit;text-decoration:none}.topbar{height:82px;padding:0 5.5vw;display
   gap: 48px;
   align-items: start;
 }
-.faq-stamp {
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
-  background: #f05a3c;
-  color: #191917;
-  border: 2px solid #191917;
-  box-shadow: 4px 4px 0 #191917;
-  font: 800 22px/1 var(--sans);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.faq-sketch-icon {
+  width: 108px;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+  transition: transform 0.25s ease;
+}
+.faq-sketch-icon:hover {
+  transform: rotate(-3deg) scale(1.05);
 }
 .faq-left h2 {
   font: 800 clamp(28px, 3.2vw, 38px)/1.05 var(--sans);
