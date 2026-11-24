@@ -82,7 +82,7 @@ const portfolio = {
       detail: "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression."
     }
   ]
-}
+},
         // PAGE 04: Most Liked Carousel
         featuredCarousel: {
           tag: "04 / HERO CONTENT FORMAT",
