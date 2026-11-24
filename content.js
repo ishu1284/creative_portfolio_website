@@ -5,7 +5,7 @@ const portfolio = {
   X: "https://x.com/IshwariKokane12",
   projects: [
     {
-      number: "01",
+      image: "parshkothar/images/logo.png",
       title: "Think School",
       category: "Personal Branding / Visual Identity / Content Strategy",
       visualTitle: "THINK<br>SCHOOL",
@@ -36,7 +36,7 @@ const portfolio = {
             "My contribution went beyond designing individual posts. I worked on building a consistent visual style, experimenting with creative concepts, and turning information-heavy content into compelling visuals that could stop the scroll and spark conversations.",
           skills:
             "Graphic Design · Thumbnail Design · Carousel Design · Visual Identity",
-          portraitImage: "parshkothar/images/Parsh Kothari profile.png",
+          portraitImage: "parshkothar/images/Parsh kothari profile.png",
         },
         // PAGE 02.5: Profile of Parsh Kothari
         profile: {
