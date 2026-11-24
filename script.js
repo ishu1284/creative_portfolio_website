@@ -220,21 +220,37 @@ function showProject(index) {
       </section>
 
       <section class="cs-block">
-        <span class="cs-tag">${s.feedTransformation.tag}</span>
-        <h3>${s.feedTransformation.heading}</h3>
-        <div class="ba-grid">
-          <div class="ba-card">
-            <span class="ba-badge">${s.feedTransformation.before.label}</span>
-            <div class="ba-img-wrap"><img src="${s.feedTransformation.before.image}" alt="Feed Before" onerror="this.style.display='none'"></div>
-            <p>${s.feedTransformation.before.notes}</p>
+          <span class="cs-tag">${s.feedTransformation.tag}</span>
+          <h3>${s.feedTransformation.heading}</h3>
+          <div class="ba-grid">
+            <div class="ba-card">
+              <span class="ba-badge">${s.feedTransformation.before.label}</span>
+              <div class="ba-img-wrap">
+                <img src="${s.feedTransformation.before.image}" alt="Before Sugar Lobby cover">
+              </div>
+              <p>${s.feedTransformation.before.notes}</p>
+            </div>
+            <div class="ba-card ba-after">
+              <span class="ba-badge accent">${s.feedTransformation.after.label}</span>
+              <div class="ba-img-wrap">
+                <img src="${s.feedTransformation.after.image}" alt="After 3.5M views Sugar Lobby cover">
+              </div>
+              <p>${s.feedTransformation.after.notes}</p>
+            </div>
           </div>
-          <div class="ba-card ba-after">
-            <span class="ba-badge accent">${s.feedTransformation.after.label}</span>
-            <div class="ba-img-wrap"><img src="${s.feedTransformation.after.image}" alt="Feed After" onerror="this.style.display='none'"></div>
-            <p>${s.feedTransformation.after.notes}</p>
-          </div>
-        </div>
-      </section>
+
+          ${s.feedTransformation.strategyPillars ? `
+            <div class="ts-strategy-strip">
+              ${s.feedTransformation.strategyPillars.map(item => `
+                <div class="ts-strat-card">
+                  <span class="ts-strat-num">${item.num}</span>
+                  <strong>${item.title}</strong>
+                  <p>${item.detail}</p>
+                </div>
+              `).join("")}
+            </div>
+          ` : ""}
+        </section>
 
       <section class="cs-block">
         <div class="cs-flex-head">

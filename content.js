@@ -52,22 +52,37 @@ const portfolio = {
           ],
         },
         // PAGE 03: Before & After Feed
-        feedTransformation: {
-          tag: "03 / FEED TRANSFORMATION",
-          heading: "From Scattered Posts to an Editorial Grid",
-          before: {
-            label: "BEFORE",
-            image: "parshkothar/images/Before.PNG",
-            notes:
-              "Inconsistent typography, cluttered text overlays, and varying color temperatures made individual posts blend into the feed without strong brand recall.",
-          },
-          after: {
-            label: "AFTER",
-            image: "parshkothar/images/After.PNG",
-            notes:
-              "Introduced strict grid rhythm, high-contrast focal hierarchy, recurring editorial frames, and unified color anchors—making every post instantly identifiable as Parsh Kothari.",
-          },
-        },
+        transformation: {
+  tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
+  title: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
+  before: {
+    label: "BEFORE",
+    image: "parshkothar/images/Sugarmills.png",
+    caption: "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels."
+  },
+  after: {
+    label: "AFTER · 3.5M+ VIEWS",
+    image: "parshkothar/images/Sugar Lobby Thumbnail.jpg",
+    caption: "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker."
+  },
+  strategyPillars: [
+    {
+      num: "01",
+      title: "Editorial Newsprint Collage",
+      detail: "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth."
+    },
+    {
+      num: "02",
+      title: "Terracotta & Ivory Contrast",
+      detail: "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens."
+    },
+    {
+      num: "03",
+      title: "Clean Subject Integration",
+      detail: "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression."
+    }
+  ]
+}
         // PAGE 04: Most Liked Carousel
         featuredCarousel: {
           tag: "04 / HERO CONTENT FORMAT",
