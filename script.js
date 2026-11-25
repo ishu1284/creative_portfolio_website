@@ -219,38 +219,76 @@ function showProject(index) {
         </div>
       </section>
 
-      <section class="cs-block">
-          <span class="cs-tag">${s.feedTransformation.tag}</span>
-          <h3>${s.feedTransformation.heading}</h3>
-          <div class="ba-grid">
-            <div class="ba-card">
-              <span class="ba-badge">${s.feedTransformation.before.label}</span>
-              <div class="ba-img-wrap">
-                <img src="${s.feedTransformation.before.image}" alt="Before Sugar Lobby cover">
-              </div>
-              <p>${s.feedTransformation.before.notes}</p>
-            </div>
-            <div class="ba-card ba-after">
-              <span class="ba-badge accent">${s.feedTransformation.after.label}</span>
-              <div class="ba-img-wrap">
-                <img src="${s.feedTransformation.after.image}" alt="After 3.5M views Sugar Lobby cover">
-              </div>
-              <p>${s.feedTransformation.after.notes}</p>
-            </div>
-          </div>
+      ${(() => {
+          const isThinkSchool = (p.id && p.id.toLowerCase().includes("think")) || index === 0;
+          const ft = s.feedTransformation || p.feedTransformation || (isThinkSchool ? {
+            tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
+            heading: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
+            before: {
+              label: "BEFORE",
+              image: "thumbnails/Sugarmills.png",
+              notes: "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels."
+            },
+            after: {
+              label: "AFTER · 3.5M+ VIEWS",
+              image: "thumbnails/Sugar Lobby Thumbnail.png",
+              notes: "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker."
+            },
+            strategyPillars: [
+              {
+                num: "01",
+                title: "Editorial Newsprint Collage",
+                detail: "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth."
+              },
+              {
+                num: "02",
+                title: "Terracotta & Ivory Contrast",
+                detail: "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens."
+              },
+              {
+                num: "03",
+                title: "Clean Subject Integration",
+                detail: "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression."
+              }
+            ]
+          } : null);
 
-          ${s.feedTransformation.strategyPillars ? `
-            <div class="ts-strategy-strip">
-              ${s.feedTransformation.strategyPillars.map(item => `
-                <div class="ts-strat-card">
-                  <span class="ts-strat-num">${item.num}</span>
-                  <strong>${item.title}</strong>
-                  <p>${item.detail}</p>
+          if (!ft) return "";
+          return `
+            <section class="cs-block">
+              <span class="cs-tag">${ft.tag}</span>
+              <h3>${ft.heading}</h3>
+              <div class="ba-grid">
+                <div class="ba-card">
+                  <span class="ba-badge">${ft.before.label}</span>
+                  <div class="ba-img-wrap">
+                    <img src="${ft.before.image}" alt="Before Sugar Lobby cover">
+                  </div>
+                  <p>${ft.before.notes}</p>
                 </div>
-              `).join("")}
-            </div>
-          ` : ""}
-        </section>
+                <div class="ba-card ba-after">
+                  <span class="ba-badge accent">${ft.after.label}</span>
+                  <div class="ba-img-wrap">
+                    <img src="${ft.after.image}" alt="After 3.5M views Sugar Lobby cover">
+                  </div>
+                  <p>${ft.after.notes}</p>
+                </div>
+              </div>
+
+              ${ft.strategyPillars ? `
+                <div class="ts-strategy-strip">
+                  ${ft.strategyPillars.map(item => `
+                    <div class="ts-strat-card">
+                      <span class="ts-strat-num">${item.num}</span>
+                      <strong>${item.title}</strong>
+                      <p>${item.detail}</p>
+                    </div>
+                  `).join("")}
+                </div>
+              ` : ""}
+            </section>
+          `;
+        })()}
 
       <section class="cs-block">
         <div class="cs-flex-head">

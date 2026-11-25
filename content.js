@@ -22,8 +22,6 @@ const portfolio = {
           heading: "Think School — Making India's Business Education Visual",
           description:
             "Think School simplifies complex business strategies, economics, and geopolitics for millions of learners. My role focused on translating heavy, information-dense narratives into an unmistakably recognizable visual system.",
-          image: "assets/think-school/homepage.png",
-          caption: "Think School digital ecosystem & content flagship overview",
         },
         // PAGE 02: Inspired by your Canva Slide 5
         collaboration: {
@@ -53,36 +51,41 @@ const portfolio = {
         },
         // PAGE 03: Before & After Feed
         transformation: {
-  tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
-  title: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
-  before: {
-    label: "BEFORE",
-    image: "parshkothar/images/Sugarmills.png",
-    caption: "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels."
-  },
-  after: {
-    label: "AFTER · 3.5M+ VIEWS",
-    image: "parshkothar/images/Sugar Lobby Thumbnail.jpg",
-    caption: "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker."
-  },
-  strategyPillars: [
-    {
-      num: "01",
-      title: "Editorial Newsprint Collage",
-      detail: "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth."
-    },
-    {
-      num: "02",
-      title: "Terracotta & Ivory Contrast",
-      detail: "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens."
-    },
-    {
-      num: "03",
-      title: "Clean Subject Integration",
-      detail: "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression."
-    }
-  ]
-},
+          tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
+          title: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
+          before: {
+            label: "BEFORE",
+            image: "parshkothar/images/Sugarmills.png",
+            caption:
+              "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels.",
+          },
+          after: {
+            label: "AFTER · 3.5M+ VIEWS",
+            image: "parshkothar/images/Sugar Lobby Thumbnail.jpg",
+            caption:
+              "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker.",
+          },
+          strategyPillars: [
+            {
+              num: "01",
+              title: "Editorial Newsprint Collage",
+              detail:
+                "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth.",
+            },
+            {
+              num: "02",
+              title: "Terracotta & Ivory Contrast",
+              detail:
+                "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens.",
+            },
+            {
+              num: "03",
+              title: "Clean Subject Integration",
+              detail:
+                "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression.",
+            },
+          ],
+        },
         // PAGE 04: Most Liked Carousel
         featuredCarousel: {
           tag: "04 / HERO CONTENT FORMAT",
@@ -493,10 +496,22 @@ const portfolio = {
           tag: "06 / EXTENDED BRAND APPLICATIONS",
           heading: "Merchandise, Menu & Digital Rollout",
           items: [
-            { src: "roam/images/Brand Application 1.png", caption: "Brand Application 01" },
-            { src: "roam/images/Brand Application 2.png", caption: "Brand Application 02" },
-            { src: "roam/images/Brand Application 3.png", caption: "Brand Application 03" },
-            { src: "roam/images/Brand Application 4.png", caption: "Brand Application 04" },
+            {
+              src: "roam/images/Brand Application 1.png",
+              caption: "Brand Application 01",
+            },
+            {
+              src: "roam/images/Brand Application 2.png",
+              caption: "Brand Application 02",
+            },
+            {
+              src: "roam/images/Brand Application 3.png",
+              caption: "Brand Application 03",
+            },
+            {
+              src: "roam/images/Brand Application 4.png",
+              caption: "Brand Application 04",
+            },
           ],
         },
       },
