@@ -187,7 +187,7 @@ const portfolio = {
     },
     {
       number: "02",
-      image: "meesho/images/cover-hero.png",
+      image: "meesho/images/meesho logo.png",
       title: "Meesho Growth",
       category:
         "Growth Creative Strategy / Full-Funnel Lifecycle / Motion & UI",
@@ -1146,6 +1146,7 @@ const portfolio = {
     },
     {
       number: "05",
+      image: "meesho/images/brief logo.png",
       title: "Brief Roulette",
       category: "Product Design / Creative Tooling / Frontend Build",
       visualTitle: "SPIN.<br>THINK.<br>MAKE.",
