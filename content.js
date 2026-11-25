@@ -201,122 +201,83 @@ const portfolio = {
       sections: {
         // 01. COVER — FROM SCROLL TO SHOPPING
         cover: {
-          tag: "01 / COVER — FROM SCROLL TO SHOPPING",
-          heading:
-            "From Scroll to Shopping: Designing a High-Trust Value Funnel for Meesho",
+          pillTag: "01 • GROWTH CREATIVE CASE STUDY",
+          metaText: "Consumer E-Commerce • Bharat / Tier-2 & Tier-3",
+          heading: "From Scroll to Shopping.",
           subhead:
-            "How editorial visual hierarchy, zero-friction mobile onboarding, and post-delivery habit loops turn passive social scrollers into repeat Meesho buyers.",
-          heroImage: "meesho/images/cover-hero.png",
-          specs: {
-            role: "Growth & Visual Designer",
-            scope:
-              "Paid Social Ads · 3-Screen Onboarding · CRM · 15s Motion · A/B Plan",
-            palette: [
-              { name: "Jamuni", hex: "#4A154B" },
-              { name: "Magenta", hex: "#D81B60" },
-              { name: "Amber", hex: "#F59E0B" },
+            "Designing a cohesive, full-funnel growth creative system for Meesho—connecting scroll-stopping editorial acquisition ads with a zero-friction onboarding flow, first-purchase trust architecture, and post-delivery habit loops.",
+          specs: [
+            {
+              label: "ROLE",
+              value: "Growth Creative & Product Visual Designer",
+            },
+            {
+              label: "SCOPE",
+              value: "Acquisition, Activation, Retention & Motion",
+            },
+            {
+              label: "METHODOLOGY",
+              value: "Research-Backed Hypotheses + A/B Plan",
+            },
+          ],
+          rigorNote:
+            "Because this is an independent growth case study without internal Meesho telemetry, every claim is explicitly labeled:",
+          blueprint: {
+            kicker: "SYSTEM BLUEPRINT",
+            title: "Connected Lifecycle Architecture",
+            count: "11 Chapters",
+            stages: [
+              {
+                num: "01 • ACQUISITION",
+                channel: "Meta / Shorts / Motion →",
+                title: "Editorial Aesthetics + Instant ₹249–₹499 Price Anchors",
+              },
+              {
+                num: "02 • ACTIVATION",
+                channel: "3-Screen Flow →",
+                title: "Lookbook Entry, Feed Curation & MEESHO100 COD Trust",
+              },
+              {
+                num: "03 • RETENTION",
+                channel: "CRM & Habit Loop →",
+                title:
+                  "Cart Recovery, Rate-to-Unlock ₹75 & Cross-Sell Pairings",
+              },
             ],
           },
         },
 
-        // 02. THE BRIEF — WHAT WE WANT TO SOLVE
+        // 02. THE BRIEF — BUSINESS OBJECTIVE & GROWTH CHALLENGE
         brief: {
-          tag: "02 / THE BRIEF",
-          epistemic: "RESEARCH-BACKED INSIGHT",
-          heading: "How do we make ₹300 shopping look stylish and trustworthy?",
-          anchors: [
-            {
-              num: "~₹300",
-              label: "Typical Order Price",
-              sub: "Everyday clothes & home items people actually buy",
+          tag: "02 • THE BRIEF",
+          epistemic: "• Research-Backed Market Context",
+          heading: "Business Objective & Growth Challenge",
+          leftCard: {
+            title:
+              "The Core Tension: Aspirational Discovery vs. Mass-Market Price Anxiety",
+            body: "Meesho has unlocked massive e-commerce adoption across India’s Tier-2, Tier-3, and Tier-4 markets by offering zero-commission, factory-direct pricing with an average order value (AOV) hovering around ₹300–₹350. However, as Meesho expands into younger, trend-conscious cohorts (Gen-Z and millennial women shopping for ethnic wear, western co-ords, and everyday beauty), creative execution faces a sharp two-sided trap:",
+            trapA: {
+              label: "TRAP A: CLUTTERED DISCOUNT FLYERS",
+              desc: "Loud, overcrowded discount banners signal “cheap” rather than “smart value,” causing fashion-conscious scrollers to swipe past or doubt fabric quality.",
             },
-            {
-              num: "Small Towns",
-              label: "Where Growth Comes From",
-              sub: "Shoppers who check price and trust before buying",
+            trapB: {
+              label: "TRAP B: PURE HIGH-FASHION EDITORIALS",
+              desc: "Minimalist luxury layouts without upfront price anchors or Cash on Delivery cues make value-first shoppers assume items cost ₹1,500+, triggering immediate bounce.",
             },
-            {
-              num: "1st → 2nd",
-              label: "The Real Goal",
-              sub: "Getting first-time buyers to come back and shop again",
-            },
-          ],
-          objectiveTitle: "01 / WHAT WE WANT TO DO",
-          objective:
-            "Get more people to download Meesho, place their first order with confidence, and come back for a second order—without relying on huge discounts every single time.",
-          tensionTitle: "02 / THE DESIGN PROBLEM",
-          leftPole: {
-            label: "TOO LOUD & MESSY",
-            outcome:
-              "Looks cheap, so people worry the cloth or quality will be bad",
           },
-          sweetSpot: {
-            label: "OUR SWEET SPOT",
-            outcome:
-              "Clean, stylish photos + honest ₹249–₹499 prices right upfront",
+          mandateCard: {
+            pill: "✦ DESIGN MANDATE",
+            headline:
+              "Bridge editorial visual polish with unmissable affordability & doorstep trust.",
+            body: "Every asset across the user journey—from the first Instagram Reel impression to the 3-screen onboarding flow and post-delivery rating card—must work as a single continuous conversation rather than disconnected promotional blasts.",
+            footer: [
+              {
+                label: "Target Audience",
+                value: "Value-First Bharat Shoppers",
+              },
+              { label: "Primary Hook", value: "₹249–₹499" },
+            ],
           },
-          rightPole: {
-            label: "TOO FANCY & LUXURY",
-            outcome:
-              "Looks expensive, so shoppers leave thinking they can't afford it",
-          },
-        },
-
-        // 03. USER INSIGHT — WHY PEOPLE HESITATE
-        userInsight: {
-          tag: "03 / USER INSIGHT",
-          epistemic: "RESEARCH-BACKED INSIGHT",
-          heading: "What Stops People From Installing, Buying, or Coming Back?",
-          barriers: [
-            {
-              stage: "01 / BEFORE INSTALLING",
-              title: "“Will the quality actually be good?”",
-              insight:
-                "When ads are covered in loud discount stickers, people assume the clothes are low quality and scroll right past.",
-            },
-            {
-              stage: "02 / BEFORE FIRST ORDER",
-              title: "“Why do I have to sign up before looking?”",
-              insight:
-                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything.",
-            },
-            {
-              stage: "03 / AFTER FIRST ORDER",
-              title: "“Now that my ₹100 coupon is gone, why come back?”",
-              insight:
-                "If someone only joined for a big welcome discount, they stop shopping once regular prices return unless we give them a fun reason to return.",
-            },
-          ],
-        },
-
-        // 04. GROWTH FUNNEL — STEP-BY-STEP JOURNEY
-        funnel: {
-          tag: "04 / GROWTH FUNNEL",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading: "See Ad → Try App → Come Back Again",
-          stages: [
-            {
-              step: "STEP 01 · GET ATTENTION (ACQUISITION)",
-              goal: "Stop the scroll with clean outfit photos and clear prices",
-              mechanism:
-                "Show real, wearable outfits with the exact price right on the image (₹349 Kurtis, ₹499 Co-ord Sets, ₹249 Perfume).",
-              kpi: "What we measure: Ad clicks & app installs",
-            },
-            {
-              step: "STEP 02 · FIRST ORDER (ACTIVATION)",
-              goal: "Make buying the first item fast and worry-free",
-              mechanism:
-                "Let people browse without a forced login, pick 2 styles they like, and unlock ₹100 off with Cash on Delivery.",
-              kpi: "What we measure: New users who buy within 7 days",
-            },
-            {
-              step: "STEP 03 · REPEAT ORDERS (RETENTION)",
-              goal: "Turn one-time shoppers into regular buyers",
-              mechanism:
-                "Send helpful cart reminders, give ₹75 wallet cash for rating their delivery, and suggest matching items under ₹250.",
-              kpi: "What we measure: Buyers who place a 2nd & 3rd order",
-            },
-          ],
         },
 
         // 05. CREATIVE STRATEGY — THE BIG IDEA
@@ -345,225 +306,338 @@ const portfolio = {
           ],
         },
 
-        // 03. USER INSIGHT — WHY PEOPLE HESITATE
+        // 03. USER INSIGHT — WHAT PREVENTS USERS FROM INSTALLING, BUYING, OR RETURNING?
         userInsight: {
-          tag: "03 / USER INSIGHT",
-          epistemic: "RESEARCH-BACKED INSIGHT",
-          heading: "What Stops People From Installing, Buying, or Coming Back?",
+          tag: "03 • USER INSIGHT",
+          heading: "What Prevents Users from Installing, Buying, or Returning?",
+          badges: [
+            { text: "• Research-Backed Insight", type: "res" },
+            { text: "✦ Design Hypothesis", type: "hyp" },
+          ],
           barriers: [
             {
               num: "01",
-              stage: "BEFORE INSTALLING",
-              thought: "“Will the cloth actually look like the photo?”",
-              problem:
-                "Loud ads covered in giant discount stickers make shoppers worry the fabric and stitching will feel cheap—so they scroll right past.",
-              fix: "DESIGN FIX → Clean studio photos + real prices",
+              accent: "jamuni",
+              badge: "• Research-Backed Insight",
+              title: "Install & Ad-Click Barriers",
+              points: [
+                {
+                  lead: "Storage & Data Sensitivity:",
+                  text: "Users on entry-level Android devices hesitate to install a new shopping app unless the ad proves immediate, tangible savings over local markets.",
+                },
+                {
+                  lead: "“Too Good to Be True” Skepticism:",
+                  text: "Seeing a stylish co-ord set or kurti without a clear landed price creates doubt around hidden delivery fees.",
+                },
+              ],
+              hypothesis:
+                "Pairing clean editorial photography with explicit <b>₹249 / ₹349 / ₹499</b> price pills and <b>₹0 Delivery</b> badges will lift click-to-install intent without cheapening brand perception.",
             },
             {
               num: "02",
-              stage: "BEFORE FIRST ORDER",
-              thought: "“Why do I have to sign up before looking?”",
-              problem:
-                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything.",
-              fix: "DESIGN FIX → Guest browse + COD upfront",
+              accent: "magenta",
+              badge: "• Research-Backed Insight",
+              title: "First-Purchase Friction (Order 1)",
+              points: [
+                {
+                  lead: "Mandatory Login Walls:",
+                  text: "Forcing phone/OTP registration before letting a value shopper browse products causes early onboarding drop-off.",
+                },
+                {
+                  lead: "Prepaid & Return Anxiety:",
+                  text: "Over 75%+ of Tier-2/3 first orders rely on Cash on Delivery (COD) because buyers fear getting stuck with ill-fitting apparel.",
+                },
+              ],
+              hypothesis:
+                "Offering a <b>Browse as Guest</b> escape hatch on Screen 1, 1-tap category curation on Screen 2, and foregrounding <b>COD + 7-Day Easy Returns</b> beside a <b>MEESHO100</b> voucher on Screen 3 will reduce first-order hesitation.",
             },
             {
               num: "03",
-              stage: "AFTER FIRST ORDER",
-              thought: "“My ₹100 coupon is gone—why come back?”",
-              problem:
-                "If someone only joined for a big welcome discount, they stop opening the app once regular prices return unless there is a fun reason to stay.",
-              fix: "DESIGN FIX → Rate for ₹75 + matching picks",
+              accent: "amber",
+              badge: "• Research-Backed Insight",
+              title: "Repeat-Purchase Drop-Off (Order 2+)",
+              points: [
+                {
+                  lead: "Post-Subsidy Cliff:",
+                  text: "Once a user spends their first-order discount, generic promotional notifications fail to re-trigger purchase intent.",
+                },
+                {
+                  lead: "Single-Category Tunnel Vision:",
+                  text: "Many buyers purchase one kurti and never discover Meesho’s high-margin accessories, beauty, or home essentials.",
+                },
+              ],
+              hypothesis:
+                "Tying a post-delivery 1-tap rating card to a <b>₹75 Repeat Wallet Credit</b> and pairing Order 1 with “Complete the Look” low-ticket add-ons will create a sustainable 3-order habit loop.",
             },
           ],
         },
 
-        // 04. GROWTH FUNNEL — ACQUISITION -> ACTIVATION -> RETENTION
+        // 04. GROWTH FUNNEL ARCHITECTURE — ACQUISITION -> ACTIVATION -> RETENTION
         funnel: {
-          tag: "04 / GROWTH FUNNEL ARCHITECTURE",
-          epistemic: "DESIGN HYPOTHESIS",
+          tag: "04 • GROWTH FUNNEL ARCHITECTURE",
+          epistemic: "✦ Full-Funnel Creative Mapping",
           heading: "Acquisition → Activation → Retention",
           stages: [
             {
-              step: "STAGE 01 · ACQUISITION",
-              goal: "Stop the scroll with editorial clarity + instant price anchor",
-              mechanism:
-                "Pair clean studio lookbook photography with transparent landed prices (₹349 Ethnic Kurtis, ₹499 Co-ord Sets, ₹249 Vanilla Elixir).",
-              kpi: "Target KPIs: Thumb-Stop Rate, CTR, Click-to-Install Rate",
+              stage: "STAGE 01",
+              timing: "Top of Funnel",
+              title: "Acquisition",
+              summary: "Paid Social Statics, Carousels & 15s Motion Reels",
+              job: "Stop the scroll in 1.5s & prove ₹249–₹499 affordability without looking cheap.",
+              lever: "Price-Anchor Contrast + Editorial Aspiration",
+              metric: "Thumb-Stop Rate, CTR & Click-to-Install Conversion",
             },
             {
-              step: "STAGE 02 · ACTIVATION",
-              goal: "Convert installs into Order 1 within 7 days",
-              mechanism:
-                "Sosh-inspired animated lookbook entry + Guest Skip, 2-tap style curation, and a Cash-on-Delivery MEESHO100 trust screen.",
-              kpi: "Target KPIs: Onboarding Completion, Install-to-Order 1 CR",
+              stage: "STAGE 02",
+              timing: "First 24–72 Hours",
+              title: "Activation",
+              summary: "3-Screen Onboarding, MEESHO100 Voucher & Cart Recovery",
+              job: "Remove sign-up walls, personalize the feed in 2 taps, and eliminate first-order payment anxiety.",
+              lever: "Guest Escape Hatch + COD & 7-Day Return Reassurance",
+              metric: "Onboarding Completion & Install-to-Order 1 Rate",
             },
             {
-              step: "STAGE 03 · RETENTION",
-              goal: "Build a subsidy-light 3-order habit loop",
-              mechanism:
-                "24-hr COD cart recovery, Post-Delivery 'Rate & Unlock ₹75' wallet delight, and 'Complete the Look' low-ticket accessory pairings.",
-              kpi: "Target KPIs: D30 Repeat Rate, Order 2+ Conversion",
+              stage: "STAGE 03",
+              timing: "Days 1–30+",
+              title: "Retention",
+              summary:
+                "Post-Delivery Rating Reward, Cross-Sell & 3-Order Streak",
+              job: "Turn one-time welcome-coupon buyers into multi-category repeat shoppers without deep subsidies.",
+              lever:
+                "Endowed Progress (₹75 Credit) + Complete-the-Look Pairings",
+              metric: "D30 Repeat Purchase Rate & Order 2+ Conversion",
             },
           ],
         },
 
-        // 05. CREATIVE STRATEGY — MESSAGE ARCHITECTURE & CAMPAIGN CONCEPT
+        // 05. CREATIVE STRATEGY — MESSAGE ARCHITECTURE & VISUAL SYSTEM
         strategy: {
-          tag: "05 / CREATIVE STRATEGY",
-          epistemic: "DESIGN HYPOTHESIS",
-          conceptName: "Campaign Platform: “Everyday Style, Zero Overpay.”",
-          thesis:
-            "Instead of hiding affordable prices behind luxury minimalism or shouting discounts with visual clutter, treat ₹249–₹499 everyday fashion and fragrance with editorial magazine hierarchy—letting generous negative space, crisp Playfair + DM Sans typography, and trust badges carry the persuasion.",
-          pillars: [
-            {
-              title: "01. Editorial Price Anchoring",
-              detail:
-                "Lead with aspirational styling, then resolve price anxiety immediately with a high-contrast ₹249 / ₹349 landed-cost pill.",
-            },
-            {
-              title: "02. Doorstep Trust Architecture",
-              detail:
-                "Elevate Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery from fine-print footnotes into primary visual trust badges.",
-            },
-            {
-              title: "03. Continuous Visual Thread",
-              detail:
-                "Carry the exact model lookbooks and price tags from Meta/Reels ads directly into Onboarding Screen 1 so users feel zero context-switch.",
-            },
-          ],
+          tag: "05 • CREATIVE STRATEGY",
+          epistemic: "✦ Core Concept: “Everyday Style, Zero Overpay”",
+          heading: "Message Architecture & Visual System",
+          leftCard: {
+            title: "3-Tier Message Architecture (Applied Across Every Asset)",
+            tiers: [
+              {
+                variant: "jamuni",
+                label: "TIER 1 • PRIMARY HOOK (0–1.5 SECONDS)",
+                headline: "“A Little More Style. A Lot Less Spend.”",
+                detail:
+                  "Editorial headline paired with an immediate starting price anchor (e.g., Starting at ₹349).",
+              },
+              {
+                variant: "rose",
+                label: "TIER 2 • LANDED-COST PROOF (1.5–3 SECONDS)",
+                headline:
+                  "Flat ₹100 OFF First Order (Code: MEESHO100) + ₹0 Delivery",
+                detail:
+                  "Shows the exact out-of-pocket price (₹349 → ₹249) so there is zero checkout surprise.",
+              },
+              {
+                variant: "amber",
+                label: "TIER 3 • RISK-REVERSAL SAFETY NET",
+                headline:
+                  "Cash on Delivery Available • 7-Day Easy Doorstep Returns",
+                detail:
+                  "Positioned right beside the CTA button to neutralize quality and sizing hesitation.",
+              },
+            ],
+          },
+          rightCard: {
+            title: "Visual & Typographic System",
+            subtitle:
+              "Designed to modernize Meesho’s signature plum palette with editorial breathing room and high-contrast conversion pills.",
+            swatches: [
+              {
+                name: "Deep Jamuni (Primary Brand)",
+                hex: "#4A154B",
+                bg: "#4a154b",
+                text: "#ffffff",
+              },
+              {
+                name: "Meesho Magenta (Action & Accent)",
+                hex: "#F43397",
+                bg: "#f43397",
+                text: "#ffffff",
+              },
+              {
+                name: "Warm Amber (Voucher & Price Pop)",
+                hex: "#FF9F1C",
+                bg: "#ff9f1c",
+                text: "#191917",
+              },
+              {
+                name: "Editorial Warm Ivory (Canvas)",
+                hex: "#FAF7F2",
+                bg: "#faf7f2",
+                text: "#191917",
+                border: true,
+              },
+            ],
+            typographyNote:
+              "<strong>Typography Pairing:</strong> <em>Playfair Display</em> for editorial aspiration + <em>DM Sans</em> for crisp numerals and mobile UI legibility.",
+          },
         },
 
-        // 06. ACQUISITION EXECUTION — AD CONCEPTS & CREATIVE VARIATIONS
+        // 06. ACQUISITION EXECUTION — PAID SOCIAL & PERFORMANCE AD CONCEPTS
         acquisition: {
-          tag: "06 / ACQUISITION EXECUTION",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading: "Paid Social Ad Concepts & Creative Variations",
-          description:
-            "Three ethnic wear ad variations built for Meta Feeds and Stories—testing a bold discount-price hook against two editorial 'Looks Expensive. Isn't.' styling directions.",
+          tag: "06 • ACQUISITION EXECUTION",
+          heading: "Paid Social & Performance Ad Concepts",
+          toggleLabel: "Show Creative Anatomy Notes",
           assets: [
             {
               src: "meesho/images/Performance ad 1.png",
-              badge: "CONCEPT 01 · PRICE-FIRST HOOK",
-              title: "Kurtis Under ₹299",
+              title: "Concept A: Price-Anchor Ethnic",
+              format: "4:5 Feed / Carousel",
               caption:
-                "High-contrast magenta backdrop with oversized amber ₹299 typography and stacked product clarity for instant 1-second price recognition.",
+                "Pairs warm festive tones with a direct ₹299 price anchor and stacked kurti clarity for instant 1-second scroll-stop.",
+              anatomy:
+                "01. Top Meesho brand mark · 02. High-contrast amber ₹299 hero numeral · 03. Folded fabric stack showing print & embroidery quality · 04. High-contrast ivory Shop pill.",
             },
             {
               src: "meesho/images/meesho-kurta-499.png",
-              badge: "CONCEPT 02 · SOCIAL PROOF + EDITORIAL",
-              title: "“Looks Expensive. Isn’t.” — ₹499 Kurta Set",
+              title: "Concept B: Editorial Discovery",
+              format: "4:5 Lifestyle Static",
               caption:
-                "Warm ivory editorial framing paired with 'India's Most Loved Shopping App' trust ribbon to build quality confidence at ₹499.",
+                "High-street editorial aesthetic ('Looks expensive. Isn't.') paired with social proof to attract fashion-first shoppers at ₹499.",
+              anatomy:
+                "01. Playfair Display serif contrast hook · 02. 'India's Most Loved Shopping App' gold trust seal · 03. Natural studio portrait · 04. Bold ₹499 anchor + Jamuni CTA.",
             },
             {
               src: "meesho/images/meesho-look-349.png",
-              badge: "CONCEPT 03 · STUDIO LOOKBOOK",
-              title: "“Looks Expensive. Isn’t.” — ₹349 Kurta Set",
+              title: "Concept C: Studio Lookbook Hook",
+              format: "2:3 & 4:5 Performance",
               caption:
-                "Full-length studio lookbook shot on a soft blush backdrop with a clean ₹349 price badge so shoppers see the full fit before tapping.",
+                "Full-length studio styling starting at ₹349 engineered to showcase complete outfit silhouette with zero sizing doubt.",
+              anatomy:
+                "01. Soft blush editorial canvas · 02. Full-body seated silhouette showing drape & footwear pairing · 03. Scalloped ₹349 price burst · 04. Clean bottom-right Shop Now CTA.",
             },
           ],
         },
 
-        // 07. ACTIVATION EXECUTION — ONBOARDING & FIRST-PURCHASE EXPERIENCE
+        // 07. ACTIVATION EXECUTION — 3-SCREEN ONBOARDING & FIRST-PURCHASE EXPERIENCE
         activation: {
-          tag: "07 / ACTIVATION EXECUTION",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading: "3-Screen Onboarding & First-Purchase Conversion Flow",
+          tag: "07 • ACTIVATION EXECUTION",
+          epistemic: "✦ Interactive Prototype — Click Inside Screens Below",
+          heading: "3-Screen Onboarding & First-Purchase Experience",
           description:
-            "A fast 3-step welcome flow built to remove sign-up friction—letting shoppers see real prices first, pick two styles they love, and unlock ₹100 off with Cash on Delivery.",
+            "To eliminate post-install bounce, Screen 1 pairs an editorial lookbook crossfade with upfront <b>₹249–₹499</b> price anchors, 1-tap Mobile/WhatsApp OTP, and a <b>Browse as Guest</b> option. Screen 2 builds feed ownership via 2+ style picks, and Screen 3 unlocks the <b>MEESHO100</b> voucher alongside COD trust pillars.",
           screens: [
             {
               src: "meesho/images/onboarding screen 1.png",
-              step: "SCREEN 01 · HOOK & ENTRY",
-              title: "Lookbook Preview + Easy Login",
-              detail:
-                "Shows trending outfits starting at ₹249 with quick Mobile/WhatsApp sign-in—plus a 'Browse as Guest' option so nobody gets blocked at the door.",
+              label: "Screen 01 • Editorial Hook & Entry",
+              sub: "Lookbook + Guest Skip",
             },
             {
               src: "meesho/onboarding screen 2.png",
-              step: "SCREEN 02 · STYLE PICKER",
-              title: "2-Tap Category Personalization",
-              detail:
-                "Zero typing required. Shoppers tap two categories they like (Ethnic Kurtis, Co-ord Sets, Beauty, Home) with clear starting prices to customize their feed.",
+              label: "Screen 02 • Style Personalization",
+              sub: "Endowment Effect",
             },
             {
               src: "meesho/images/onboarding screen 3.png",
-              step: "SCREEN 03 · TRUST & VOUCHER",
-              title: "MEESHO100 Coupon + COD Confidence",
-              detail:
-                "Unlocks a Flat ₹100 Off welcome ticket paired with Cash on Delivery and 7-Day Easy Returns right before entering the home feed.",
+              label: "Screen 03 • Trust & ₹100 Nudge",
+              sub: "COD + Easy Returns",
             },
           ],
         },
 
-        // 08. RETENTION EXECUTION — PUSH, BANNERS & CRM CREATIVES
+        // 08. RETENTION & CRM EXECUTION — INTERACTIVE 4-TOUCHPOINT HUB
         retention: {
-          tag: "08 / RETENTION & CRM EXECUTION",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading:
-            "Lifecycle Touchpoints: Push, In-App Banners, Cart Recovery & Habit Loop",
-          description:
-            "Connected CRM and in-app surfaces engineered to recover abandoned carts without margin-killing coupons and turn Order 1 buyers into 3-order VIP regulars.",
-          touchpoints: [
+          tag: "08 • RETENTION & CRM EXECUTION",
+          epistemic: "✦ Switch Tabs Below to Test Each Touchpoint",
+          heading: "Push, In-App Banners, Cart Recovery & Repeat Habit Loop",
+          tabs: [
             {
-              src: "meesho/images/crm-push.png",
-              channel: "LOCK-SCREEN RICH PUSH",
-              title: "T+4h / T+24h / T+48h Welcome Nudge",
-              detail:
-                "Rich media notification displaying the exact ₹349 → ₹249 landed price preview and dual quick-actions ('Claim ₹100 Off' / 'Browse Under ₹299').",
+              label: "1. Rich Push Notification",
+              badge: "✦ Touchpoint 01 • Lock-Screen Rich Push",
+              title: "Converting Install-Only Users in the First 4–48 Hours",
+              description:
+                "Instead of generic “We miss you” blasts, the rich push notification attaches a landed-price preview card showing the exact ₹349 → ₹249 savings and deep-links straight into checkout with MEESHO100 auto-applied.",
+              src: "meesho/images/Push Notification.png",
+              cropMode: "lockscreen",
+              cadence: [
+                {
+                  time: "T + 4 Hours",
+                  note: "Price-anchor hook (₹249 + ₹0 Delivery)",
+                },
+                {
+                  time: "T + 24 Hours",
+                  note: "Social proof (4.6★ by 12k+ buyers + 7d returns)",
+                },
+                {
+                  time: "T + 48 Hours",
+                  note: "Loss-aversion midnight expiry nudge",
+                },
+              ],
             },
             {
-              src: "meesho/images/crm-inapp-banners.png",
-              channel: "IN-APP MERCHANDISING",
-              title: "Home Feed Hero + Sticky Checkout Nudge",
-              detail:
-                "Editorial top-of-feed welcome banner paired with a persistent bottom-bar progress tracker showing real-time ₹100 voucher eligibility.",
+              label: "2. In-App Promotional Banners (2 Variants)",
+              badge: "✦ Touchpoint 02 • Home Feed & Sticky Checkout Nudge",
+              title: "Reinforcing MEESHO100 & Doorstep Trust Inside the App",
+              description:
+                "Two coordinated in-app placements keep the welcome offer visible without blocking browsing: a top-of-feed editorial hero banner and a persistent bottom checkout bar tracking ₹100 voucher unlock.",
+              src: "meesho/images/in app banners.png",
+              cropMode: "phone",
+              cadence: [
+                {
+                  time: "Top Hero Slot",
+                  note: "“Everyday Style, Zero Overpay” + MEESHO100 ticket",
+                },
+                {
+                  time: "Sticky Footer",
+                  note: "Live cart progress bar + 1-tap COD checkout",
+                },
+                {
+                  time: "Trust Anchor",
+                  note: "Cash on Delivery & 7-Day Returns above fold",
+                },
+              ],
             },
             {
-              src: "meesho/images/crm-cart-reminder.png",
-              channel: "CART ABANDONMENT RECOVERY",
-              title: "Size-Lock + 1-Tap COD Checkout Deep Link",
-              detail:
-                "3-stage cadence (+15m size reservation, +6h COD & easy-return reassurance, +24h voucher expiry) routing directly to 1-tap COD confirmation.",
+              label: "3. Cart Abandonment Reminder",
+              badge: "✦ Touchpoint 03 • High-Intent Cart Recovery",
+              title: "Recovering Shoppers Who Paused Before COD Checkout",
+              description:
+                "Combines a 15-minute bag reservation timer with size scarcity (‘Only 3 left in Size M’) across Lock-Screen Push and WhatsApp Business rich templates.",
+              src: "meesho/images/whatsapp cart nudge.png",
+              cropMode: "mockup-transparent",
+              cadence: [
+                {
+                  time: "T + 15 Mins",
+                  note: "Size M bag reservation + countdown timer",
+                },
+                {
+                  time: "T + 2 Hours",
+                  note: "WhatsApp rich card with 1-tap COD button",
+                },
+                {
+                  time: "Zero Friction",
+                  note: "Auto-applies MEESHO100 at checkout",
+                },
+              ],
             },
             {
-              src: "meesho/images/crm-repeat-loop.png",
-              channel: "POST-DELIVERY HABIT LOOP",
-              title: "“Rate & Unlock ₹75” + Complete the Look",
-              detail:
-                "Turns post-delivery satisfaction into an instant ₹75 wallet credit usable on curated Order 1 pairings (Oxidised Jhumkas @ ₹124, Kolhapuri Flats @ ₹224).",
-            },
-          ],
-        },
-
-        // 09. MOTION DESIGN — STORYBOARD & FINAL ANIMATION
-        motion: {
-          tag: "09 / MOTION DESIGN",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading: "15-Second First-Purchase Explainer Reel (9:16)",
-          description:
-            "Built for Instagram Reels, YouTube Shorts, and Paid Social Stories—engineered with a 1.5-second visual hook and silent-autoplay kinetic typography.",
-          reelPreview: "meesho/images/motion-reel-preview.png",
-          beats: [
-            {
-              time: "00.0s – 04.5s",
-              beat: "BEAT 01 · EDITORIAL PRICE-ANCHOR HOOK",
-              visual:
-                "Full-bleed studio lookbook zoom matching Onboarding Screen 1; bold ₹249 scroll-stopper badge snaps in within the first 36 frames.",
-            },
-            {
-              time: "04.5s – 10.0s",
-              beat: "BEAT 02 · VOUCHER DROP & PRICE SLASH",
-              visual:
-                "Kinetic strikethrough animates ₹349 → ₹249 landed cost as the perforated MEESHO100 welcome ticket drops into frame.",
-            },
-            {
-              time: "10.0s – 15.0s",
-              beat: "BEAT 03 · DOORSTEP TRUST & FINAL CTA",
-              visual:
-                "Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery stack cleanly above a pulsing 'Order COD @ ₹249' CTA.",
+              label: "4. Post-Delivery Repeat Loop (₹75)",
+              badge: "✦ Touchpoint 04 • Order 2+ Habit Formation",
+              title: "Turning First-Time Buyers Into a 3-Order VIP Streak",
+              description:
+                "Replaces the post-subsidy cliff with an instant 1-tap fit & quality rating card that unlocks ₹75 in Meesho Wallet credit paired with ‘Complete the Look’ low-ticket add-ons.",
+              src: "meesho/images/repeat purchase campaign strategy.png",
+              cropMode: "phone-crop",
+              cadence: [
+                {
+                  time: "Delivery + 2h",
+                  note: "1-tap star & fit rating unlocks ₹75 credit",
+                },
+                {
+                  time: "Cross-Sell",
+                  note: "Complete-the-Look Jhumkas & Flats under ₹225",
+                },
+                {
+                  time: "Order 3 Goal",
+                  note: "3-Order VIP Streak unlocks free surprise gift",
+                },
+              ],
             },
           ],
         },

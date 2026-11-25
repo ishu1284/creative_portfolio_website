@@ -87,14 +87,14 @@ function renderProjects() {
       const num = String(i + 1).padStart(2, "0");
       // Grab best preview image available on each project
       const thumb =
-      p.coverImage ||
-      p.image ||
-      p.sections?.hero?.logoImage ||
-      p.sections?.hero?.portraitImage ||
-      p.sections?.showcase?.image ||
-      p.assets?.[0]?.image ||
-      p.gallery?.[0] ||
-      "";
+        p.coverImage ||
+        p.image ||
+        p.sections?.hero?.logoImage ||
+        p.sections?.hero?.portraitImage ||
+        p.sections?.showcase?.image ||
+        p.assets?.[0]?.image ||
+        p.gallery?.[0] ||
+        "";
 
       return `
       <article class="pa-panel ${i === 0 ? "is-expanded" : ""}" data-index="${i}">
@@ -220,41 +220,52 @@ function showProject(index) {
       </section>
 
       ${(() => {
-          const isThinkSchool = (p.id && p.id.toLowerCase().includes("think")) || index === 0;
-          const ft = s.feedTransformation || p.feedTransformation || (isThinkSchool ? {
-            tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
-            heading: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
-            before: {
-              label: "BEFORE",
-              image: "thumbnails/Sugarmills.png",
-              notes: "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels."
-            },
-            after: {
-              label: "AFTER · 3.5M+ VIEWS",
-              image: "thumbnails/Sugar Lobby Thumbnail.png",
-              notes: "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker."
-            },
-            strategyPillars: [
-              {
-                num: "01",
-                title: "Editorial Newsprint Collage",
-                detail: "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth."
-              },
-              {
-                num: "02",
-                title: "Terracotta & Ivory Contrast",
-                detail: "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens."
-              },
-              {
-                num: "03",
-                title: "Clean Subject Integration",
-                detail: "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression."
+        const isThinkSchool =
+          (p.id && p.id.toLowerCase().includes("think")) || index === 0;
+        const ft =
+          s.feedTransformation ||
+          p.feedTransformation ||
+          (isThinkSchool
+            ? {
+                tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",
+                heading: "How Redesigning 'The Sugar Lobby' Drove 3.5M+ Views",
+                before: {
+                  label: "BEFORE",
+                  image: "thumbnails/Sugarmills.png",
+                  notes:
+                    "Generic yellow brush highlight, harsh white sticker outline around the speaker, and empty beige space that blended into standard creator reels.",
+                },
+                after: {
+                  label: "AFTER · 3.5M+ VIEWS",
+                  image: "thumbnails/Sugar Lobby Thumbnail.png",
+                  notes:
+                    "Deep terracotta backdrop, torn editorial newsprint collage, high-contrast ivory serif title, and a directional arrow guiding the eye straight to the speaker.",
+                },
+                strategyPillars: [
+                  {
+                    num: "01",
+                    title: "Editorial Newsprint Collage",
+                    detail:
+                      "Replaced literal stock cutouts with torn-paper industrial engravings (ethanol nozzle, mills, sugarcane) to signal investigative depth.",
+                  },
+                  {
+                    num: "02",
+                    title: "Terracotta & Ivory Contrast",
+                    detail:
+                      "Swapped flat beige and yellow highlights for a saturated terracotta-orange field so the ivory serif title pops on mobile screens.",
+                  },
+                  {
+                    num: "03",
+                    title: "Clean Subject Integration",
+                    detail:
+                      "Removed the artificial white sticker outline and used a curved hand-drawn arrow to connect the hook directly to Parsh's expression.",
+                  },
+                ],
               }
-            ]
-          } : null);
+            : null);
 
-          if (!ft) return "";
-          return `
+        if (!ft) return "";
+        return `
             <section class="cs-block">
               <span class="cs-tag">${ft.tag}</span>
               <h3>${ft.heading}</h3>
@@ -275,20 +286,28 @@ function showProject(index) {
                 </div>
               </div>
 
-              ${ft.strategyPillars ? `
+              ${
+                ft.strategyPillars
+                  ? `
                 <div class="ts-strategy-strip">
-                  ${ft.strategyPillars.map(item => `
+                  ${ft.strategyPillars
+                    .map(
+                      (item) => `
                     <div class="ts-strat-card">
                       <span class="ts-strat-num">${item.num}</span>
                       <strong>${item.title}</strong>
                       <p>${item.detail}</p>
                     </div>
-                  `).join("")}
+                  `,
+                    )
+                    .join("")}
                 </div>
-              ` : ""}
+              `
+                  : ""
+              }
             </section>
           `;
-        })()}
+      })()}
 
       <section class="cs-block">
         <div class="cs-flex-head">
@@ -799,7 +818,7 @@ function showProject(index) {
     dialog.showModal();
     return;
   }
-// 02. MEESHO GROWTH CASE STUDY (11 CHAPTERS)
+  // 02. MEESHO GROWTH CASE STUDY (11 CHAPTERS)
   if (p.isMeesho && p.sections) {
     const s = p.sections;
     const badgeHtml = (label) => {
@@ -820,140 +839,219 @@ function showProject(index) {
       </div>
 
       <!-- 01. COVER -->
-      <section class="cs-block ms-cover-card">
-        <span class="cs-tag">${s.cover.tag}</span>
-        <h3>${s.cover.heading}</h3>
-        <p class="dialog-body">${s.cover.subhead}</p>
+      <section class="cs-block ms-hero-split">
+        <div class="ms-hero-left">
+          <div class="ms-hero-eyebrow">
+            <span class="ms-jamuni-pill">${s.cover?.pillTag || "01 • GROWTH CREATIVE CASE STUDY"}</span>
+            <span class="ms-hero-domain">${s.cover?.metaText || "Consumer E-Commerce • Bharat / Tier-2 & Tier-3"}</span>
+          </div>
 
-        <div class="ms-spec-strip">
-          <div class="ms-spec-cell">
-            <span class="ms-spec-label">ROLE</span>
-            <strong>${s.cover.specs.role}</strong>
+          <h2 class="ms-hero-title">${s.cover?.heading || "From Scroll to Shopping."}</h2>
+          <p class="ms-hero-lead">${s.cover?.subhead || ""}</p>
+
+          <div class="ms-hero-specs">
+            ${(Array.isArray(s.cover?.specs) ? s.cover.specs : [])
+              .map(
+                (sp) => `
+              <div class="ms-hspec-card">
+                <span class="ms-hspec-label">${sp.label}</span>
+                <strong>${sp.value}</strong>
+              </div>
+            `,
+              )
+              .join("")}
           </div>
-          <div class="ms-spec-cell">
-            <span class="ms-spec-label">SCOPE &amp; DELIVERABLES</span>
-            <strong>${s.cover.specs.scope}</strong>
-          </div>
-          <div class="ms-spec-cell">
-            <span class="ms-spec-label">CAMPAIGN PALETTE</span>
-            <div class="ms-swatch-row">
-              ${s.cover.specs.palette
-                .map(
-                  (c) => `
-                <span class="ms-dot-pill">
-                  <i style="background:${c.hex}"></i>${c.name} <code>${c.hex}</code>
-                </span>
-              `,
-                )
-                .join("")}
+
+          <div class="ms-rigor-box">
+            <p class="ms-rigor-text">
+              <strong>Epistemic Rigor:</strong> ${s.cover?.rigorNote || ""}
+            </p>
+            <div class="ms-rigor-badges">
+              <span class="ms-rbadge is-res">● Research-Backed Insight</span>
+              <span class="ms-rbadge is-hyp">✦ Design Hypothesis</span>
+              <span class="ms-rbadge is-exp">▲ Proposed Experiment</span>
             </div>
           </div>
         </div>
 
-        <figure class="roam-frame" style="margin-top:22px">
-          <img src="${s.cover.heroImage}" alt="From Scroll to Shopping Cover" onerror="this.closest('figure').style.display='none'">
-          <figcaption>Campaign System Overview — From Scroll to Shopping</figcaption>
-        </figure>
+        <aside class="ms-blueprint-card">
+          <div class="ms-bp-head">
+            <div>
+              <span class="ms-bp-kicker">${s.cover?.blueprint?.kicker || "SYSTEM BLUEPRINT"}</span>
+              <h3>${s.cover?.blueprint?.title || "Connected Lifecycle Architecture"}</h3>
+            </div>
+            <span class="ms-bp-count">${s.cover?.blueprint?.count || "11 Chapters"}</span>
+          </div>
+
+          <div class="ms-bp-stack">
+            ${(s.cover?.blueprint?.stages || [])
+              .map(
+                (st, i) => `
+              <div class="ms-bp-tier">
+                <div class="ms-bp-tier-top">
+                  <span class="ms-bp-num is-t${i + 1}">${st.num}</span>
+                  <span class="ms-bp-chan">${st.channel}</span>
+                </div>
+                <strong>${st.title}</strong>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </aside>
       </section>
 
       <!-- 02. THE BRIEF -->
       <section class="cs-block">
-        <div class="cs-flex-head">
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.brief.tag}</span>
-            <h3>${s.brief.heading}</h3>
+            <span class="ms-brief-tag">${s.brief?.tag || "02 • THE BRIEF"}</span>
+            <h3 class="ms-brief-title">${s.brief?.heading || "Business Objective & Growth Challenge"}</h3>
           </div>
-          ${badgeHtml(s.brief.epistemic)}
+          <span class="ms-rbadge is-res">${s.brief?.epistemic || "• Research-Backed Market Context"}</span>
         </div>
 
-        <!-- 3 MARKET ANCHOR CARDS -->
-        <div class="ms-anchor-grid">
-          ${s.brief.anchors
-            .map(
-              (a) => `
-            <div class="ms-anchor-card">
-              <strong class="ms-anchor-num">${a.num}</strong>
-              <span class="ms-anchor-label">${a.label}</span>
-              <p>${a.sub}</p>
-            </div>
-          `,
-            )
-            .join("")}
-        </div>
+        <div class="ms-brief-grid">
+          <article class="ms-tension-card">
+            <h4>${s.brief?.leftCard?.title || ""}</h4>
+            <p class="ms-tension-body">${s.brief?.leftCard?.body || ""}</p>
 
-        <!-- OBJECTIVE + VISUAL TENSION DIAGRAM -->
-        <div class="ms-brief-split">
-          <div class="ms-obj-box">
-            <span class="cs-tag" style="color:#c6de41">${s.brief.objectiveTitle}</span>
-            <p>${s.brief.objective}</p>
-          </div>
-
-          <div class="ms-tension-box">
-            <span class="cs-tag">${s.brief.tensionTitle}</span>
-            <div class="ms-tension-track">
-              <div class="ms-pole is-trap">
-                <small>${s.brief.leftPole.label}</small>
-                <strong>${s.brief.leftPole.outcome}</strong>
+            <div class="ms-traps-row">
+              <div class="ms-trap-box">
+                <span class="ms-trap-label">${s.brief?.leftCard?.trapA?.label || ""}</span>
+                <p>${s.brief?.leftCard?.trapA?.desc || ""}</p>
               </div>
-              <div class="ms-pole is-sweet">
-                <small>✦ ${s.brief.sweetSpot.label}</small>
-                <strong>${s.brief.sweetSpot.outcome}</strong>
-              </div>
-              <div class="ms-pole is-trap">
-                <small>${s.brief.rightPole.label}</small>
-                <strong>${s.brief.rightPole.outcome}</strong>
+              <div class="ms-trap-box">
+                <span class="ms-trap-label">${s.brief?.leftCard?.trapB?.label || ""}</span>
+                <p>${s.brief?.leftCard?.trapB?.desc || ""}</p>
               </div>
             </div>
-          </div>
+          </article>
+
+          <aside class="ms-mandate-card">
+            <div>
+              <span class="ms-mandate-pill">${s.brief?.mandateCard?.pill || "✦ DESIGN MANDATE"}</span>
+              <h4 class="ms-mandate-heading">${s.brief?.mandateCard?.headline || ""}</h4>
+              <p class="ms-mandate-body">${s.brief?.mandateCard?.body || ""}</p>
+            </div>
+
+            <div class="ms-mandate-footer">
+              ${(s.brief?.mandateCard?.footer || [])
+                .map(
+                  (f) => `
+                <div>
+                  <span class="ms-mf-label">${f.label}:</span>
+                  <strong>${f.value}</strong>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </aside>
         </div>
       </section>
 
       <!-- 03. USER INSIGHT -->
       <section class="cs-block">
-        <div class="cs-flex-head">
-          <div>
-            <span class="cs-tag">${s.userInsight.tag}</span>
-            <h3>${s.userInsight.heading}</h3>
-          </div>
-          ${badgeHtml(s.userInsight.epistemic)}
+        <span class="ms-brief-tag">${s.userInsight?.tag || "03 • USER INSIGHT"}</span>
+        <h3 class="ms-brief-title">${s.userInsight?.heading || "What Prevents Users from Installing, Buying, or Returning?"}</h3>
+
+        <div class="ms-ui-badges">
+          ${(s.userInsight?.badges || [])
+            .map((b) => `<span class="ms-rbadge is-${b.type}">${b.text}</span>`)
+            .join("")}
         </div>
-        <div class="ms-insight-grid">
-          ${s.userInsight.barriers
+
+        <div class="ms-ui-grid">
+          ${(s.userInsight?.barriers || [])
             .map(
-              (b, idx) => `
-            <article class="ms-insight-card ${idx === 1 ? "is-coral" : idx === 2 ? "is-lime" : ""}">
-              <div class="ms-ic-top">
-                <span class="ms-ic-num">${b.num}</span>
-                <span class="ms-ic-stage">${b.stage}</span>
+              (b) => `
+            <article class="ms-ui-card">
+              <div>
+                <div class="ms-ui-top">
+                  <span class="ms-ui-num is-${b.accent || "jamuni"}">${b.num || ""}</span>
+                  <span class="ms-rbadge is-res">${b.badge || "• Research-Backed Insight"}</span>
+                </div>
+
+                <h4>${b.title || ""}</h4>
+
+                <ul class="ms-ui-list">
+                  ${(b.points || [])
+                    .map(
+                      (pt) => `
+                    <li><strong>${pt.lead}</strong> ${pt.text}</li>
+                  `,
+                    )
+                    .join("")}
+                </ul>
               </div>
-              <blockquote class="ms-ic-quote">${b.thought}</blockquote>
-              <p class="ms-ic-desc">${b.problem}</p>
-              <div class="ms-ic-fix">${b.fix}</div>
+
+              <div class="ms-ui-hyp">
+                <span class="ms-ui-hyp-label">✦ DESIGN HYPOTHESIS</span>
+                <p>${b.hypothesis || ""}</p>
+              </div>
             </article>
           `,
             )
             .join("")}
         </div>
       </section>
-
+      
       <!-- 04. GROWTH FUNNEL -->
       <section class="cs-block">
-        <div class="cs-flex-head">
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.funnel.tag}</span>
-            <h3>${s.funnel.heading}</h3>
+            <span class="ms-brief-tag">${s.funnel?.tag || "04 • GROWTH FUNNEL ARCHITECTURE"}</span>
+            <h3 class="ms-brief-title">${s.funnel?.heading || "Acquisition → Activation → Retention"}</h3>
           </div>
-          ${badgeHtml(s.funnel.epistemic)}
+          <span class="ms-rbadge is-hyp">${s.funnel?.epistemic || "✦ Full-Funnel Creative Mapping"}</span>
         </div>
-        <div class="pillars-grid">
-          ${s.funnel.stages
+
+        <div class="ms-funnel-shell" data-ms-funnel>
+          <div class="ms-funnel-tabs">
+            ${(s.funnel?.stages || [])
+              .map(
+                (st, idx) => `
+              <button
+                type="button"
+                class="ms-ftab ${idx === 0 ? "is-active" : ""}"
+                data-f-idx="${idx}"
+                onclick="(function(btn){
+                  const wrap = btn.closest('[data-ms-funnel]');
+                  wrap.querySelectorAll('.ms-ftab').forEach(b => b.classList.remove('is-active'));
+                  wrap.querySelectorAll('.ms-fpanel').forEach(p => p.classList.remove('is-active'));
+                  btn.classList.add('is-active');
+                  wrap.querySelector('[data-f-panel=&quot;' + btn.dataset.fIdx + '&quot;]').classList.add('is-active');
+                })(this)"
+              >
+                <div class="ms-ftab-top">
+                  <span class="ms-ftab-stage">${st.stage}</span>
+                  <span class="ms-ftab-time">${st.timing}</span>
+                </div>
+                <strong>${st.title}</strong>
+                <p>${st.summary}</p>
+              </button>
+            `,
+              )
+              .join("")}
+          </div>
+
+          ${(s.funnel?.stages || [])
             .map(
-              (st) => `
-            <div class="pillar-card ms-funnel-card">
-              <span class="cs-tag" style="color:#c6de41">${st.step}</span>
-              <strong>${st.goal}</strong>
-              <p>${st.mechanism}</p>
-              <span class="ms-kpi-line">${st.kpi}</span>
+              (st, idx) => `
+            <div class="ms-fpanel ${idx === 0 ? "is-active" : ""}" data-f-panel="${idx}">
+              <div class="ms-fdetail">
+                <span>CREATIVE JOB-TO-BE-DONE</span>
+                <strong>${st.job}</strong>
+              </div>
+              <div class="ms-fdetail">
+                <span>PSYCHOLOGICAL LEVER</span>
+                <strong>${st.lever}</strong>
+              </div>
+              <div class="ms-fdetail">
+                <span>PRIMARY SUCCESS METRIC</span>
+                <strong>${st.metric}</strong>
+              </div>
             </div>
           `,
             )
@@ -963,50 +1061,103 @@ function showProject(index) {
 
       <!-- 05. CREATIVE STRATEGY -->
       <section class="cs-block">
-        <div class="cs-flex-head">
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.strategy.tag}</span>
-            <h3>${s.strategy.conceptName}</h3>
+            <span class="ms-brief-tag">${s.strategy?.tag || "05 • CREATIVE STRATEGY"}</span>
+            <h3 class="ms-brief-title">${s.strategy?.heading || "Message Architecture & Visual System"}</h3>
           </div>
-          ${badgeHtml(s.strategy.epistemic)}
+          <span class="ms-rbadge is-hyp">${s.strategy?.epistemic || "✦ Core Concept: “Everyday Style, Zero Overpay”"}</span>
         </div>
-        <p class="dialog-body">${s.strategy.thesis}</p>
-        <div class="pillars-grid" style="margin-top:20px">
-          ${s.strategy.pillars
-            .map(
-              (pl) => `
-            <div class="pillar-card">
-              <strong>${pl.title}</strong>
-              <p>${pl.detail}</p>
+
+        <div class="ms-strat-grid">
+          <!-- LEFT CARD: 3-TIER MESSAGE ARCHITECTURE -->
+          <article class="ms-strat-card">
+            <h4>${s.strategy?.leftCard?.title || "3-Tier Message Architecture (Applied Across Every Asset)"}</h4>
+
+            <div class="ms-tier-stack">
+              ${(s.strategy?.leftCard?.tiers || [])
+                .map(
+                  (t) => `
+                <div class="ms-msg-tier is-${t.variant}">
+                  <span class="ms-mt-label">${t.label}</span>
+                  <strong class="ms-mt-head">${t.headline}</strong>
+                  <p>${t.detail}</p>
+                </div>
+              `,
+                )
+                .join("")}
             </div>
-          `,
-            )
-            .join("")}
+          </article>
+
+          <!-- RIGHT CARD: VISUAL & TYPOGRAPHIC SYSTEM -->
+          <aside class="ms-strat-card">
+            <div>
+              <h4>${s.strategy?.rightCard?.title || "Visual & Typographic System"}</h4>
+              <p class="ms-vis-sub">${s.strategy?.rightCard?.subtitle || ""}</p>
+
+              <div class="ms-swatch-stack">
+                ${(s.strategy?.rightCard?.swatches || [])
+                  .map(
+                    (sw) => `
+                  <div
+                    class="ms-swatch-bar ${sw.border ? "has-border" : ""}"
+                    style="background:${sw.bg};color:${sw.text}"
+                  >
+                    <span>${sw.name}</span>
+                    <code>${sw.hex}</code>
+                  </div>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </div>
+
+            <p class="ms-typo-foot">${s.strategy?.rightCard?.typographyNote || ""}</p>
+          </aside>
         </div>
       </section>
 
       <!-- 06. ACQUISITION EXECUTION -->
-      <section class="cs-block">
-        <div class="cs-flex-head">
+      <section class="cs-block" data-ms-acq>
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.acquisition.tag}</span>
-            <h3>${s.acquisition.heading}</h3>
+            <span class="ms-brief-tag">${s.acquisition?.tag || "06 • ACQUISITION EXECUTION"}</span>
+            <h3 class="ms-brief-title">${s.acquisition?.heading || "Paid Social & Performance Ad Concepts"}</h3>
           </div>
-          ${badgeHtml(s.acquisition.epistemic)}
+
+          <button
+            type="button"
+            class="ms-anatomy-btn"
+            onclick="(function(btn){
+              const sec = btn.closest('[data-ms-acq]');
+              const isOpen = sec.classList.toggle('show-anatomy');
+              btn.textContent = isOpen ? '✦ Hide Creative Anatomy Notes' : '✦ Show Creative Anatomy Notes';
+            })(this)"
+          >
+            ✦ ${s.acquisition?.toggleLabel || "Show Creative Anatomy Notes"}
+          </button>
         </div>
-        <p class="dialog-body">${s.acquisition.description}</p>
-        <div class="ms-ad-showcase">
-          ${s.acquisition.assets
+
+        <div class="ms-acq-grid">
+          ${(s.acquisition?.assets || [])
             .map(
               (a) => `
-            <article class="ms-ad-card">
-              <div class="ms-ad-media">
+            <article class="ms-acq-card">
+              <div class="ms-acq-media">
                 <img src="${a.src}" alt="${a.title}">
               </div>
-              <div class="ms-ad-copy">
-                <span class="ms-ad-badge">${a.badge}</span>
-                <h4>${a.title}</h4>
-                <p>${a.caption}</p>
+
+              <div class="ms-acq-body">
+                <div class="ms-acq-top">
+                  <h4>${a.title}</h4>
+                  <span class="ms-acq-fmt">${a.format}</span>
+                </div>
+                <p class="ms-acq-desc">${a.caption}</p>
+
+                <div class="ms-acq-notes">
+                  <span>CREATIVE ANATOMY</span>
+                  <p>${a.anatomy}</p>
+                </div>
               </div>
             </article>
           `,
@@ -1017,59 +1168,102 @@ function showProject(index) {
 
       <!-- 07. ACTIVATION EXECUTION -->
       <section class="cs-block">
-        <div class="cs-flex-head">
-          <div>
-            <span class="cs-tag">${s.activation.tag}</span>
-            <h3>${s.activation.heading}</h3>
-          </div>
-          ${badgeHtml(s.activation.epistemic)}
+        <span class="ms-brief-tag">${s.activation?.tag || "07 • ACTIVATION EXECUTION"}</span>
+        <h3 class="ms-brief-title">${s.activation?.heading || "3-Screen Onboarding & First-Purchase Experience"}</h3>
+
+        <div class="ms-ui-badges">
+          <span class="ms-rbadge is-hyp">${s.activation?.epistemic || "✦ Interactive Prototype — Click Inside Screens Below"}</span>
         </div>
-        <p class="dialog-body">${s.activation.description}</p>
-        <div class="ms-ad-showcase">
-          ${s.activation.screens
+
+        <p class="ms-act-lead">${s.activation?.description || ""}</p>
+
+        <div class="ms-onboard-grid">
+          ${(s.activation?.screens || [])
             .map(
               (sc) => `
-            <article class="ms-ad-card">
-              <div class="ms-phone-media">
-                <img src="${sc.src}" alt="${sc.title}">
+            <div class="ms-onboard-col">
+              <div class="ms-onboard-meta">
+                <strong>${sc.label}</strong>
+                <span>${sc.sub}</span>
               </div>
-              <div class="ms-ad-copy">
-                <span class="ms-ad-badge">${sc.step}</span>
-                <h4>${sc.title}</h4>
-                <p>${sc.detail}</p>
+              <div class="ms-onboard-frame">
+                <img src="${sc.src}" alt="${sc.label}">
               </div>
-            </article>
+            </div>
           `,
             )
             .join("")}
         </div>
       </section>
-      
-      <!-- 08. RETENTION EXECUTION -->
-      <section class="cs-block">
-        <div class="cs-flex-head">
-          <div>
-            <span class="cs-tag">${s.retention.tag}</span>
-            <h3>${s.retention.heading}</h3>
-          </div>
-          ${badgeHtml(s.retention.epistemic)}
+
+      <!-- 08. RETENTION & CRM EXECUTION -->
+      <section class="cs-block" data-ms-ret>
+        <span class="ms-brief-tag">${s.retention?.tag || "08 • RETENTION & CRM EXECUTION"}</span>
+        <h3 class="ms-brief-title">${s.retention?.heading || "Push, In-App Banners, Cart Recovery & Repeat Habit Loop"}</h3>
+
+        <div class="ms-ui-badges">
+          <span class="ms-rbadge is-hyp">${s.retention?.epistemic || "✦ Switch Tabs Below to Test Each Touchpoint"}</span>
         </div>
-        <p class="dialog-body">${s.retention.description}</p>
-        <div class="roam-gallery-2">
-          ${s.retention.touchpoints
+
+        <!-- 4 TOUCHPOINT TABS -->
+        <div class="ms-ret-tabs">
+          ${(s.retention?.tabs || [])
             .map(
-              (tp) => `
-            <figure class="roam-frame">
-              <img src="${tp.src}" alt="${tp.title}" onerror="this.style.display='none'">
-              <figcaption>
-                <span class="ms-mini-tag">${tp.channel}</span><br>
-                <strong>${tp.title}</strong><br>${tp.detail}
-              </figcaption>
-            </figure>
+              (t, idx) => `
+            <button
+              type="button"
+              class="ms-rtab ${idx === 0 ? "is-active" : ""}"
+              data-r-idx="${idx}"
+              onclick="(function(btn){
+                const wrap = btn.closest('[data-ms-ret]');
+                wrap.querySelectorAll('.ms-rtab').forEach(b => b.classList.remove('is-active'));
+                wrap.querySelectorAll('.ms-rpanel').forEach(p => p.classList.remove('is-active'));
+                btn.classList.add('is-active');
+                wrap.querySelector('[data-r-panel=&quot;' + btn.dataset.rIdx + '&quot;]').classList.add('is-active');
+              })(this)"
+            >
+              ${t.label}
+            </button>
           `,
             )
             .join("")}
         </div>
+
+        <!-- TAB PANELS -->
+        ${(s.retention?.tabs || [])
+          .map(
+            (t, idx) => `
+          <div class="ms-rpanel ${idx === 0 ? "is-active" : ""}" data-r-panel="${idx}">
+            <!-- LEFT: CROPPED NOTIFICATION / PHONE VISUAL -->
+            <div class="ms-ret-visual">
+              <div class="ms-crop-frame is-${t.cropMode || "lockscreen"}">
+                <img src="${t.src}" alt="${t.label}">
+              </div>
+            </div>
+
+            <!-- RIGHT: STRATEGY & TIMING CADENCE -->
+            <div class="ms-ret-copy">
+              <span class="ms-rbadge is-hyp">${t.badge}</span>
+              <h4>${t.title}</h4>
+              <p class="ms-ret-desc">${t.description}</p>
+
+              <div class="ms-cadence-grid">
+                ${(t.cadence || [])
+                  .map(
+                    (c) => `
+                  <div class="ms-cad-card">
+                    <strong>${c.time}</strong>
+                    <p>${c.note}</p>
+                  </div>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        `,
+          )
+          .join("")}
       </section>
 
       <!-- 09. MOTION DESIGN -->
@@ -1198,7 +1392,11 @@ const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".topbar nav");
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => nav.classList.remove("open")));
+  nav
+    .querySelectorAll("a")
+    .forEach((link) =>
+      link.addEventListener("click", () => nav.classList.remove("open")),
+    );
 }
 
 document
@@ -1283,7 +1481,13 @@ renderProjects();
     const next2 = (active + 2) % total;
 
     cards.forEach((card, i) => {
-      card.classList.remove("is-center", "is-prev-1", "is-prev-2", "is-next-1", "is-next-2");
+      card.classList.remove(
+        "is-center",
+        "is-prev-1",
+        "is-prev-2",
+        "is-next-1",
+        "is-next-2",
+      );
       if (i === active) card.classList.add("is-center");
       else if (i === prev1) card.classList.add("is-prev-1");
       else if (i === next1) card.classList.add("is-next-1");
@@ -1322,8 +1526,16 @@ renderProjects();
     });
   });
 
-  if (prevBtn) prevBtn.addEventListener("click", () => { goTo(active - 1); startAuto(); });
-  if (nextBtn) nextBtn.addEventListener("click", () => { goTo(active + 1); startAuto(); });
+  if (prevBtn)
+    prevBtn.addEventListener("click", () => {
+      goTo(active - 1);
+      startAuto();
+    });
+  if (nextBtn)
+    nextBtn.addEventListener("click", () => {
+      goTo(active + 1);
+      startAuto();
+    });
 
   stage.addEventListener("mouseenter", stopAuto);
   stage.addEventListener("mouseleave", startAuto);
