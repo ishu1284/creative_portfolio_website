@@ -1266,62 +1266,141 @@ function showProject(index) {
           .join("")}
       </section>
 
-      <!-- 09. MOTION DESIGN -->
+      <!-- 09. PHOTOSHOP CRAFT & COMPOSITING -->
       <section class="cs-block">
-        <div class="cs-flex-head">
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.motion.tag}</span>
-            <h3>${s.motion.heading}</h3>
+            <span class="ms-brief-tag">${s.motion?.tag || "09 • PHOTOSHOP CRAFT & COMPOSITING"}</span>
+            <h3 class="ms-brief-title">${s.motion?.heading || "Beauty & Fragrance Performance Ads + PS Layer Proof"}</h3>
           </div>
-          ${badgeHtml(s.motion.epistemic)}
+          <span class="ms-rbadge is-hyp">${s.motion?.epistemic || "✦ High-Resolution Raster Production • Adobe Photoshop"}</span>
         </div>
-        <p class="dialog-body">${s.motion.description}</p>
-        <div class="pillars-grid" style="margin-top:20px">
-          ${s.motion.beats
+
+        <p class="ms-act-lead">${s.motion?.description || ""}</p>
+
+        <!-- TOP ROW: 2 PHOTOSHOP PERFORMANCE ADS -->
+        <div class="ms-ps-ads-grid">
+          ${(s.motion?.ads || [])
             .map(
-              (bt) => `
-            <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
-              <span class="cs-tag" style="color:#f05a3c">${bt.time}</span>
-              <strong>${bt.beat}</strong>
-              <p>${bt.visual}</p>
-            </div>
+              (ad) => `
+            <article class="ms-ps-ad-card">
+              <div class="ms-ps-ad-media">
+                <img src="${ad.src}" alt="${ad.title}">
+              </div>
+
+              <div class="ms-ps-ad-body">
+                <div class="ms-ps-ad-top">
+                  <span class="ms-ps-badge">${ad.badge}</span>
+                  <span class="ms-acq-fmt">${ad.format}</span>
+                </div>
+                <h4>${ad.title}</h4>
+                <p class="ms-ps-ad-desc">${ad.caption}</p>
+
+                <ul class="ms-ps-checklist">
+                  ${(ad.layers || []).map((item) => `<li>✓ ${item}</li>`).join("")}
+                </ul>
+              </div>
+            </article>
           `,
             )
             .join("")}
         </div>
+
+        <!-- BOTTOM ROW: PHOTOSHOP WORKSPACE & LAYER SCREENSHOT PROOF -->
+        <article class="ms-ps-proof-card">
+          <div class="ms-ps-proof-head">
+            <div>
+              <span class="ms-ps-proof-tag">${s.motion?.psProof?.badge || "BEHIND THE SCENES • ADOBE PHOTOSHOP WORKSPACE"}</span>
+              <h4>${s.motion?.psProof?.title || "Non-Destructive Layer Stack, Lighting & Shadow Architecture"}</h4>
+              <p>${s.motion?.psProof?.subtitle || ""}</p>
+            </div>
+
+            <div class="ms-ps-pills">
+              ${(s.motion?.psProof?.highlights || [])
+                .map(
+                  (h) => `
+                <div class="ms-ps-pill-box">
+                  <span>${h.label}</span>
+                  <strong>${h.value}</strong>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+
+          <div class="ms-ps-screens-grid">
+            ${(s.motion?.psProof?.screens || [])
+              .map(
+                (sc) => `
+              <div class="ms-ps-screen-item">
+                <span class="ms-ps-screen-label">${sc.label}</span>
+                <div class="ms-ps-screen-wrap">
+                  <img
+                    src="${sc.src}"
+                    alt="${sc.alt}"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  >
+                  <div class="ms-ps-fallback" style="display:none;">
+                    <strong>Drop PS Screenshot Here</strong>
+                    <span>Save as <code>${sc.src}</code></span>
+                  </div>
+                </div>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </article>
       </section>
 
-      <!-- 10. TESTING PLAN -->
+      <!-- 10. CREATIVE TESTING STRATEGY -->
       <section class="cs-block">
-        <div class="cs-flex-head">
-          <div>
-            <span class="cs-tag">${s.testingPlan.tag}</span>
-            <h3>${s.testingPlan.heading}</h3>
-          </div>
-          ${badgeHtml(s.testingPlan.epistemic)}
-        </div>
-        <p class="dialog-body">${s.testingPlan.note}</p>
+        <span class="ms-brief-tag">${s.testing?.tag || "10 • CREATIVE TESTING STRATEGY"}</span>
+        <h3 class="ms-brief-title">${s.testing?.heading || "Proposed Experiments, A/B Matrix & Measurement Plan"}</h3>
 
-        <div class="ms-table-wrap">
-          <table class="ms-test-table">
+        <div class="ms-ui-badges">
+          <span class="ms-rbadge is-exp">${s.testing?.epistemic || "▲ Proposed Experiment Framework (Zero Fabricated Results)"}</span>
+        </div>
+
+        <p class="ms-act-lead">${s.testing?.description || ""}</p>
+
+        <!-- 3 ACQUISITION ANGLE CARDS -->
+        <div class="ms-angle-grid">
+          ${(s.testing?.angles || [])
+            .map(
+              (ang) => `
+            <article class="ms-angle-card">
+              <span class="ms-angle-tag">${ang.tag}</span>
+              <h4>${ang.title}</h4>
+              <p>${ang.desc}</p>
+            </article>
+          `,
+            )
+            .join("")}
+        </div>
+
+        <!-- A/B MATRIX TABLE -->
+        <div class="ms-ab-table-wrap">
+          <table class="ms-ab-table">
             <thead>
               <tr>
                 <th>Test</th>
-                <th>Variable</th>
+                <th>Isolated Variable</th>
                 <th>Variant A (Control)</th>
                 <th>Variant B (Challenger)</th>
-                <th>Hypothesis</th>
+                <th>Proposed Hypothesis</th>
               </tr>
             </thead>
             <tbody>
-              ${s.testingPlan.matrix
+              ${(s.testing?.matrix || [])
                 .map(
                   (row) => `
                 <tr>
-                  <td><strong>${row.test}</strong></td>
-                  <td>${row.variable}</td>
-                  <td>${row.variantA}</td>
-                  <td>${row.variantB}</td>
+                  <td class="ms-ab-id">${row.test}</td>
+                  <td class="ms-ab-var">${row.variable}</td>
+                  <td>${row.control}</td>
+                  <td>${row.challenger}</td>
                   <td>${row.hypothesis}</td>
                 </tr>
               `,
@@ -1330,38 +1409,83 @@ function showProject(index) {
             </tbody>
           </table>
         </div>
-
-        <div class="pillars-grid" style="margin-top:20px">
-          ${s.testingPlan.kpis
-            .map(
-              (k) => `
-            <div class="pillar-card">
-              <span class="cs-tag">${k.stage} KPIS</span>
-              <p style="color:#191917;font-weight:600">${k.metrics}</p>
-            </div>
-          `,
-            )
-            .join("")}
-        </div>
       </section>
 
       <!-- 11. FINAL CAMPAIGN SYSTEM -->
       <section class="cs-block">
-        <div class="cs-flex-head">
+        <div class="ms-brief-header">
           <div>
-            <span class="cs-tag">${s.finalSystem.tag}</span>
-            <h3>${s.finalSystem.heading}</h3>
+            <span class="ms-brief-tag">${s.ecosystem?.tag || "11 • FINAL CAMPAIGN SYSTEM"}</span>
+            <h3 class="ms-brief-title">${s.ecosystem?.heading || "Unified Multi-Channel Ecosystem"}</h3>
           </div>
-          ${badgeHtml(s.finalSystem.epistemic)}
+          <span class="ms-eco-pill">${s.ecosystem?.epistemic || "7 Connected Touchpoints • 1 Visual Language"}</span>
         </div>
-        <p class="dialog-body">${s.finalSystem.summary}</p>
-        <div class="ms-channel-list">
-          ${s.finalSystem.channels.map((ch) => `<span>${ch}</span>`).join("")}
+
+        <p class="ms-act-lead">${s.ecosystem?.description || ""}</p>
+
+        <!-- TOP 4-COLUMN TOUCHPOINT GRID (01 - 04) -->
+        <div class="ms-eco-top-grid">
+          ${(s.ecosystem?.topCards || [])
+            .map(
+              (c) => `
+            <article class="ms-eco-card">
+              <span class="ms-eco-tag">${c.tag}</span>
+              <h4>${c.title}</h4>
+
+              <div class="ms-eco-media">
+                <img src="${c.src}" alt="${c.alt || c.title}">
+              </div>
+
+              <span class="ms-eco-foot">${c.footer}</span>
+            </article>
+          `,
+            )
+            .join("")}
         </div>
-        <figure class="roam-frame" style="margin-top:20px">
-          <img src="${s.finalSystem.boardImage}" alt="Meesho Final Multi-Channel System" onerror="this.closest('figure').style.display='none'">
-          <figcaption>Complete Multi-Channel Growth System — Paid Ads, Motion, Onboarding & CRM</figcaption>
-        </figure>
+
+        <!-- BOTTOM 4-COLUMN SPAN ROW: 05 + 06 + 2-COL FINALE BANNER (07) -->
+        <div class="ms-eco-bot-grid">
+          ${(s.ecosystem?.bottomCards || [])
+            .map(
+              (c) => `
+            <article class="ms-eco-card">
+              <span class="ms-eco-tag">${c.tag}</span>
+              <h4>${c.title}</h4>
+
+              <div class="ms-eco-media is-bottom">
+                <img src="${c.src}" alt="${c.alt || c.title}">
+              </div>
+            </article>
+          `,
+            )
+            .join("")}
+
+          <aside class="ms-eco-finale">
+            <div class="ms-eco-finale-media">
+              <img
+                src="${s.ecosystem?.finale?.src || "meesho/images/repeat purchase campaign strategy_2.jpg"}"
+                alt="${s.ecosystem?.finale?.alt || "Post-Delivery Retention Loop"}"
+              >
+            </div>
+
+            <div class="ms-eco-finale-copy">
+              <span class="ms-eco-ftag">${s.ecosystem?.finale?.tag || "07 • POST-DELIVERY RETENTION LOOP"}</span>
+              <h4>${s.ecosystem?.finale?.title || "Rate & Unlock ₹75 + Complete the Look"}</h4>
+              <p>${s.ecosystem?.finale?.desc || ""}</p>
+
+              <button
+                type="button"
+                class="ms-eco-top-btn"
+                onclick="(function(btn){
+                  const scroller = btn.closest('.modal-card, .cs-modal, [role=&quot;dialog&quot;]') || window;
+                  if (scroller.scrollTo) scroller.scrollTo({ top: 0, behavior: 'smooth' });
+                })(this)"
+              >
+                ${s.ecosystem?.finale?.ctaLabel || "Back to Top ↑"}
+              </button>
+            </div>
+          </aside>
+        </div>
       </section>
     `;
     dialog.scrollTop = 0;

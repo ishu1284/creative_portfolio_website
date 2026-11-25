@@ -3951,3 +3951,606 @@ html {
   transform: translate(-50%, -50%);
   display: block;
 }
+/* 09 / PHOTOSHOP CRAFT & COMPOSITING — 2 FINAL ADS + PS WORKSPACE PROOF */
+.ms-ps-ads-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 22px;
+  align-items: stretch;
+}
+
+.ms-ps-ad-card {
+  background: #ffffff;
+  border: 1px solid #e4ded2;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-ps-ad-media {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  background: #f7f4ec;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.ms-ps-ad-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ms-ps-ad-body {
+  padding: 0 4px 4px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ms-ps-ad-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ms-ps-badge {
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.06em;
+  background: #4a154b;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.ms-ps-ad-body h4 {
+  font: 700 16px/1.28 var(--sans);
+  color: #191917;
+  margin: 0 0 8px;
+}
+
+.ms-ps-ad-desc {
+  font: 400 12.5px/1.55 var(--sans);
+  color: #5c5a55;
+  margin: 0 0 14px;
+}
+
+.ms-ps-checklist {
+  list-style: none;
+  padding: 12px 14px;
+  margin: auto 0 0;
+  background: #fbf8f3;
+  border: 1px solid #ebe4d8;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-ps-checklist li {
+  font: 600 11.5px/1.35 var(--sans);
+  color: #3d353c;
+}
+
+/* PHOTOSHOP WORKSPACE SCREENSHOT PROOF CARD */
+.ms-ps-proof-card {
+  background: #1f1b24;
+  color: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 20px 44px rgba(25, 25, 23, 0.18);
+}
+
+.ms-ps-proof-head {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.ms-ps-proof-tag {
+  display: inline-block;
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 5px 9px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+}
+
+.ms-ps-proof-head h4 {
+  font: 700 20px/1.22 var(--serif);
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.ms-ps-proof-head p {
+  font: 400 12.5px/1.55 var(--sans);
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+}
+
+.ms-ps-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-ps-pill-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.ms-ps-pill-box span {
+  display: block;
+  font: 700 8.5px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: #ff6b9d;
+  margin-bottom: 4px;
+}
+
+.ms-ps-pill-box strong {
+  font: 600 12px/1.3 var(--sans);
+  color: #ffffff;
+}
+
+.ms-ps-screen-wrap {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #141118;
+}
+
+.ms-ps-screen-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ms-ps-fallback {
+  min-height: 200px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ms-ps-fallback code {
+  color: #f59e0b;
+  font-family: var(--mono);
+}
+
+@media (max-width: 860px) {
+  .ms-ps-ads-grid,
+  .ms-ps-proof-head {
+    grid-template-columns: 1fr;
+  }
+}
+/* 09 / DUAL PHOTOSHOP WORKSPACE SCREENSHOTS */
+.ms-ps-screens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ms-ps-screen-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-ps-screen-label {
+  display: block;
+  font: 700 9px/1.2 var(--mono);
+  letter-spacing: 0.06em;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 860px) {
+  .ms-ps-screens-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 10 / CREATIVE TESTING STRATEGY — ACQUISITION ANGLES + A/B MATRIX TABLE */
+.ms-angle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.ms-angle-card {
+  background: #ffffff;
+  border: 1px solid #e4ded2;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.ms-angle-tag {
+  display: block;
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: #d81b60;
+  margin-bottom: 8px;
+}
+
+.ms-angle-card h4 {
+  font: 700 15px/1.28 var(--sans);
+  color: #191917;
+  margin: 0 0 8px;
+}
+
+.ms-angle-card p {
+  font: 400 12.5px/1.55 var(--sans);
+  color: #5c5a55;
+  margin: 0;
+}
+
+/* A/B MATRIX TABLE */
+.ms-ab-table-wrap {
+  background: #ffffff;
+  border: 1px solid #e4ded2;
+  border-radius: 18px;
+  overflow-x: auto;
+}
+
+.ms-ab-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 720px;
+}
+
+.ms-ab-table thead {
+  background: #4a154b;
+  color: #ffffff;
+}
+
+.ms-ab-table th {
+  font: 700 11px/1.2 var(--sans);
+  padding: 15px 18px;
+  white-space: nowrap;
+}
+
+.ms-ab-table td {
+  padding: 16px 18px;
+  font: 400 12px/1.5 var(--sans);
+  color: #454c44;
+  border-top: 1px solid #ebe4d8;
+  vertical-align: top;
+}
+
+.ms-ab-table tbody tr:nth-child(even) {
+  background: #fdfbf7;
+}
+
+.ms-ab-id {
+  font-weight: 700 !important;
+  color: #4a154b !important;
+  white-space: nowrap;
+}
+
+.ms-ab-var {
+  font-weight: 700 !important;
+  color: #191917 !important;
+}
+
+@media (max-width: 860px) {
+  .ms-angle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 11 / FINAL CAMPAIGN SYSTEM — UNIFIED MULTI-CHANNEL ECOSYSTEM */
+.ms-eco-pill {
+  background: #4a154b;
+  color: #ffffff;
+  font: 600 11px/1 var(--sans);
+  padding: 8px 14px;
+  border-radius: 99px;
+}
+
+.ms-eco-top-grid,
+.ms-eco-bot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.ms-eco-top-grid {
+  margin-bottom: 16px;
+}
+
+.ms-eco-card {
+  background: #ffffff;
+  border: 1px solid #e4ded2;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-eco-tag {
+  display: block;
+  font: 700 8.5px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: #d81b60;
+  margin-bottom: 6px;
+}
+
+.ms-eco-card h4 {
+  font: 700 14.5px/1.28 var(--sans);
+  color: #191917;
+  margin: 0 0 14px;
+}
+
+/* MINI PREVIEW TILES */
+.ms-eco-mini {
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ms-eco-mpill {
+  align-self: flex-start;
+  font: 700 8.5px/1 var(--mono);
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.ms-eco-mini strong {
+  font: 700 13px/1.3 var(--serif);
+}
+
+/* TILE COLOR THEMES */
+.ms-eco-mini.is-amber-grad {
+  background: linear-gradient(145deg, #6d1d5c 0%, #c96a2b 100%);
+  color: #ffffff;
+}
+.ms-eco-mini.is-amber-grad .ms-eco-mpill {
+  background: #f59e0b;
+  color: #191917;
+}
+
+.ms-eco-mini.is-jamuni-grad {
+  background: linear-gradient(145deg, #4a154b 0%, #240825 100%);
+  color: #ffffff;
+}
+.ms-eco-mini.is-jamuni-grad .ms-eco-mpill {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.ms-eco-mini.is-plum-grad {
+  background: linear-gradient(145deg, #4a154b 0%, #9b1d64 100%);
+  color: #ffffff;
+}
+.ms-eco-mini.is-plum-grad .ms-eco-mpill {
+  background: #f43397;
+  color: #ffffff;
+}
+
+.ms-eco-mini.is-magenta-grad {
+  background: linear-gradient(145deg, #52154e 0%, #d81b60 100%);
+  color: #ffffff;
+}
+.ms-eco-mini.is-magenta-grad .ms-eco-mpill {
+  background: #f59e0b;
+  color: #191917;
+}
+
+.ms-eco-mini.is-soft-rose {
+  background: #fdf2f7;
+  border: 1px solid #f7d6e6;
+  color: #191917;
+  margin-bottom: 0;
+}
+.ms-eco-mini.is-soft-rose .ms-eco-mpill {
+  background: #ffffff;
+  color: #4a154b;
+}
+.ms-eco-mini.is-soft-rose strong {
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.ms-eco-mini.is-soft-mint {
+  background: #effaf3;
+  border: 1px solid #ccebd7;
+  color: #191917;
+  margin-bottom: 0;
+}
+.ms-eco-mini.is-soft-mint .ms-eco-mpill {
+  background: #dcfce7;
+  color: #166534;
+}
+.ms-eco-mini.is-soft-mint strong {
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.ms-eco-foot {
+  font: 500 10.5px/1.3 var(--sans);
+  color: #7a766e;
+  margin-top: auto;
+}
+
+/* 2-COLUMN FINALE BANNER (TOUCHPOINT 07) */
+.ms-eco-finale {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #4a154b 0%, #2a092b 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 24px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.ms-eco-ftag {
+  display: block;
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+
+.ms-eco-finale-copy h4 {
+  font: 700 22px/1.2 var(--serif);
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.ms-eco-finale-copy p {
+  font: 400 12px/1.55 var(--sans);
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+.ms-eco-top-btn {
+  background: #f59e0b;
+  color: #191917;
+  border: 0;
+  border-radius: 99px;
+  padding: 11px 18px;
+  font: 700 12px/1 var(--sans);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.ms-eco-top-btn:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .ms-eco-top-grid,
+  .ms-eco-bot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ms-eco-top-grid,
+  .ms-eco-bot-grid {
+    grid-template-columns: 1fr;
+  }
+  .ms-eco-finale {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* FLEXIBLE IMAGE CONTAINER FOR SECTION 11 CARDS */
+.ms-eco-media {
+  width: 100%;
+  border-radius: 12px;
+  background: #fbf8f3;
+  border: 1px solid #ebe4d8;
+  padding: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.ms-eco-media.is-bottom {
+  margin-bottom: 0;
+}
+
+.ms-eco-media img {
+  width: 100%;
+  height: auto;
+  max-height: 210px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+/* 2-COLUMN FINALE BANNER WITH CROPPED PHONE PREVIEW (TOUCHPOINT 07) */
+.ms-eco-finale {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #4a154b 0%, #2a092b 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ms-eco-finale-media {
+  width: 132px;
+  height: 236px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background: #191917;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  flex-shrink: 0;
+}
+
+.ms-eco-finale-media img {
+  position: absolute;
+  width: 136%;
+  max-width: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.ms-eco-finale-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ms-eco-ftag {
+  display: block;
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.06em;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+
+.ms-eco-finale-copy h4 {
+  font: 700 20px/1.2 var(--serif);
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.ms-eco-finale-copy p {
+  font: 400 12px/1.52 var(--sans);
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0 0 16px;
+}
+
+@media (max-width: 640px) {
+  .ms-eco-finale {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

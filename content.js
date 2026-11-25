@@ -641,85 +641,193 @@ const portfolio = {
             },
           ],
         },
+        // 09. PHOTOSHOP CRAFT & HIGH-CONVERTING AD COMPOSITING
+        motion: {
+          tag: "09 • PHOTOSHOP CRAFT & COMPOSITING",
+          epistemic: "✦ High-Resolution Raster Production • Adobe Photoshop",
+          heading: "Beauty & Fragrance Performance Ads + PS Layer Proof",
+          description:
+            "Designed in Adobe Photoshop to pair studio-grade product compositing, custom lighting, and grounded contact shadows with high-contrast ₹199–₹249 price anchors and 4.3★ COD social proof.",
+          ads: [
+            {
+              src: "meesho/images/Performance ad 2.png",
+              badge: "AD 01 • FRAGRANCE HOOK",
+              title: "Vanilla Elixir — Luxury Anchor @ ₹249",
+              format: "4:5 Paid Social Static",
+              caption:
+                "Warm radial studio lighting, raw vanilla pods, brown sugar cubes, and soft Multiply contact shadows paired with an editorial Playfair Display price-contrast headline.",
+              layers: [
+                "Warm radial studio gradient + soft floor plane",
+                "Vanilla bean & brown sugar foreground depth compositing",
+                "4.3★ (12K+ Ratings) • Free Delivery • COD trust pill",
+              ],
+            },
+            {
+              src: "meesho/images/performance 3.png",
+              badge: "AD 02 • SKINCARE CALLOUTS",
+              title: "Glowvera Vitamin C Serum @ ₹199",
+              format: "4:5 Ingredient-Led Static",
+              caption:
+                "Natural wood-slice pedestal grounding, glass dropper highlights, and clean ingredient callout pointers (10% Pure Vitamin C, Hyaluronic Acid, Non-Sticky Gel).",
+              layers: [
+                "Wood pedestal grounding + soft contact shadow",
+                "4-point ingredient callout lines for 2-second scan",
+                "Entry ₹199 price pop + 4.3★ COD social proof bar",
+              ],
+            },
+          ],
+          psProof: {
+            badge: "BEHIND THE SCENES • ADOBE PHOTOSHOP WORKSPACE (2 FILES)",
+            title:
+              "Non-Destructive Layer Stack, Lighting & Shadow Architecture",
+            subtitle:
+              "Built with organized Smart Objects, Curves/Color Balance adjustment layers, custom radial studio gradients, and soft Multiply contact shadows so both SKUs sit naturally on their surfaces.",
+            highlights: [
+              {
+                label: "COMPOSITING",
+                value: "Smart Objects + Hairline Callout Paths",
+              },
+              {
+                label: "LIGHT & DEPTH",
+                value: "Radial Glows + Soft Multiply Contact Shadows",
+              },
+              {
+                label: "CONVERSION UI",
+                value: "Meesho Magenta Pills + ₹199 / ₹249 Anchors",
+              },
+            ],
+            screens: [
+              {
+                label: "PSD 01 • VANILLA ELIXIR COMPOSITE & LAYER STACK",
+                src: "meesho/images/Screenshot (1135).png",
+                alt: "Adobe Photoshop Workspace Screenshot for Vanilla Elixir Perfume Ad",
+              },
+              {
+                label: "PSD 02 • GLOWVERA VITAMIN C SERUM & CALLOUT LAYERS",
+                src: "meesho/images/Screenshot (1141).png",
+                alt: "Adobe Photoshop Workspace Screenshot for Glowvera Vitamin C Serum Ad",
+              },
+            ],
+          },
+        },
 
-        // 10. TESTING PLAN — HYPOTHESES, VARIANTS & KPIs
-        testingPlan: {
-          tag: "10 / CREATIVE TESTING PLAN",
-          epistemic: "PROPOSED EXPERIMENT",
-          heading: "Controlled A/B Testing Matrix & Full-Funnel KPIs",
-          note: "All tests below are proposed single-variable experiments held at equal budget and audience targeting over a 7–14 day learning window. No internal Meesho results are assumed or fabricated.",
+        // 10. CREATIVE TESTING STRATEGY — PROPOSED EXPERIMENTS, A/B MATRIX & MEASUREMENT PLAN
+        testing: {
+          tag: "10 • CREATIVE TESTING STRATEGY",
+          epistemic:
+            "▲ Proposed Experiment Framework (Zero Fabricated Results)",
+          heading: "Proposed Experiments, A/B Matrix & Measurement Plan",
+          description:
+            "Rather than inventing post-launch metrics, this section defines how the three acquisition creative angles would be validated through single-variable A/B tests across Meta Reels/Feeds and Google App Campaigns over a 14-day learning window.",
+          angles: [
+            {
+              tag: "ACQUISITION ANGLE A",
+              title: "Price-Anchor & Utility Hook",
+              desc: "Leads with “Everyday Style Under ₹399” (Anarkali Kurti at ₹349 / Net ₹249) to eliminate price hesitation in the first 1.5 seconds.",
+            },
+            {
+              tag: "ACQUISITION ANGLE B",
+              title: "Editorial Discovery Hook",
+              desc: "Leads with “The Co-ord You’ll Live In” (₹499 editorial lookbook) to attract trend-conscious shoppers seeking wardrobe upgrades.",
+            },
+            {
+              tag: "ACQUISITION ANGLE C",
+              title: "Zero-Risk Trust Hook",
+              desc: "Leads with Cash on Delivery + 7-Day Easy Returns alongside low-sizing-risk beauty staples (Vanilla Elixir at ₹249).",
+            },
+          ],
           matrix: [
             {
               test: "A/B Test 1",
-              variable: "Price first vs. Style first",
-              variantA: "Big 'Starting ₹349 / Net ₹249' price badge at the top",
-              variantB:
-                "Fashion headline ('The Co-ord You'll Live In') with smaller price",
+              variable: "Price-led vs. discovery-led hook",
+              control:
+                "Bold Starting ₹349 / Net ₹249 price badge in primary focal zone.",
+              challenger:
+                "Editorial headline (“The Co-ord You’ll Live In”) with secondary price tag.",
               hypothesis:
-                "See whether showing the low price immediately gets more clicks, or if leading with style brings in bigger orders.",
+                "Tests whether explicit price anchors drive higher CTR or if discovery hooks attract higher-AOV cohorts.",
             },
             {
               test: "A/B Test 2",
-              variable: "Many outfits vs. One hero outfit",
-              variantA: "Grid showing 3–4 different outfits and prices at once",
-              variantB:
-                "One clean model photo matching the app's welcome screen",
+              variable: "Product collage vs. lifestyle image",
+              control:
+                "Multi-SKU grid displaying 3–4 silhouettes + prices on warm ivory.",
+              challenger:
+                "Single-model studio lifestyle shot (matching Onboarding Screen 1).",
               hypothesis:
-                "Test if showing more variety helps more people spot something they like, or if one clear photo works better.",
+                "Evaluates whether catalog breadth density beats single-hero visual aspiration on mobile feeds.",
             },
             {
               test: "A/B Test 3",
-              variable: "Still image vs. 15-second video",
-              variantA: "Clean static ad card with bold price and outfit photo",
-              variantB: "15-second animated reel showing ₹349 dropping to ₹249",
+              variable: "COD trust badge placement",
+              control: "Standard “Shop Now” CTA without doorstep payment cues.",
+              challenger:
+                "Explicit “Pay Cash on Delivery • 7-Day Easy Returns” badge beside CTA.",
               hypothesis:
-                "Check if movement and a live price-drop animation stop more people from scrolling past.",
-            },
-            {
-              test: "A/B Test 4",
-              variable: "Direct button vs. Curious button",
-              variantA: "'Claim ₹100 Off & Shop' / 'Order COD @ ₹249'",
-              variantB: "'See Styles Under ₹399' / 'Unlock Your Welcome Box'",
-              hypothesis:
-                "Find out if new shoppers prefer an immediate discount button or a low-pressure button to browse first.",
-            },
-          ],
-          kpis: [
-            {
-              stage: "GETTING USERS (ACQUISITION)",
-              metrics:
-                "How many people stop scrolling · Ad click rate (CTR) · App installs",
-            },
-            {
-              stage: "FIRST PURCHASE (ACTIVATION)",
-              metrics:
-                "People who finish the 3 welcome screens · First orders placed within 7 days",
-            },
-            {
-              stage: "COMING BACK (RETENTION)",
-              metrics:
-                "Shoppers who place a 2nd order within 30 days · People who claim the ₹75 rating reward",
+                "Measures impact on click-to-install and first-order completion among Tier-2/3 first-time buyers.",
             },
           ],
         },
 
-        // 11. FINAL CAMPAIGN SYSTEM — ALL ASSETS TOGETHER ACROSS CHANNELS
-        finalSystem: {
-          tag: "11 / FINAL CAMPAIGN SYSTEM",
-          epistemic: "DESIGN HYPOTHESIS",
-          heading: "Unified Multi-Channel Growth System",
-          summary:
-            "Every creative artifact shares one cohesive typographic scale (Playfair Display + DM Sans), one color language (Jamuni, Magenta, Amber on warm ivory), and one uninterrupted value promise from first impression to third order.",
-          boardImage: "meesho/images/final-campaign-system.png",
-          channels: [
-            "01. Paid Social Static Ads (Meta / Google)",
-            "02. 15s Motion Explainer Reel (9:16)",
-            "03. 3-Screen Mobile Onboarding Prototype",
-            "04. In-App Hero & Sticky Checkout Banners",
-            "05. Lock-Screen Rich Push Notifications",
-            "06. 3-Stage COD Cart Abandonment Flow",
-            "07. Post-Delivery Rate-to-Unlock ₹75 Habit Loop",
+        // 11. FINAL CAMPAIGN SYSTEM — UNIFIED MULTI-CHANNEL ECOSYSTEM
+        ecosystem: {
+          tag: "11 • FINAL CAMPAIGN SYSTEM",
+          epistemic: "7 Connected Touchpoints • 1 Visual Language",
+          heading: "Unified Multi-Channel Ecosystem",
+          description:
+            "Seen together, every touchpoint shares identical color codes (Jamuni, Magenta, Warm Amber), typography, and landed-price framing—ensuring a user who clicks an Instagram ad experiences zero visual disconnect through onboarding, checkout, and repeat delivery.",
+          topCards: [
+            {
+              tag: "01 • PAID SOCIAL STATIC",
+              title: "Ethnic & Co-ord Feed Ads",
+              src: "meesho/images/Performance ad 1.png",
+              alt: "Ethnic Kurti Feed Ad @ ₹299",
+              footer: "4:5 Meta Feed & Carousel Acquisition",
+            },
+            {
+              tag: "02 • PHOTOSHOP COMPOSITING",
+              title: "Fragrance & Skincare Ads",
+              src: "meesho/images/Performance ad 2.png",
+              alt: "Vanilla Elixir Fragrance Ad @ ₹249",
+              footer: "Studio Lighting + PS Layer Stack",
+            },
+            {
+              tag: "03 • PRODUCT ACTIVATION",
+              title: "3-Screen Editorial Onboarding",
+              src: "meesho/images/onboarding screen 1.png",
+              alt: "Onboarding Screen 1 Editorial Hook",
+              footer: "First-Time App Open Experience",
+            },
+            {
+              tag: "04 • IN-APP MERCHANDISING",
+              title: "Split-Ticket & Sticky Dock",
+              src: "meesho/images/In app banners.png",
+              alt: "In-App Hero Banner and Sticky Dock",
+              footer: "Home Feed Hero & Persistent Footer",
+            },
           ],
+          bottomCards: [
+            {
+              tag: "05 • LOCK-SCREEN CRM",
+              title: "Lock-Screen Rich Push",
+              src: "meesho/images/Push Notification.png",
+              alt: "Lock-Screen Rich Push Notification",
+            },
+            {
+              tag: "06 • BAG RECOVERY",
+              title: "WhatsApp Cart Nudge",
+              src: "meesho/images/whatsapp cart nudge.png",
+              alt: "WhatsApp Business Cart Recovery Nudge",
+            },
+          ],
+          finale: {
+            tag: "07 • POST-DELIVERY RETENTION LOOP",
+            title: "Rate & Unlock ₹75 + Complete the Look",
+            desc: "Turns Order 1 delivery delight into 1-tap fit reviews, ₹75 repeat wallet credit, and cross-category add-on purchases (Jhumkas @ ₹124, Flats @ ₹224).",
+            src: "meesho/images/repeat purchase campaign strategy.png",
+            alt: "Post-Delivery Retention Loop & Complete the Look UI",
+            ctaLabel: "Back to Top ↑",
+          },
         },
       },
     },
