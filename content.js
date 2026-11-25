@@ -187,21 +187,335 @@ const portfolio = {
     },
     {
       number: "02",
+      image: "meesho/images/cover-hero.png",
       title: "Meesho Growth",
-      category: "Growth strategy / Creative strategy",
-      visualTitle: "GROWTH<br>IS A<br>PEOPLE THING",
+      category: "Growth Creative Strategy / Full-Funnel Lifecycle / Motion & UI",
+      visualTitle: "FROM SCROLL<br>TO SHOPPING",
       visualStyle: "serif",
-      label: "MAKE EVERYDAY FEEL BIG",
+      label: "EVERYDAY STYLE, ZERO OVERPAY",
       corner: "✳",
       summary:
-        "A creative growth lens for making value, discovery and everyday wins feel worth sharing.",
-      challenge:
-        "How can a value-first commerce brand build stronger emotional relevance while helping more people discover what is possible on the platform?",
-      approach:
-        "Start with real shopping behaviours and everyday motivations. Turn product breadth, affordability and small moments of delight into clear creative territories that can travel across the funnel.",
-      deliverables:
-        "Audience insight · Growth territories · Messaging directions · Campaign ideas",
-      outcome: "A growth story rooted in people, not just performance metrics.",
+        "A full-funnel growth creative case study for Meesho—bridging the gap between high-appeal editorial discovery and Tier-2/Tier-3 price confidence across Acquisition, Activation, Motion, and Habit-Loop Retention.",
+      isMeesho: true,
+      sections: {
+        // 01. COVER — FROM SCROLL TO SHOPPING
+        cover: {
+          tag: "01 / COVER — FROM SCROLL TO SHOPPING",
+          heading: "From Scroll to Shopping: Designing a High-Trust Value Funnel for Meesho",
+          subhead:
+            "How editorial visual hierarchy, zero-friction mobile onboarding, and post-delivery habit loops turn passive social scrollers into repeat Meesho buyers.",
+          heroImage: "meesho/images/cover-hero.png",
+          metaPills: [
+            "Role: Growth & Visual Designer",
+            "Scope: Paid Ads · 3-Screen Onboarding · CRM · Motion · A/B Plan",
+            "Core Palette: Jamuni #4A154B · Magenta #D81B60 · Amber #F59E0B"
+          ]
+        },
+
+        // 02. THE BRIEF — BUSINESS OBJECTIVE & GROWTH CHALLENGE
+        brief: {
+          tag: "02 / THE BRIEF",
+          epistemic: "RESEARCH-BACKED INSIGHT",
+          objectiveTitle: "Business Objective",
+          objective:
+            "Drive profitable new-user acquisition and accelerate first-to-second order conversion across value-conscious Tier-2 and Tier-3 Indian shoppers without eroding unit economics through perpetual heavy discounting.",
+          challengeTitle: "The Core Growth Challenge",
+          challenge:
+            "Meesho wins on ~₹300 average order value (AOV) affordability and massive unbranded catalog depth, yet discount-cluttered ad creatives trigger 'low-quality skepticism'—while overly luxury editorial ads trigger 'too expensive for me' bounce."
+        },
+
+        // 03. USER INSIGHT — BARRIERS TO INSTALLING, BUYING & RETURNING
+        userInsight: {
+          tag: "03 / USER INSIGHT",
+          epistemic: "RESEARCH-BACKED INSIGHT",
+          heading: "What Prevents Users From Installing, Buying, or Returning?",
+          barriers: [
+            {
+              stage: "01 / INSTALL BARRIER",
+              title: "Visual Fatigue & Quality Doubt",
+              insight:
+                "Loud, starburst-heavy discount ads create banner blindness and make shoppers question fabric, stitching, and print accuracy before tapping Install."
+            },
+            {
+              stage: "02 / FIRST-ORDER BARRIER",
+              title: "Login Walls & Payment Hesitation",
+              insight:
+                "Forcing immediate account creation before letting users browse deals—or failing to surface Cash on Delivery (COD) and 7-day returns early—causes sharp drop-off before Order 1."
+            },
+            {
+              stage: "03 / REPEAT-PURCHASE BARRIER",
+              title: "Subsidy Cliff After Order 1",
+              insight:
+                "Users acquired purely via deep ₹100 welcome coupons churn once full prices return unless post-delivery delight and low-ticket cross-sells establish a shopping habit."
+            }
+          ]
+        },
+
+        // 04. GROWTH FUNNEL — ACQUISITION -> ACTIVATION -> RETENTION
+        funnel: {
+          tag: "04 / GROWTH FUNNEL ARCHITECTURE",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "Acquisition → Activation → Retention",
+          stages: [
+            {
+              step: "STAGE 01 · ACQUISITION",
+              goal: "Stop the scroll with editorial clarity + instant price anchor",
+              mechanism:
+                "Pair clean studio lookbook photography with transparent landed prices (₹349 Ethnic Kurtis, ₹499 Co-ord Sets, ₹249 Vanilla Elixir).",
+              kpi: "Target KPIs: Thumb-Stop Rate, CTR, Click-to-Install Rate"
+            },
+            {
+              step: "STAGE 02 · ACTIVATION",
+              goal: "Convert installs into Order 1 within 7 days",
+              mechanism:
+                "Sosh-inspired animated lookbook entry + Guest Skip, 2-tap style curation, and a Cash-on-Delivery MEESHO100 trust screen.",
+              kpi: "Target KPIs: Onboarding Completion, Install-to-Order 1 CR"
+            },
+            {
+              step: "STAGE 03 · RETENTION",
+              goal: "Build a subsidy-light 3-order habit loop",
+              mechanism:
+                "24-hr COD cart recovery, Post-Delivery 'Rate & Unlock ₹75' wallet delight, and 'Complete the Look' low-ticket accessory pairings.",
+              kpi: "Target KPIs: D30 Repeat Rate, Order 2+ Conversion"
+            }
+          ]
+        },
+
+        // 05. CREATIVE STRATEGY — MESSAGE ARCHITECTURE & CAMPAIGN CONCEPT
+        strategy: {
+          tag: "05 / CREATIVE STRATEGY",
+          epistemic: "DESIGN HYPOTHESIS",
+          conceptName: "Campaign Platform: “Everyday Style, Zero Overpay.”",
+          thesis:
+            "Instead of hiding affordable prices behind luxury minimalism or shouting discounts with visual clutter, treat ₹249–₹499 everyday fashion and fragrance with editorial magazine hierarchy—letting generous negative space, crisp Playfair + DM Sans typography, and trust badges carry the persuasion.",
+          pillars: [
+            {
+              title: "01. Editorial Price Anchoring",
+              detail:
+                "Lead with aspirational styling, then resolve price anxiety immediately with a high-contrast ₹249 / ₹349 landed-cost pill."
+            },
+            {
+              title: "02. Doorstep Trust Architecture",
+              detail:
+                "Elevate Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery from fine-print footnotes into primary visual trust badges."
+            },
+            {
+              title: "03. Continuous Visual Thread",
+              detail:
+                "Carry the exact model lookbooks and price tags from Meta/Reels ads directly into Onboarding Screen 1 so users feel zero context-switch."
+            }
+          ]
+        },
+
+        // 06. ACQUISITION EXECUTION — AD CONCEPTS & CREATIVE VARIATIONS
+        acquisition: {
+          tag: "06 / ACQUISITION EXECUTION",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "Paid Social Ad Concepts & Category Variations",
+          description:
+            "Three category-specific performance creatives built for Meta Feeds, Stories, and Google App Campaigns—testing price-led hooks against editorial wardrobe storytelling.",
+          assets: [
+            {
+              src: "meesho/images/ad-ethnic-kurti.png",
+              badge: "ANGLE A · PRICE-LED UTILITY",
+              title: "Ethnic Wear — “A Little More Style. A Lot Less Spend.”",
+              caption:
+                "1200×500 & 4:5 Feed unit anchored at ₹349 (Net ₹249 with MEESHO100) with warm editorial framing and COD badge."
+            },
+            {
+              src: "meesho/images/ad-coord-set.png",
+              badge: "ANGLE B · EDITORIAL DISCOVERY",
+              title: "Western Co-ords — “The Co-ord You'll Live In.”",
+              caption:
+                "Clean studio styling starting at ₹499—designed to attract younger, trend-driven shoppers who usually browse high-street apps."
+            },
+            {
+              src: "meesho/images/ad-vanilla-elixir.png",
+              badge: "ANGLE C · IMPULSE BEAUTY & GIFTING",
+              title: "Fragrance — “Vanilla Elixir @ ₹249”",
+              caption:
+                "High-contrast sensory product visual positioned as an effortless low-ticket first order with zero delivery fee."
+            }
+          ]
+        },
+
+        // 07. ACTIVATION EXECUTION — ONBOARDING & FIRST-PURCHASE EXPERIENCE
+        activation: {
+          tag: "07 / ACTIVATION EXECUTION",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "3-Screen Onboarding & First-Purchase Conversion Flow",
+          description:
+            "Adapted the full-bleed glassmorphic aesthetic of modern social-shopping apps for Meesho's mass-market user psychology—pairing an animated lookbook background with low-friction WhatsApp/OTP entry and a Skip escape hatch.",
+          screens: [
+            {
+              src: "meesho/images/onboarding-1.png",
+              step: "SCREEN 01 · HOOK & ENTRY",
+              title: "Animated Lookbook + Low-Friction OTP",
+              detail:
+                "Crossfading everyday looks with floating ₹249–₹499 price pills behind a dark glassmorphic bottom sheet, 1-tap Mobile/WhatsApp OTP, and top-right Skip."
+            },
+            {
+              src: "meesho/images/onboarding-2.png",
+              step: "SCREEN 02 · INTENT CURATION",
+              title: "2-Tap Style & Category Selector",
+              detail:
+                "Zero-typing visual chips (Ethnic Kurtis, Western Co-ords, Home & Decor, Beauty) with clear starting price anchors to personalize the home feed immediately."
+            },
+            {
+              src: "meesho/images/onboarding-3.png",
+              step: "SCREEN 03 · TRUST & VOUCHER",
+              title: "COD Assurance + MEESHO100 Unlock",
+              detail:
+                "Stacks Cash on Delivery, 7-Day Easy Returns, and Lowest Price Guarantee above a perforated ₹100 welcome ticket before entering the feed."
+            }
+          ]
+        },
+
+        // 08. RETENTION EXECUTION — PUSH, BANNERS & CRM CREATIVES
+        retention: {
+          tag: "08 / RETENTION & CRM EXECUTION",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "Lifecycle Touchpoints: Push, In-App Banners, Cart Recovery & Habit Loop",
+          description:
+            "Connected CRM and in-app surfaces engineered to recover abandoned carts without margin-killing coupons and turn Order 1 buyers into 3-order VIP regulars.",
+          touchpoints: [
+            {
+              src: "meesho/images/crm-push.png",
+              channel: "LOCK-SCREEN RICH PUSH",
+              title: "T+4h / T+24h / T+48h Welcome Nudge",
+              detail:
+                "Rich media notification displaying the exact ₹349 → ₹249 landed price preview and dual quick-actions ('Claim ₹100 Off' / 'Browse Under ₹299')."
+            },
+            {
+              src: "meesho/images/crm-inapp-banners.png",
+              channel: "IN-APP MERCHANDISING",
+              title: "Home Feed Hero + Sticky Checkout Nudge",
+              detail:
+                "Editorial top-of-feed welcome banner paired with a persistent bottom-bar progress tracker showing real-time ₹100 voucher eligibility."
+            },
+            {
+              src: "meesho/images/crm-cart-reminder.png",
+              channel: "CART ABANDONMENT RECOVERY",
+              title: "Size-Lock + 1-Tap COD Checkout Deep Link",
+              detail:
+                "3-stage cadence (+15m size reservation, +6h COD & easy-return reassurance, +24h voucher expiry) routing directly to 1-tap COD confirmation."
+            },
+            {
+              src: "meesho/images/crm-repeat-loop.png",
+              channel: "POST-DELIVERY HABIT LOOP",
+              title: "“Rate & Unlock ₹75” + Complete the Look",
+              detail:
+                "Turns post-delivery satisfaction into an instant ₹75 wallet credit usable on curated Order 1 pairings (Oxidised Jhumkas @ ₹124, Kolhapuri Flats @ ₹224)."
+            }
+          ]
+        },
+
+        // 09. MOTION DESIGN — STORYBOARD & FINAL ANIMATION
+        motion: {
+          tag: "09 / MOTION DESIGN",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "15-Second First-Purchase Explainer Reel (9:16)",
+          description:
+            "Built for Instagram Reels, YouTube Shorts, and Paid Social Stories—engineered with a 1.5-second visual hook and silent-autoplay kinetic typography.",
+          reelPreview: "meesho/images/motion-reel-preview.png",
+          beats: [
+            {
+              time: "00.0s – 04.5s",
+              beat: "BEAT 01 · EDITORIAL PRICE-ANCHOR HOOK",
+              visual:
+                "Full-bleed studio lookbook zoom matching Onboarding Screen 1; bold ₹249 scroll-stopper badge snaps in within the first 36 frames."
+            },
+            {
+              time: "04.5s – 10.0s",
+              beat: "BEAT 02 · VOUCHER DROP & PRICE SLASH",
+              visual:
+                "Kinetic strikethrough animates ₹349 → ₹249 landed cost as the perforated MEESHO100 welcome ticket drops into frame."
+            },
+            {
+              time: "10.0s – 15.0s",
+              beat: "BEAT 03 · DOORSTEP TRUST & FINAL CTA",
+              visual:
+                "Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery stack cleanly above a pulsing 'Order COD @ ₹249' CTA."
+            }
+          ]
+        },
+
+        // 10. TESTING PLAN — HYPOTHESES, VARIANTS & KPIs
+        testingPlan: {
+          tag: "10 / CREATIVE TESTING PLAN",
+          epistemic: "PROPOSED EXPERIMENT",
+          heading: "Controlled A/B Testing Matrix & Full-Funnel KPIs",
+          note:
+            "All tests below are proposed single-variable experiments held at equal budget and audience targeting over a 7–14 day learning window. No internal Meesho results are assumed or fabricated.",
+          matrix: [
+            {
+              test: "A/B Test 1",
+              variable: "Price-led vs. Discovery-led hook",
+              variantA: "Bold 'Starting ₹349 / Net ₹249' badge in top focal zone",
+              variantB: "Editorial headline ('The Co-ord You'll Live In') with price secondary",
+              hypothesis:
+                "Isolates whether immediate price anchoring maximizes click volume while discovery hooks attract higher-AOV baskets."
+            },
+            {
+              test: "A/B Test 2",
+              variable: "Product collage vs. Lifestyle image",
+              variantA: "Multi-SKU grid showing 3–4 silhouettes + prices on warm backdrop",
+              variantB: "Single model editorial shot matching Onboarding Screen 1",
+              hypothesis:
+                "Tests whether catalog breadth (higher odds one item appeals) outperforms single-hero visual clarity and ad-to-app continuity."
+            },
+            {
+              test: "A/B Test 3",
+              variable: "Static creative vs. Motion creative",
+              variantA: "High-contrast 4:5 editorial static card with clear hierarchy",
+              variantB: "15-second 3-beat explainer reel (₹349 → ₹249 slash + MEESHO100)",
+              hypothesis:
+                "Evaluates whether kinetic price-drop storytelling lifts 3-second thumb-stop rate and downstream install-to-purchase intent."
+            },
+            {
+              test: "A/B Test 4",
+              variable: "Direct CTA vs. Curiosity-driven CTA",
+              variantA: "'Claim ₹100 Off & Shop' / 'Order COD @ ₹249'",
+              variantB: "'See Styles Under ₹399' / 'Unlock Your Welcome Box'",
+              hypothesis:
+                "Determines if transactional urgency outperforms low-commitment browsing cues for cold Tier-2/3 traffic."
+            }
+          ],
+          kpis: [
+            {
+              stage: "ACQUISITION",
+              metrics: "3-Sec Thumb-Stop Rate · Outbound CTR · Click-to-Install Conversion (IPM)"
+            },
+            {
+              stage: "ACTIVATION",
+              metrics: "3-Screen Onboarding Completion · Install-to-Order 1 CR (D7) · Cart Push Recovery Lift vs. Holdout"
+            },
+            {
+              stage: "RETENTION",
+              metrics: "D30 Repeat-Purchase Rate (Order 1 → 2) · Post-Delivery Rating & ₹75 Credit Redemption · D45 Reactivation"
+            }
+          ]
+        },
+
+        // 11. FINAL CAMPAIGN SYSTEM — ALL ASSETS TOGETHER ACROSS CHANNELS
+        finalSystem: {
+          tag: "11 / FINAL CAMPAIGN SYSTEM",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "Unified Multi-Channel Growth System",
+          summary:
+            "Every creative artifact shares one cohesive typographic scale (Playfair Display + DM Sans), one color language (Jamuni, Magenta, Amber on warm ivory), and one uninterrupted value promise from first impression to third order.",
+          boardImage: "meesho/images/final-campaign-system.png",
+          channels: [
+            "01. Paid Social Static Ads (Meta / Google)",
+            "02. 15s Motion Explainer Reel (9:16)",
+            "03. 3-Screen Mobile Onboarding Prototype",
+            "04. In-App Hero & Sticky Checkout Banners",
+            "05. Lock-Screen Rich Push Notifications",
+            "06. 3-Stage COD Cart Abandonment Flow",
+            "07. Post-Delivery Rate-to-Unlock ₹75 Habit Loop"
+          ]
+        }
+      }
     },
     {
       image: "After hours/extra 5.png",

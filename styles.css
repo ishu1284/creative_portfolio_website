@@ -2359,3 +2359,83 @@ html {
 @media (max-width: 720px) {
   .ts-strategy-strip { grid-template-columns: 1fr; }
 }
+/* MEESHO GROWTH CASE STUDY EXTENSIONS */
+.ms-epistemic {
+  display: inline-block;
+  font: 800 9.5px/1 var(--mono);
+  letter-spacing: 0.08em;
+  padding: 6px 11px;
+  border-radius: 99px;
+  border: 1.5px solid #191917;
+  white-space: nowrap;
+}
+.ms-badge-research { background: #a9c9f5; color: #191917; }
+.ms-badge-hypothesis { background: #c6de41; color: #191917; }
+.ms-badge-experiment { background: #f05a3c; color: #fff; }
+
+.ms-meta-pills, .ms-channel-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.ms-meta-pills span, .ms-channel-list span {
+  font: 700 10px/1.2 var(--mono);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 6px 11px;
+  border-radius: 99px;
+}
+
+.ms-funnel-card {
+  background: #191917;
+  color: #f7f4ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ms-funnel-card p { color: rgba(247, 244, 236, 0.8); }
+.ms-kpi-line {
+  display: block;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(247, 244, 236, 0.16);
+  font: 700 10px/1.4 var(--mono);
+  color: #c6de41;
+}
+
+.ms-mini-tag {
+  display: inline-block;
+  font: 700 9px/1 var(--mono);
+  color: #f05a3c;
+  margin-bottom: 4px;
+}
+
+.ms-table-wrap {
+  overflow-x: auto;
+  margin-top: 18px;
+  border: 1.5px solid #191917;
+  border-radius: 12px;
+  background: #fff;
+}
+.ms-test-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+.ms-test-table th {
+  background: #191917;
+  color: #f7f4ec;
+  font: 700 10px/1.2 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 14px;
+}
+.ms-test-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.ms-test-table tr:last-child td { border-bottom: 0; }

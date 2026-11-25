@@ -799,7 +799,314 @@ function showProject(index) {
     dialog.showModal();
     return;
   }
+// 02. MEESHO GROWTH CASE STUDY (11 CHAPTERS)
+  if (p.isMeesho && p.sections) {
+    const s = p.sections;
+    const badgeHtml = (label) => {
+      const cls =
+        label === "RESEARCH-BACKED INSIGHT"
+          ? "ms-badge-research"
+          : label === "PROPOSED EXPERIMENT"
+            ? "ms-badge-experiment"
+            : "ms-badge-hypothesis";
+      return `<span class="ms-epistemic ${cls}">${label}</span>`;
+    };
 
+    dialogContent.innerHTML = `
+      <div class="cs-header">
+        <p class="eyebrow">${p.number} / CASE STUDY · ${p.category}</p>
+        <h2>${p.title}</h2>
+        <p class="dialog-summary">${p.summary}</p>
+      </div>
+
+      <!-- 01. COVER -->
+      <section class="cs-block ms-cover-card">
+        <span class="cs-tag">${s.cover.tag}</span>
+        <h3>${s.cover.heading}</h3>
+        <p class="dialog-body">${s.cover.subhead}</p>
+        <div class="ms-meta-pills">
+          ${s.cover.metaPills.map((m) => `<span>${m}</span>`).join("")}
+        </div>
+        <figure class="roam-frame" style="margin-top:20px">
+          <img src="${s.cover.heroImage}" alt="From Scroll to Shopping Cover" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Campaign System Overview — From Scroll to Shopping</figcaption>
+        </figure>
+      </section>
+
+      <!-- 02. THE BRIEF -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <span class="cs-tag">${s.brief.tag}</span>
+          ${badgeHtml(s.brief.epistemic)}
+        </div>
+        <div class="cp-grid">
+          <div class="cp-box">
+            <h4>${s.brief.objectiveTitle.toUpperCase()}</h4>
+            <p>${s.brief.objective}</p>
+          </div>
+          <div class="cp-box purpose">
+            <h4>${s.brief.challengeTitle.toUpperCase()}</h4>
+            <p>${s.brief.challenge}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. USER INSIGHT -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.userInsight.tag}</span>
+            <h3>${s.userInsight.heading}</h3>
+          </div>
+          ${badgeHtml(s.userInsight.epistemic)}
+        </div>
+        <div class="pillars-grid">
+          ${s.userInsight.barriers
+            .map(
+              (b) => `
+            <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
+              <span class="cs-tag">${b.stage}</span>
+              <strong>${b.title}</strong>
+              <p>${b.insight}</p>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 04. GROWTH FUNNEL -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.funnel.tag}</span>
+            <h3>${s.funnel.heading}</h3>
+          </div>
+          ${badgeHtml(s.funnel.epistemic)}
+        </div>
+        <div class="pillars-grid">
+          ${s.funnel.stages
+            .map(
+              (st) => `
+            <div class="pillar-card ms-funnel-card">
+              <span class="cs-tag" style="color:#c6de41">${st.step}</span>
+              <strong>${st.goal}</strong>
+              <p>${st.mechanism}</p>
+              <span class="ms-kpi-line">${st.kpi}</span>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 05. CREATIVE STRATEGY -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.strategy.tag}</span>
+            <h3>${s.strategy.conceptName}</h3>
+          </div>
+          ${badgeHtml(s.strategy.epistemic)}
+        </div>
+        <p class="dialog-body">${s.strategy.thesis}</p>
+        <div class="pillars-grid" style="margin-top:20px">
+          ${s.strategy.pillars
+            .map(
+              (pl) => `
+            <div class="pillar-card">
+              <strong>${pl.title}</strong>
+              <p>${pl.detail}</p>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 06. ACQUISITION EXECUTION -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.acquisition.tag}</span>
+            <h3>${s.acquisition.heading}</h3>
+          </div>
+          ${badgeHtml(s.acquisition.epistemic)}
+        </div>
+        <p class="dialog-body">${s.acquisition.description}</p>
+        <div class="roam-gallery-3">
+          ${s.acquisition.assets
+            .map(
+              (a) => `
+            <figure class="roam-frame">
+              <img src="${a.src}" alt="${a.title}" onerror="this.style.display='none'">
+              <figcaption>
+                <span class="ms-mini-tag">${a.badge}</span><br>
+                <strong>${a.title}</strong><br>${a.caption}
+              </figcaption>
+            </figure>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 07. ACTIVATION EXECUTION -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.activation.tag}</span>
+            <h3>${s.activation.heading}</h3>
+          </div>
+          ${badgeHtml(s.activation.epistemic)}
+        </div>
+        <p class="dialog-body">${s.activation.description}</p>
+        <div class="roam-gallery-3">
+          ${s.activation.screens
+            .map(
+              (sc) => `
+            <figure class="roam-frame">
+              <img src="${sc.src}" alt="${sc.title}" style="aspect-ratio:9/18;object-fit:cover" onerror="this.style.display='none'">
+              <figcaption>
+                <span class="ms-mini-tag">${sc.step}</span><br>
+                <strong>${sc.title}</strong><br>${sc.detail}
+              </figcaption>
+            </figure>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 08. RETENTION EXECUTION -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.retention.tag}</span>
+            <h3>${s.retention.heading}</h3>
+          </div>
+          ${badgeHtml(s.retention.epistemic)}
+        </div>
+        <p class="dialog-body">${s.retention.description}</p>
+        <div class="roam-gallery-2">
+          ${s.retention.touchpoints
+            .map(
+              (tp) => `
+            <figure class="roam-frame">
+              <img src="${tp.src}" alt="${tp.title}" onerror="this.style.display='none'">
+              <figcaption>
+                <span class="ms-mini-tag">${tp.channel}</span><br>
+                <strong>${tp.title}</strong><br>${tp.detail}
+              </figcaption>
+            </figure>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 09. MOTION DESIGN -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.motion.tag}</span>
+            <h3>${s.motion.heading}</h3>
+          </div>
+          ${badgeHtml(s.motion.epistemic)}
+        </div>
+        <p class="dialog-body">${s.motion.description}</p>
+        <div class="pillars-grid" style="margin-top:20px">
+          ${s.motion.beats
+            .map(
+              (bt) => `
+            <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
+              <span class="cs-tag" style="color:#f05a3c">${bt.time}</span>
+              <strong>${bt.beat}</strong>
+              <p>${bt.visual}</p>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 10. TESTING PLAN -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.testingPlan.tag}</span>
+            <h3>${s.testingPlan.heading}</h3>
+          </div>
+          ${badgeHtml(s.testingPlan.epistemic)}
+        </div>
+        <p class="dialog-body">${s.testingPlan.note}</p>
+
+        <div class="ms-table-wrap">
+          <table class="ms-test-table">
+            <thead>
+              <tr>
+                <th>Test</th>
+                <th>Variable</th>
+                <th>Variant A (Control)</th>
+                <th>Variant B (Challenger)</th>
+                <th>Hypothesis</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${s.testingPlan.matrix
+                .map(
+                  (row) => `
+                <tr>
+                  <td><strong>${row.test}</strong></td>
+                  <td>${row.variable}</td>
+                  <td>${row.variantA}</td>
+                  <td>${row.variantB}</td>
+                  <td>${row.hypothesis}</td>
+                </tr>
+              `,
+                )
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pillars-grid" style="margin-top:20px">
+          ${s.testingPlan.kpis
+            .map(
+              (k) => `
+            <div class="pillar-card">
+              <span class="cs-tag">${k.stage} KPIS</span>
+              <p style="color:#191917;font-weight:600">${k.metrics}</p>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <!-- 11. FINAL CAMPAIGN SYSTEM -->
+      <section class="cs-block">
+        <div class="cs-flex-head">
+          <div>
+            <span class="cs-tag">${s.finalSystem.tag}</span>
+            <h3>${s.finalSystem.heading}</h3>
+          </div>
+          ${badgeHtml(s.finalSystem.epistemic)}
+        </div>
+        <p class="dialog-body">${s.finalSystem.summary}</p>
+        <div class="ms-channel-list">
+          ${s.finalSystem.channels.map((ch) => `<span>${ch}</span>`).join("")}
+        </div>
+        <figure class="roam-frame" style="margin-top:20px">
+          <img src="${s.finalSystem.boardImage}" alt="Meesho Final Multi-Channel System" onerror="this.closest('figure').style.display='none'">
+          <figcaption>Complete Multi-Channel Growth System — Paid Ads, Motion, Onboarding & CRM</figcaption>
+        </figure>
+      </section>
+    `;
+    dialog.scrollTop = 0;
+    dialog.showModal();
+    return;
+  }
   // DEFAULT STANDARD CASE STUDY
   dialogContent.innerHTML = `
     <p class="eyebrow">${p.number} / CASE STUDY · ${p.category}</p>
