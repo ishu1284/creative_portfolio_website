@@ -189,7 +189,8 @@ const portfolio = {
       number: "02",
       image: "meesho/images/cover-hero.png",
       title: "Meesho Growth",
-      category: "Growth Creative Strategy / Full-Funnel Lifecycle / Motion & UI",
+      category:
+        "Growth Creative Strategy / Full-Funnel Lifecycle / Motion & UI",
       visualTitle: "FROM SCROLL<br>TO SHOPPING",
       visualStyle: "serif",
       label: "EVERYDAY STYLE, ZERO OVERPAY",
@@ -201,19 +202,21 @@ const portfolio = {
         // 01. COVER — FROM SCROLL TO SHOPPING
         cover: {
           tag: "01 / COVER — FROM SCROLL TO SHOPPING",
-          heading: "From Scroll to Shopping: Designing a High-Trust Value Funnel for Meesho",
+          heading:
+            "From Scroll to Shopping: Designing a High-Trust Value Funnel for Meesho",
           subhead:
             "How editorial visual hierarchy, zero-friction mobile onboarding, and post-delivery habit loops turn passive social scrollers into repeat Meesho buyers.",
           heroImage: "meesho/images/cover-hero.png",
           specs: {
             role: "Growth & Visual Designer",
-            scope: "Paid Social Ads · 3-Screen Onboarding · CRM · 15s Motion · A/B Plan",
+            scope:
+              "Paid Social Ads · 3-Screen Onboarding · CRM · 15s Motion · A/B Plan",
             palette: [
               { name: "Jamuni", hex: "#4A154B" },
               { name: "Magenta", hex: "#D81B60" },
-              { name: "Amber", hex: "#F59E0B" }
-            ]
-          }
+              { name: "Amber", hex: "#F59E0B" },
+            ],
+          },
         },
 
         // 02. THE BRIEF — WHAT WE WANT TO SOLVE
@@ -222,9 +225,21 @@ const portfolio = {
           epistemic: "RESEARCH-BACKED INSIGHT",
           heading: "How do we make ₹300 shopping look stylish and trustworthy?",
           anchors: [
-            { num: "~₹300", label: "Typical Order Price", sub: "Everyday clothes & home items people actually buy" },
-            { num: "Small Towns", label: "Where Growth Comes From", sub: "Shoppers who check price and trust before buying" },
-            { num: "1st → 2nd", label: "The Real Goal", sub: "Getting first-time buyers to come back and shop again" }
+            {
+              num: "~₹300",
+              label: "Typical Order Price",
+              sub: "Everyday clothes & home items people actually buy",
+            },
+            {
+              num: "Small Towns",
+              label: "Where Growth Comes From",
+              sub: "Shoppers who check price and trust before buying",
+            },
+            {
+              num: "1st → 2nd",
+              label: "The Real Goal",
+              sub: "Getting first-time buyers to come back and shop again",
+            },
           ],
           objectiveTitle: "01 / WHAT WE WANT TO DO",
           objective:
@@ -232,16 +247,19 @@ const portfolio = {
           tensionTitle: "02 / THE DESIGN PROBLEM",
           leftPole: {
             label: "TOO LOUD & MESSY",
-            outcome: "Looks cheap, so people worry the cloth or quality will be bad"
+            outcome:
+              "Looks cheap, so people worry the cloth or quality will be bad",
           },
           sweetSpot: {
             label: "OUR SWEET SPOT",
-            outcome: "Clean, stylish photos + honest ₹249–₹499 prices right upfront"
+            outcome:
+              "Clean, stylish photos + honest ₹249–₹499 prices right upfront",
           },
           rightPole: {
             label: "TOO FANCY & LUXURY",
-            outcome: "Looks expensive, so shoppers leave thinking they can't afford it"
-          }
+            outcome:
+              "Looks expensive, so shoppers leave thinking they can't afford it",
+          },
         },
 
         // 03. USER INSIGHT — WHY PEOPLE HESITATE
@@ -254,21 +272,21 @@ const portfolio = {
               stage: "01 / BEFORE INSTALLING",
               title: "“Will the quality actually be good?”",
               insight:
-                "When ads are covered in loud discount stickers, people assume the clothes are low quality and scroll right past."
+                "When ads are covered in loud discount stickers, people assume the clothes are low quality and scroll right past.",
             },
             {
               stage: "02 / BEFORE FIRST ORDER",
               title: "“Why do I have to sign up before looking?”",
               insight:
-                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything."
+                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything.",
             },
             {
               stage: "03 / AFTER FIRST ORDER",
               title: "“Now that my ₹100 coupon is gone, why come back?”",
               insight:
-                "If someone only joined for a big welcome discount, they stop shopping once regular prices return unless we give them a fun reason to return."
-            }
-          ]
+                "If someone only joined for a big welcome discount, they stop shopping once regular prices return unless we give them a fun reason to return.",
+            },
+          ],
         },
 
         // 04. GROWTH FUNNEL — STEP-BY-STEP JOURNEY
@@ -282,23 +300,23 @@ const portfolio = {
               goal: "Stop the scroll with clean outfit photos and clear prices",
               mechanism:
                 "Show real, wearable outfits with the exact price right on the image (₹349 Kurtis, ₹499 Co-ord Sets, ₹249 Perfume).",
-              kpi: "What we measure: Ad clicks & app installs"
+              kpi: "What we measure: Ad clicks & app installs",
             },
             {
               step: "STEP 02 · FIRST ORDER (ACTIVATION)",
               goal: "Make buying the first item fast and worry-free",
               mechanism:
                 "Let people browse without a forced login, pick 2 styles they like, and unlock ₹100 off with Cash on Delivery.",
-              kpi: "What we measure: New users who buy within 7 days"
+              kpi: "What we measure: New users who buy within 7 days",
             },
             {
               step: "STEP 03 · REPEAT ORDERS (RETENTION)",
               goal: "Turn one-time shoppers into regular buyers",
               mechanism:
                 "Send helpful cart reminders, give ₹75 wallet cash for rating their delivery, and suggest matching items under ₹250.",
-              kpi: "What we measure: Buyers who place a 2nd & 3rd order"
-            }
-          ]
+              kpi: "What we measure: Buyers who place a 2nd & 3rd order",
+            },
+          ],
         },
 
         // 05. CREATIVE STRATEGY — THE BIG IDEA
@@ -312,46 +330,52 @@ const portfolio = {
             {
               title: "01. Show the Exact Price Early",
               detail:
-                "Don't hide prices or use confusing 'Up to 80% Off' math. Show the real price (₹249 or ₹349) so shoppers know they can afford it."
+                "Don't hide prices or use confusing 'Up to 80% Off' math. Show the real price (₹249 or ₹349) so shoppers know they can afford it.",
             },
             {
               title: "02. Make Trust Impossible to Miss",
               detail:
-                "Put 'Cash on Delivery', '7-Day Easy Returns', and 'Free Delivery' front and center so first-time buyers feel completely safe."
+                "Put 'Cash on Delivery', '7-Day Easy Returns', and 'Free Delivery' front and center so first-time buyers feel completely safe.",
             },
             {
               title: "03. Match the Ad to the App",
               detail:
-                "When someone taps an ad for a ₹349 kurti, show that exact same lookbook style on the very first app screen so nothing feels jarring."
-            }
-          ]
+                "When someone taps an ad for a ₹349 kurti, show that exact same lookbook style on the very first app screen so nothing feels jarring.",
+            },
+          ],
         },
 
-        // 03. USER INSIGHT — BARRIERS TO INSTALLING, BUYING & RETURNING
+        // 03. USER INSIGHT — WHY PEOPLE HESITATE
         userInsight: {
           tag: "03 / USER INSIGHT",
           epistemic: "RESEARCH-BACKED INSIGHT",
-          heading: "What Prevents Users From Installing, Buying, or Returning?",
+          heading: "What Stops People From Installing, Buying, or Coming Back?",
           barriers: [
             {
-              stage: "01 / INSTALL BARRIER",
-              title: "Visual Fatigue & Quality Doubt",
-              insight:
-                "Loud, starburst-heavy discount ads create banner blindness and make shoppers question fabric, stitching, and print accuracy before tapping Install."
+              num: "01",
+              stage: "BEFORE INSTALLING",
+              thought: "“Will the cloth actually look like the photo?”",
+              problem:
+                "Loud ads covered in giant discount stickers make shoppers worry the fabric and stitching will feel cheap—so they scroll right past.",
+              fix: "DESIGN FIX → Clean studio photos + real prices",
             },
             {
-              stage: "02 / FIRST-ORDER BARRIER",
-              title: "Login Walls & Payment Hesitation",
-              insight:
-                "Forcing immediate account creation before letting users browse deals—or failing to surface Cash on Delivery (COD) and 7-day returns early—causes sharp drop-off before Order 1."
+              num: "02",
+              stage: "BEFORE FIRST ORDER",
+              thought: "“Why do I have to sign up before looking?”",
+              problem:
+                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything.",
+              fix: "DESIGN FIX → Guest browse + COD upfront",
             },
             {
-              stage: "03 / REPEAT-PURCHASE BARRIER",
-              title: "Subsidy Cliff After Order 1",
-              insight:
-                "Users acquired purely via deep ₹100 welcome coupons churn once full prices return unless post-delivery delight and low-ticket cross-sells establish a shopping habit."
-            }
-          ]
+              num: "03",
+              stage: "AFTER FIRST ORDER",
+              thought: "“My ₹100 coupon is gone—why come back?”",
+              problem:
+                "If someone only joined for a big welcome discount, they stop opening the app once regular prices return unless there is a fun reason to stay.",
+              fix: "DESIGN FIX → Rate for ₹75 + matching picks",
+            },
+          ],
         },
 
         // 04. GROWTH FUNNEL — ACQUISITION -> ACTIVATION -> RETENTION
@@ -365,23 +389,23 @@ const portfolio = {
               goal: "Stop the scroll with editorial clarity + instant price anchor",
               mechanism:
                 "Pair clean studio lookbook photography with transparent landed prices (₹349 Ethnic Kurtis, ₹499 Co-ord Sets, ₹249 Vanilla Elixir).",
-              kpi: "Target KPIs: Thumb-Stop Rate, CTR, Click-to-Install Rate"
+              kpi: "Target KPIs: Thumb-Stop Rate, CTR, Click-to-Install Rate",
             },
             {
               step: "STAGE 02 · ACTIVATION",
               goal: "Convert installs into Order 1 within 7 days",
               mechanism:
                 "Sosh-inspired animated lookbook entry + Guest Skip, 2-tap style curation, and a Cash-on-Delivery MEESHO100 trust screen.",
-              kpi: "Target KPIs: Onboarding Completion, Install-to-Order 1 CR"
+              kpi: "Target KPIs: Onboarding Completion, Install-to-Order 1 CR",
             },
             {
               step: "STAGE 03 · RETENTION",
               goal: "Build a subsidy-light 3-order habit loop",
               mechanism:
                 "24-hr COD cart recovery, Post-Delivery 'Rate & Unlock ₹75' wallet delight, and 'Complete the Look' low-ticket accessory pairings.",
-              kpi: "Target KPIs: D30 Repeat Rate, Order 2+ Conversion"
-            }
-          ]
+              kpi: "Target KPIs: D30 Repeat Rate, Order 2+ Conversion",
+            },
+          ],
         },
 
         // 05. CREATIVE STRATEGY — MESSAGE ARCHITECTURE & CAMPAIGN CONCEPT
@@ -395,51 +419,51 @@ const portfolio = {
             {
               title: "01. Editorial Price Anchoring",
               detail:
-                "Lead with aspirational styling, then resolve price anxiety immediately with a high-contrast ₹249 / ₹349 landed-cost pill."
+                "Lead with aspirational styling, then resolve price anxiety immediately with a high-contrast ₹249 / ₹349 landed-cost pill.",
             },
             {
               title: "02. Doorstep Trust Architecture",
               detail:
-                "Elevate Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery from fine-print footnotes into primary visual trust badges."
+                "Elevate Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery from fine-print footnotes into primary visual trust badges.",
             },
             {
               title: "03. Continuous Visual Thread",
               detail:
-                "Carry the exact model lookbooks and price tags from Meta/Reels ads directly into Onboarding Screen 1 so users feel zero context-switch."
-            }
-          ]
+                "Carry the exact model lookbooks and price tags from Meta/Reels ads directly into Onboarding Screen 1 so users feel zero context-switch.",
+            },
+          ],
         },
 
         // 06. ACQUISITION EXECUTION — AD CONCEPTS & CREATIVE VARIATIONS
         acquisition: {
           tag: "06 / ACQUISITION EXECUTION",
           epistemic: "DESIGN HYPOTHESIS",
-          heading: "Paid Social Ad Concepts & Category Variations",
+          heading: "Paid Social Ad Concepts & Creative Variations",
           description:
-            "Three category-specific performance creatives built for Meta Feeds, Stories, and Google App Campaigns—testing price-led hooks against editorial wardrobe storytelling.",
+            "Three ethnic wear ad variations built for Meta Feeds and Stories—testing a bold discount-price hook against two editorial 'Looks Expensive. Isn't.' styling directions.",
           assets: [
             {
-              src: "meesho/images/ad-ethnic-kurti.png",
-              badge: "ANGLE A · PRICE-LED UTILITY",
-              title: "Ethnic Wear — “A Little More Style. A Lot Less Spend.”",
+              src: "meesho/images/Performance ad 1.png",
+              badge: "CONCEPT 01 · PRICE-FIRST HOOK",
+              title: "Kurtis Under ₹299",
               caption:
-                "1200×500 & 4:5 Feed unit anchored at ₹349 (Net ₹249 with MEESHO100) with warm editorial framing and COD badge."
+                "High-contrast magenta backdrop with oversized amber ₹299 typography and stacked product clarity for instant 1-second price recognition.",
             },
             {
-              src: "meesho/images/ad-coord-set.png",
-              badge: "ANGLE B · EDITORIAL DISCOVERY",
-              title: "Western Co-ords — “The Co-ord You'll Live In.”",
+              src: "meesho/images/meesho-kurta-499.png",
+              badge: "CONCEPT 02 · SOCIAL PROOF + EDITORIAL",
+              title: "“Looks Expensive. Isn’t.” — ₹499 Kurta Set",
               caption:
-                "Clean studio styling starting at ₹499—designed to attract younger, trend-driven shoppers who usually browse high-street apps."
+                "Warm ivory editorial framing paired with 'India's Most Loved Shopping App' trust ribbon to build quality confidence at ₹499.",
             },
             {
-              src: "meesho/images/ad-vanilla-elixir.png",
-              badge: "ANGLE C · IMPULSE BEAUTY & GIFTING",
-              title: "Fragrance — “Vanilla Elixir @ ₹249”",
+              src: "meesho/images/meesho-look-349.png",
+              badge: "CONCEPT 03 · STUDIO LOOKBOOK",
+              title: "“Looks Expensive. Isn’t.” — ₹349 Kurta Set",
               caption:
-                "High-contrast sensory product visual positioned as an effortless low-ticket first order with zero delivery fee."
-            }
-          ]
+                "Full-length studio lookbook shot on a soft blush backdrop with a clean ₹349 price badge so shoppers see the full fit before tapping.",
+            },
+          ],
         },
 
         // 07. ACTIVATION EXECUTION — ONBOARDING & FIRST-PURCHASE EXPERIENCE
@@ -448,37 +472,38 @@ const portfolio = {
           epistemic: "DESIGN HYPOTHESIS",
           heading: "3-Screen Onboarding & First-Purchase Conversion Flow",
           description:
-            "Adapted the full-bleed glassmorphic aesthetic of modern social-shopping apps for Meesho's mass-market user psychology—pairing an animated lookbook background with low-friction WhatsApp/OTP entry and a Skip escape hatch.",
+            "A fast 3-step welcome flow built to remove sign-up friction—letting shoppers see real prices first, pick two styles they love, and unlock ₹100 off with Cash on Delivery.",
           screens: [
             {
-              src: "meesho/images/onboarding-1.png",
+              src: "meesho/images/onboarding screen 1.png",
               step: "SCREEN 01 · HOOK & ENTRY",
-              title: "Animated Lookbook + Low-Friction OTP",
+              title: "Lookbook Preview + Easy Login",
               detail:
-                "Crossfading everyday looks with floating ₹249–₹499 price pills behind a dark glassmorphic bottom sheet, 1-tap Mobile/WhatsApp OTP, and top-right Skip."
+                "Shows trending outfits starting at ₹249 with quick Mobile/WhatsApp sign-in—plus a 'Browse as Guest' option so nobody gets blocked at the door.",
             },
             {
-              src: "meesho/images/onboarding-2.png",
-              step: "SCREEN 02 · INTENT CURATION",
-              title: "2-Tap Style & Category Selector",
+              src: "meesho/onboarding screen 2.png",
+              step: "SCREEN 02 · STYLE PICKER",
+              title: "2-Tap Category Personalization",
               detail:
-                "Zero-typing visual chips (Ethnic Kurtis, Western Co-ords, Home & Decor, Beauty) with clear starting price anchors to personalize the home feed immediately."
+                "Zero typing required. Shoppers tap two categories they like (Ethnic Kurtis, Co-ord Sets, Beauty, Home) with clear starting prices to customize their feed.",
             },
             {
-              src: "meesho/images/onboarding-3.png",
+              src: "meesho/images/onboarding screen 3.png",
               step: "SCREEN 03 · TRUST & VOUCHER",
-              title: "COD Assurance + MEESHO100 Unlock",
+              title: "MEESHO100 Coupon + COD Confidence",
               detail:
-                "Stacks Cash on Delivery, 7-Day Easy Returns, and Lowest Price Guarantee above a perforated ₹100 welcome ticket before entering the feed."
-            }
-          ]
+                "Unlocks a Flat ₹100 Off welcome ticket paired with Cash on Delivery and 7-Day Easy Returns right before entering the home feed.",
+            },
+          ],
         },
 
         // 08. RETENTION EXECUTION — PUSH, BANNERS & CRM CREATIVES
         retention: {
           tag: "08 / RETENTION & CRM EXECUTION",
           epistemic: "DESIGN HYPOTHESIS",
-          heading: "Lifecycle Touchpoints: Push, In-App Banners, Cart Recovery & Habit Loop",
+          heading:
+            "Lifecycle Touchpoints: Push, In-App Banners, Cart Recovery & Habit Loop",
           description:
             "Connected CRM and in-app surfaces engineered to recover abandoned carts without margin-killing coupons and turn Order 1 buyers into 3-order VIP regulars.",
           touchpoints: [
@@ -487,30 +512,30 @@ const portfolio = {
               channel: "LOCK-SCREEN RICH PUSH",
               title: "T+4h / T+24h / T+48h Welcome Nudge",
               detail:
-                "Rich media notification displaying the exact ₹349 → ₹249 landed price preview and dual quick-actions ('Claim ₹100 Off' / 'Browse Under ₹299')."
+                "Rich media notification displaying the exact ₹349 → ₹249 landed price preview and dual quick-actions ('Claim ₹100 Off' / 'Browse Under ₹299').",
             },
             {
               src: "meesho/images/crm-inapp-banners.png",
               channel: "IN-APP MERCHANDISING",
               title: "Home Feed Hero + Sticky Checkout Nudge",
               detail:
-                "Editorial top-of-feed welcome banner paired with a persistent bottom-bar progress tracker showing real-time ₹100 voucher eligibility."
+                "Editorial top-of-feed welcome banner paired with a persistent bottom-bar progress tracker showing real-time ₹100 voucher eligibility.",
             },
             {
               src: "meesho/images/crm-cart-reminder.png",
               channel: "CART ABANDONMENT RECOVERY",
               title: "Size-Lock + 1-Tap COD Checkout Deep Link",
               detail:
-                "3-stage cadence (+15m size reservation, +6h COD & easy-return reassurance, +24h voucher expiry) routing directly to 1-tap COD confirmation."
+                "3-stage cadence (+15m size reservation, +6h COD & easy-return reassurance, +24h voucher expiry) routing directly to 1-tap COD confirmation.",
             },
             {
               src: "meesho/images/crm-repeat-loop.png",
               channel: "POST-DELIVERY HABIT LOOP",
               title: "“Rate & Unlock ₹75” + Complete the Look",
               detail:
-                "Turns post-delivery satisfaction into an instant ₹75 wallet credit usable on curated Order 1 pairings (Oxidised Jhumkas @ ₹124, Kolhapuri Flats @ ₹224)."
-            }
-          ]
+                "Turns post-delivery satisfaction into an instant ₹75 wallet credit usable on curated Order 1 pairings (Oxidised Jhumkas @ ₹124, Kolhapuri Flats @ ₹224).",
+            },
+          ],
         },
 
         // 09. MOTION DESIGN — STORYBOARD & FINAL ANIMATION
@@ -526,21 +551,21 @@ const portfolio = {
               time: "00.0s – 04.5s",
               beat: "BEAT 01 · EDITORIAL PRICE-ANCHOR HOOK",
               visual:
-                "Full-bleed studio lookbook zoom matching Onboarding Screen 1; bold ₹249 scroll-stopper badge snaps in within the first 36 frames."
+                "Full-bleed studio lookbook zoom matching Onboarding Screen 1; bold ₹249 scroll-stopper badge snaps in within the first 36 frames.",
             },
             {
               time: "04.5s – 10.0s",
               beat: "BEAT 02 · VOUCHER DROP & PRICE SLASH",
               visual:
-                "Kinetic strikethrough animates ₹349 → ₹249 landed cost as the perforated MEESHO100 welcome ticket drops into frame."
+                "Kinetic strikethrough animates ₹349 → ₹249 landed cost as the perforated MEESHO100 welcome ticket drops into frame.",
             },
             {
               time: "10.0s – 15.0s",
               beat: "BEAT 03 · DOORSTEP TRUST & FINAL CTA",
               visual:
-                "Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery stack cleanly above a pulsing 'Order COD @ ₹249' CTA."
-            }
-          ]
+                "Cash on Delivery, 7-Day Easy Returns, and ₹0 Delivery stack cleanly above a pulsing 'Order COD @ ₹249' CTA.",
+            },
+          ],
         },
 
         // 10. TESTING PLAN — HYPOTHESES, VARIANTS & KPIs
@@ -548,24 +573,25 @@ const portfolio = {
           tag: "10 / CREATIVE TESTING PLAN",
           epistemic: "PROPOSED EXPERIMENT",
           heading: "Controlled A/B Testing Matrix & Full-Funnel KPIs",
-          note:
-            "All tests below are proposed single-variable experiments held at equal budget and audience targeting over a 7–14 day learning window. No internal Meesho results are assumed or fabricated.",
+          note: "All tests below are proposed single-variable experiments held at equal budget and audience targeting over a 7–14 day learning window. No internal Meesho results are assumed or fabricated.",
           matrix: [
             {
               test: "A/B Test 1",
               variable: "Price first vs. Style first",
               variantA: "Big 'Starting ₹349 / Net ₹249' price badge at the top",
-              variantB: "Fashion headline ('The Co-ord You'll Live In') with smaller price",
+              variantB:
+                "Fashion headline ('The Co-ord You'll Live In') with smaller price",
               hypothesis:
-                "See whether showing the low price immediately gets more clicks, or if leading with style brings in bigger orders."
+                "See whether showing the low price immediately gets more clicks, or if leading with style brings in bigger orders.",
             },
             {
               test: "A/B Test 2",
               variable: "Many outfits vs. One hero outfit",
               variantA: "Grid showing 3–4 different outfits and prices at once",
-              variantB: "One clean model photo matching the app's welcome screen",
+              variantB:
+                "One clean model photo matching the app's welcome screen",
               hypothesis:
-                "Test if showing more variety helps more people spot something they like, or if one clear photo works better."
+                "Test if showing more variety helps more people spot something they like, or if one clear photo works better.",
             },
             {
               test: "A/B Test 3",
@@ -573,7 +599,7 @@ const portfolio = {
               variantA: "Clean static ad card with bold price and outfit photo",
               variantB: "15-second animated reel showing ₹349 dropping to ₹249",
               hypothesis:
-                "Check if movement and a live price-drop animation stop more people from scrolling past."
+                "Check if movement and a live price-drop animation stop more people from scrolling past.",
             },
             {
               test: "A/B Test 4",
@@ -581,23 +607,26 @@ const portfolio = {
               variantA: "'Claim ₹100 Off & Shop' / 'Order COD @ ₹249'",
               variantB: "'See Styles Under ₹399' / 'Unlock Your Welcome Box'",
               hypothesis:
-                "Find out if new shoppers prefer an immediate discount button or a low-pressure button to browse first."
-            }
+                "Find out if new shoppers prefer an immediate discount button or a low-pressure button to browse first.",
+            },
           ],
           kpis: [
             {
               stage: "GETTING USERS (ACQUISITION)",
-              metrics: "How many people stop scrolling · Ad click rate (CTR) · App installs"
+              metrics:
+                "How many people stop scrolling · Ad click rate (CTR) · App installs",
             },
             {
               stage: "FIRST PURCHASE (ACTIVATION)",
-              metrics: "People who finish the 3 welcome screens · First orders placed within 7 days"
+              metrics:
+                "People who finish the 3 welcome screens · First orders placed within 7 days",
             },
             {
               stage: "COMING BACK (RETENTION)",
-              metrics: "Shoppers who place a 2nd order within 30 days · People who claim the ₹75 rating reward"
-            }
-          ]
+              metrics:
+                "Shoppers who place a 2nd order within 30 days · People who claim the ₹75 rating reward",
+            },
+          ],
         },
 
         // 11. FINAL CAMPAIGN SYSTEM — ALL ASSETS TOGETHER ACROSS CHANNELS
@@ -615,10 +644,10 @@ const portfolio = {
             "04. In-App Hero & Sticky Checkout Banners",
             "05. Lock-Screen Rich Push Notifications",
             "06. 3-Stage COD Cart Abandonment Flow",
-            "07. Post-Delivery Rate-to-Unlock ₹75 Habit Loop"
-          ]
-        }
-      }
+            "07. Post-Delivery Rate-to-Unlock ₹75 Habit Loop",
+          ],
+        },
+      },
     },
     {
       image: "After hours/extra 5.png",

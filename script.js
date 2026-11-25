@@ -917,15 +917,19 @@ function showProject(index) {
           </div>
           ${badgeHtml(s.userInsight.epistemic)}
         </div>
-        <div class="pillars-grid">
+        <div class="ms-insight-grid">
           ${s.userInsight.barriers
             .map(
-              (b) => `
-            <div class="pillar-card" style="background:#fff;border:1px solid var(--line)">
-              <span class="cs-tag">${b.stage}</span>
-              <strong>${b.title}</strong>
-              <p>${b.insight}</p>
-            </div>
+              (b, idx) => `
+            <article class="ms-insight-card ${idx === 1 ? "is-coral" : idx === 2 ? "is-lime" : ""}">
+              <div class="ms-ic-top">
+                <span class="ms-ic-num">${b.num}</span>
+                <span class="ms-ic-stage">${b.stage}</span>
+              </div>
+              <blockquote class="ms-ic-quote">${b.thought}</blockquote>
+              <p class="ms-ic-desc">${b.problem}</p>
+              <div class="ms-ic-fix">${b.fix}</div>
+            </article>
           `,
             )
             .join("")}
@@ -991,17 +995,20 @@ function showProject(index) {
           ${badgeHtml(s.acquisition.epistemic)}
         </div>
         <p class="dialog-body">${s.acquisition.description}</p>
-        <div class="roam-gallery-3">
+        <div class="ms-ad-showcase">
           ${s.acquisition.assets
             .map(
               (a) => `
-            <figure class="roam-frame">
-              <img src="${a.src}" alt="${a.title}" onerror="this.style.display='none'">
-              <figcaption>
-                <span class="ms-mini-tag">${a.badge}</span><br>
-                <strong>${a.title}</strong><br>${a.caption}
-              </figcaption>
-            </figure>
+            <article class="ms-ad-card">
+              <div class="ms-ad-media">
+                <img src="${a.src}" alt="${a.title}">
+              </div>
+              <div class="ms-ad-copy">
+                <span class="ms-ad-badge">${a.badge}</span>
+                <h4>${a.title}</h4>
+                <p>${a.caption}</p>
+              </div>
+            </article>
           `,
             )
             .join("")}
@@ -1018,23 +1025,26 @@ function showProject(index) {
           ${badgeHtml(s.activation.epistemic)}
         </div>
         <p class="dialog-body">${s.activation.description}</p>
-        <div class="roam-gallery-3">
+        <div class="ms-ad-showcase">
           ${s.activation.screens
             .map(
               (sc) => `
-            <figure class="roam-frame">
-              <img src="${sc.src}" alt="${sc.title}" style="aspect-ratio:9/18;object-fit:cover" onerror="this.style.display='none'">
-              <figcaption>
-                <span class="ms-mini-tag">${sc.step}</span><br>
-                <strong>${sc.title}</strong><br>${sc.detail}
-              </figcaption>
-            </figure>
+            <article class="ms-ad-card">
+              <div class="ms-phone-media">
+                <img src="${sc.src}" alt="${sc.title}">
+              </div>
+              <div class="ms-ad-copy">
+                <span class="ms-ad-badge">${sc.step}</span>
+                <h4>${sc.title}</h4>
+                <p>${sc.detail}</p>
+              </div>
+            </article>
           `,
             )
             .join("")}
         </div>
       </section>
-
+      
       <!-- 08. RETENTION EXECUTION -->
       <section class="cs-block">
         <div class="cs-flex-head">
