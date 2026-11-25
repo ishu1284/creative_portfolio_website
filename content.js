@@ -205,23 +205,126 @@ const portfolio = {
           subhead:
             "How editorial visual hierarchy, zero-friction mobile onboarding, and post-delivery habit loops turn passive social scrollers into repeat Meesho buyers.",
           heroImage: "meesho/images/cover-hero.png",
-          metaPills: [
-            "Role: Growth & Visual Designer",
-            "Scope: Paid Ads · 3-Screen Onboarding · CRM · Motion · A/B Plan",
-            "Core Palette: Jamuni #4A154B · Magenta #D81B60 · Amber #F59E0B"
-          ]
+          specs: {
+            role: "Growth & Visual Designer",
+            scope: "Paid Social Ads · 3-Screen Onboarding · CRM · 15s Motion · A/B Plan",
+            palette: [
+              { name: "Jamuni", hex: "#4A154B" },
+              { name: "Magenta", hex: "#D81B60" },
+              { name: "Amber", hex: "#F59E0B" }
+            ]
+          }
         },
 
-        // 02. THE BRIEF — BUSINESS OBJECTIVE & GROWTH CHALLENGE
+        // 02. THE BRIEF — WHAT WE WANT TO SOLVE
         brief: {
           tag: "02 / THE BRIEF",
           epistemic: "RESEARCH-BACKED INSIGHT",
-          objectiveTitle: "Business Objective",
+          heading: "How do we make ₹300 shopping look stylish and trustworthy?",
+          anchors: [
+            { num: "~₹300", label: "Typical Order Price", sub: "Everyday clothes & home items people actually buy" },
+            { num: "Small Towns", label: "Where Growth Comes From", sub: "Shoppers who check price and trust before buying" },
+            { num: "1st → 2nd", label: "The Real Goal", sub: "Getting first-time buyers to come back and shop again" }
+          ],
+          objectiveTitle: "01 / WHAT WE WANT TO DO",
           objective:
-            "Drive profitable new-user acquisition and accelerate first-to-second order conversion across value-conscious Tier-2 and Tier-3 Indian shoppers without eroding unit economics through perpetual heavy discounting.",
-          challengeTitle: "The Core Growth Challenge",
-          challenge:
-            "Meesho wins on ~₹300 average order value (AOV) affordability and massive unbranded catalog depth, yet discount-cluttered ad creatives trigger 'low-quality skepticism'—while overly luxury editorial ads trigger 'too expensive for me' bounce."
+            "Get more people to download Meesho, place their first order with confidence, and come back for a second order—without relying on huge discounts every single time.",
+          tensionTitle: "02 / THE DESIGN PROBLEM",
+          leftPole: {
+            label: "TOO LOUD & MESSY",
+            outcome: "Looks cheap, so people worry the cloth or quality will be bad"
+          },
+          sweetSpot: {
+            label: "OUR SWEET SPOT",
+            outcome: "Clean, stylish photos + honest ₹249–₹499 prices right upfront"
+          },
+          rightPole: {
+            label: "TOO FANCY & LUXURY",
+            outcome: "Looks expensive, so shoppers leave thinking they can't afford it"
+          }
+        },
+
+        // 03. USER INSIGHT — WHY PEOPLE HESITATE
+        userInsight: {
+          tag: "03 / USER INSIGHT",
+          epistemic: "RESEARCH-BACKED INSIGHT",
+          heading: "What Stops People From Installing, Buying, or Coming Back?",
+          barriers: [
+            {
+              stage: "01 / BEFORE INSTALLING",
+              title: "“Will the quality actually be good?”",
+              insight:
+                "When ads are covered in loud discount stickers, people assume the clothes are low quality and scroll right past."
+            },
+            {
+              stage: "02 / BEFORE FIRST ORDER",
+              title: "“Why do I have to sign up before looking?”",
+              insight:
+                "Forcing people to log in immediately—or hiding Cash on Delivery and easy returns—makes new users quit before buying anything."
+            },
+            {
+              stage: "03 / AFTER FIRST ORDER",
+              title: "“Now that my ₹100 coupon is gone, why come back?”",
+              insight:
+                "If someone only joined for a big welcome discount, they stop shopping once regular prices return unless we give them a fun reason to return."
+            }
+          ]
+        },
+
+        // 04. GROWTH FUNNEL — STEP-BY-STEP JOURNEY
+        funnel: {
+          tag: "04 / GROWTH FUNNEL",
+          epistemic: "DESIGN HYPOTHESIS",
+          heading: "See Ad → Try App → Come Back Again",
+          stages: [
+            {
+              step: "STEP 01 · GET ATTENTION (ACQUISITION)",
+              goal: "Stop the scroll with clean outfit photos and clear prices",
+              mechanism:
+                "Show real, wearable outfits with the exact price right on the image (₹349 Kurtis, ₹499 Co-ord Sets, ₹249 Perfume).",
+              kpi: "What we measure: Ad clicks & app installs"
+            },
+            {
+              step: "STEP 02 · FIRST ORDER (ACTIVATION)",
+              goal: "Make buying the first item fast and worry-free",
+              mechanism:
+                "Let people browse without a forced login, pick 2 styles they like, and unlock ₹100 off with Cash on Delivery.",
+              kpi: "What we measure: New users who buy within 7 days"
+            },
+            {
+              step: "STEP 03 · REPEAT ORDERS (RETENTION)",
+              goal: "Turn one-time shoppers into regular buyers",
+              mechanism:
+                "Send helpful cart reminders, give ₹75 wallet cash for rating their delivery, and suggest matching items under ₹250.",
+              kpi: "What we measure: Buyers who place a 2nd & 3rd order"
+            }
+          ]
+        },
+
+        // 05. CREATIVE STRATEGY — THE BIG IDEA
+        strategy: {
+          tag: "05 / CREATIVE STRATEGY",
+          epistemic: "DESIGN HYPOTHESIS",
+          conceptName: "Big Idea: “Everyday Style, Zero Overpay.”",
+          thesis:
+            "Treat ₹249–₹499 everyday clothes like a fashion magazine—clean layouts, breathing room, and real models—while keeping the low price and Cash on Delivery impossible to miss.",
+          pillars: [
+            {
+              title: "01. Show the Exact Price Early",
+              detail:
+                "Don't hide prices or use confusing 'Up to 80% Off' math. Show the real price (₹249 or ₹349) so shoppers know they can afford it."
+            },
+            {
+              title: "02. Make Trust Impossible to Miss",
+              detail:
+                "Put 'Cash on Delivery', '7-Day Easy Returns', and 'Free Delivery' front and center so first-time buyers feel completely safe."
+            },
+            {
+              title: "03. Match the Ad to the App",
+              detail:
+                "When someone taps an ad for a ₹349 kurti, show that exact same lookbook style on the very first app screen so nothing feels jarring."
+            }
+          ]
         },
 
         // 03. USER INSIGHT — BARRIERS TO INSTALLING, BUYING & RETURNING
@@ -450,49 +553,49 @@ const portfolio = {
           matrix: [
             {
               test: "A/B Test 1",
-              variable: "Price-led vs. Discovery-led hook",
-              variantA: "Bold 'Starting ₹349 / Net ₹249' badge in top focal zone",
-              variantB: "Editorial headline ('The Co-ord You'll Live In') with price secondary",
+              variable: "Price first vs. Style first",
+              variantA: "Big 'Starting ₹349 / Net ₹249' price badge at the top",
+              variantB: "Fashion headline ('The Co-ord You'll Live In') with smaller price",
               hypothesis:
-                "Isolates whether immediate price anchoring maximizes click volume while discovery hooks attract higher-AOV baskets."
+                "See whether showing the low price immediately gets more clicks, or if leading with style brings in bigger orders."
             },
             {
               test: "A/B Test 2",
-              variable: "Product collage vs. Lifestyle image",
-              variantA: "Multi-SKU grid showing 3–4 silhouettes + prices on warm backdrop",
-              variantB: "Single model editorial shot matching Onboarding Screen 1",
+              variable: "Many outfits vs. One hero outfit",
+              variantA: "Grid showing 3–4 different outfits and prices at once",
+              variantB: "One clean model photo matching the app's welcome screen",
               hypothesis:
-                "Tests whether catalog breadth (higher odds one item appeals) outperforms single-hero visual clarity and ad-to-app continuity."
+                "Test if showing more variety helps more people spot something they like, or if one clear photo works better."
             },
             {
               test: "A/B Test 3",
-              variable: "Static creative vs. Motion creative",
-              variantA: "High-contrast 4:5 editorial static card with clear hierarchy",
-              variantB: "15-second 3-beat explainer reel (₹349 → ₹249 slash + MEESHO100)",
+              variable: "Still image vs. 15-second video",
+              variantA: "Clean static ad card with bold price and outfit photo",
+              variantB: "15-second animated reel showing ₹349 dropping to ₹249",
               hypothesis:
-                "Evaluates whether kinetic price-drop storytelling lifts 3-second thumb-stop rate and downstream install-to-purchase intent."
+                "Check if movement and a live price-drop animation stop more people from scrolling past."
             },
             {
               test: "A/B Test 4",
-              variable: "Direct CTA vs. Curiosity-driven CTA",
+              variable: "Direct button vs. Curious button",
               variantA: "'Claim ₹100 Off & Shop' / 'Order COD @ ₹249'",
               variantB: "'See Styles Under ₹399' / 'Unlock Your Welcome Box'",
               hypothesis:
-                "Determines if transactional urgency outperforms low-commitment browsing cues for cold Tier-2/3 traffic."
+                "Find out if new shoppers prefer an immediate discount button or a low-pressure button to browse first."
             }
           ],
           kpis: [
             {
-              stage: "ACQUISITION",
-              metrics: "3-Sec Thumb-Stop Rate · Outbound CTR · Click-to-Install Conversion (IPM)"
+              stage: "GETTING USERS (ACQUISITION)",
+              metrics: "How many people stop scrolling · Ad click rate (CTR) · App installs"
             },
             {
-              stage: "ACTIVATION",
-              metrics: "3-Screen Onboarding Completion · Install-to-Order 1 CR (D7) · Cart Push Recovery Lift vs. Holdout"
+              stage: "FIRST PURCHASE (ACTIVATION)",
+              metrics: "People who finish the 3 welcome screens · First orders placed within 7 days"
             },
             {
-              stage: "RETENTION",
-              metrics: "D30 Repeat-Purchase Rate (Order 1 → 2) · Post-Delivery Rating & ₹75 Credit Redemption · D45 Reactivation"
+              stage: "COMING BACK (RETENTION)",
+              metrics: "Shoppers who place a 2nd order within 30 days · People who claim the ₹75 rating reward"
             }
           ]
         },

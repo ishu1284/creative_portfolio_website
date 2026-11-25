@@ -824,10 +824,33 @@ function showProject(index) {
         <span class="cs-tag">${s.cover.tag}</span>
         <h3>${s.cover.heading}</h3>
         <p class="dialog-body">${s.cover.subhead}</p>
-        <div class="ms-meta-pills">
-          ${s.cover.metaPills.map((m) => `<span>${m}</span>`).join("")}
+
+        <div class="ms-spec-strip">
+          <div class="ms-spec-cell">
+            <span class="ms-spec-label">ROLE</span>
+            <strong>${s.cover.specs.role}</strong>
+          </div>
+          <div class="ms-spec-cell">
+            <span class="ms-spec-label">SCOPE &amp; DELIVERABLES</span>
+            <strong>${s.cover.specs.scope}</strong>
+          </div>
+          <div class="ms-spec-cell">
+            <span class="ms-spec-label">CAMPAIGN PALETTE</span>
+            <div class="ms-swatch-row">
+              ${s.cover.specs.palette
+                .map(
+                  (c) => `
+                <span class="ms-dot-pill">
+                  <i style="background:${c.hex}"></i>${c.name} <code>${c.hex}</code>
+                </span>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
         </div>
-        <figure class="roam-frame" style="margin-top:20px">
+
+        <figure class="roam-frame" style="margin-top:22px">
           <img src="${s.cover.heroImage}" alt="From Scroll to Shopping Cover" onerror="this.closest('figure').style.display='none'">
           <figcaption>Campaign System Overview — From Scroll to Shopping</figcaption>
         </figure>
@@ -836,17 +859,51 @@ function showProject(index) {
       <!-- 02. THE BRIEF -->
       <section class="cs-block">
         <div class="cs-flex-head">
-          <span class="cs-tag">${s.brief.tag}</span>
+          <div>
+            <span class="cs-tag">${s.brief.tag}</span>
+            <h3>${s.brief.heading}</h3>
+          </div>
           ${badgeHtml(s.brief.epistemic)}
         </div>
-        <div class="cp-grid">
-          <div class="cp-box">
-            <h4>${s.brief.objectiveTitle.toUpperCase()}</h4>
+
+        <!-- 3 MARKET ANCHOR CARDS -->
+        <div class="ms-anchor-grid">
+          ${s.brief.anchors
+            .map(
+              (a) => `
+            <div class="ms-anchor-card">
+              <strong class="ms-anchor-num">${a.num}</strong>
+              <span class="ms-anchor-label">${a.label}</span>
+              <p>${a.sub}</p>
+            </div>
+          `,
+            )
+            .join("")}
+        </div>
+
+        <!-- OBJECTIVE + VISUAL TENSION DIAGRAM -->
+        <div class="ms-brief-split">
+          <div class="ms-obj-box">
+            <span class="cs-tag" style="color:#c6de41">${s.brief.objectiveTitle}</span>
             <p>${s.brief.objective}</p>
           </div>
-          <div class="cp-box purpose">
-            <h4>${s.brief.challengeTitle.toUpperCase()}</h4>
-            <p>${s.brief.challenge}</p>
+
+          <div class="ms-tension-box">
+            <span class="cs-tag">${s.brief.tensionTitle}</span>
+            <div class="ms-tension-track">
+              <div class="ms-pole is-trap">
+                <small>${s.brief.leftPole.label}</small>
+                <strong>${s.brief.leftPole.outcome}</strong>
+              </div>
+              <div class="ms-pole is-sweet">
+                <small>✦ ${s.brief.sweetSpot.label}</small>
+                <strong>${s.brief.sweetSpot.outcome}</strong>
+              </div>
+              <div class="ms-pole is-trap">
+                <small>${s.brief.rightPole.label}</small>
+                <strong>${s.brief.rightPole.outcome}</strong>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -2373,13 +2373,74 @@ html {
 .ms-badge-hypothesis { background: #c6de41; color: #191917; }
 .ms-badge-experiment { background: #f05a3c; color: #fff; }
 
-.ms-meta-pills, .ms-channel-list {
+/* CLEAN 3-COLUMN EDITORIAL SPEC STRIP */
+.ms-spec-strip {
+  display: grid;
+  grid-template-columns: 0.75fr 1.15fr 1.25fr;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1.5px solid #191917;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #191917;
+}
+.ms-spec-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 12px;
+  border-right: 1px solid var(--line);
+}
+.ms-spec-cell:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+.ms-spec-label {
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.1em;
+  color: #70766e;
+  margin-bottom: 6px;
+}
+.ms-spec-cell strong {
+  font: 600 13px/1.4 var(--sans);
+  color: #191917;
+}
+.ms-swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ms-dot-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+  border-radius: 99px;
+  font: 600 11px/1 var(--sans);
+}
+.ms-dot-pill i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.ms-dot-pill code {
+  font: 400 9.5px var(--mono);
+  color: #687067;
+}
+
+.ms-channel-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 16px;
 }
-.ms-meta-pills span, .ms-channel-list span {
+.ms-channel-list span {
   font: 700 10px/1.2 var(--mono);
   background: #fff;
   border: 1px solid var(--line);
@@ -2387,6 +2448,21 @@ html {
   border-radius: 99px;
 }
 
+@media (max-width: 760px) {
+  .ms-spec-strip {
+    grid-template-columns: 1fr;
+  }
+  .ms-spec-cell {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .ms-spec-cell:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
 .ms-funnel-card {
   background: #191917;
   color: #f7f4ec;
@@ -2439,3 +2515,106 @@ html {
   line-height: 1.5;
 }
 .ms-test-table tr:last-child td { border-bottom: 0; }
+/* 02 / THE BRIEF — VISUAL ANCHORS & TENSION DIAGRAM */
+.ms-anchor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.ms-anchor-card {
+  background: #fff;
+  border: 1.5px solid #191917;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.ms-anchor-num {
+  display: block;
+  font: 700 clamp(24px, 3vw, 32px)/1 var(--serif);
+  font-style: italic;
+  color: #4a154b;
+  margin-bottom: 6px;
+}
+.ms-anchor-label {
+  display: block;
+  font: 700 10px/1.2 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #191917;
+}
+.ms-anchor-card p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #687067;
+  margin: 6px 0 0;
+}
+
+.ms-brief-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.ms-obj-box {
+  background: #191917;
+  color: #f7f4ec;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ms-obj-box p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin: 4px 0 0;
+  color: rgba(247, 244, 236, 0.9);
+}
+
+.ms-tension-box {
+  background: #fff;
+  border: 1.5px solid #191917;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.ms-tension-track {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+.ms-pole {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ms-pole small {
+  font: 700 8.5px/1.2 var(--mono);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  display: block;
+}
+.ms-pole strong {
+  font: 700 12px/1.35 var(--sans);
+}
+.ms-pole.is-trap {
+  background: var(--paper);
+  color: #687067;
+}
+.ms-pole.is-sweet {
+  background: #c6de41;
+  color: #191917;
+  border: 1.5px solid #191917;
+  box-shadow: 3px 3px 0 #191917;
+}
+
+@media (max-width: 820px) {
+  .ms-anchor-grid,
+  .ms-brief-split,
+  .ms-tension-track {
+    grid-template-columns: 1fr;
+  }
+}
