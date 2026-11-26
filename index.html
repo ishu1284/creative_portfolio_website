@@ -21,7 +21,7 @@
     <!-- CLEAN SLIM EDITORIAL NAVBAR -->
   <header class="site-nav-wrap">
     <nav class="site-nav" aria-label="Primary Navigation">
-      <a class="sn-brand" href="#home">ishwari<span class="sn-star">*</span></a>
+      <a class="sn-brand" href="#home">ishwari<span class="sn-star"></span></a>
 
       <div class="sn-links" id="nav-links">
         <a href="#work">WORK</a>
@@ -78,7 +78,7 @@
           <!-- Replace src with your portrait photo filename -->
           <img src="Myprofile/My profile.png" alt="Ishwari Kokane" onerror="this.style.display='none'">
           <div class="ib-center-fallback">
-            <span class="ib-initials">IK*</span>
+            <span class="ib-initials">IK</span>
             <small>ISHWARI KOKANE</small>
           </div>
           <span class="ib-center-badge">CREATIVE DIRECTOR & DESIGNER</span>
@@ -95,7 +95,7 @@
       <div class="hc-inner">
         <span class="hc-kicker">STRATEGY WITH A LITTLE SPARK · BRAND WORLDS & VISUAL SYSTEMS</span>
         <h1 class="hc-title">
-          Making good ideas feel <em>impossible to ignore<span class="hc-star">*</span></em>
+          Making good ideas feel <em>impossible to ignore<span class="hc-star"></span></em>
         </h1>
         <p class="hc-sub">
           I connect the dots between people, culture, and brands — then turn those dots into visual systems and campaigns with a clear point of view.
@@ -259,54 +259,58 @@
             <p id="ald-desc">Turn their expertise into a clear, compelling story people want to follow — with the right point of view, content pillars and storytelling formats.</p>
           </div>
 
-          <div class="ald-middle">
-            <span class="ald-deliv-kicker">WHAT THIS STAGE DELIVERS</span>
-            <div class="ald-grid" id="ald-grid">
-              <div class="ald-item">
-                <span class="ald-icon">◎</span>
-                <div>
-                  <strong>Point of view</strong>
-                  <span>What they stand for</span>
-                </div>
-              </div>
-              <div class="ald-item">
-                <span class="ald-icon">❖</span>
-                <div>
-                  <strong>Content pillars</strong>
-                  <span>What they talk about</span>
-                </div>
-              </div>
-              <div class="ald-item">
-                <span class="ald-icon">〰</span>
-                <div>
-                  <strong>Voice &amp; tone</strong>
-                  <span>How they sound</span>
-                </div>
-              </div>
-              <div class="ald-item">
-                <span class="ald-icon">▷</span>
-                <div>
-                  <strong>Story formats</strong>
-                  <span>How they communicate</span>
-                </div>
+          <div class="ald-grid" id="ald-grid">
+  <div class="ald-item">
+    <span class="ald-icon">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+    </span>
+    <div>
+      <strong>Point of view</strong>
+      <span>What they stand for</span>
+    </div>
+  </div>
+  <div class="ald-item">
+              <span class="ald-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <div>
+                <strong>Point of view</strong>
+                <span>What they stand for</span>
               </div>
             </div>
-          </div>
+            <div class="ald-item">
+              <span class="ald-icon">
+                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+              </span>
+              <div>
+                <strong>Content pillars</strong>
+                <span>What they talk about</span>
+              </div>
+            </div>
+            <div class="ald-item">
+              <span class="ald-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 12h3l3-6 4 12 3-6h5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Voice &amp; tone</strong>
+                <span>How they sound</span>
+              </div>
+            </div>
+           <div class="ald-item">
+              <span class="ald-icon">
+                <svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <strong>Story formats</strong>
+                <span>How they communicate</span>
+              </div>
+            </div>
+          </div><!-- closes #ald-grid -->
+        </div><!-- closes .ald-middle -->
+      </div><!-- closes the green panel -->
 
-          <div class="ald-controls">
-            <button type="button" class="ald-btn" id="arc-prev" aria-label="Previous stage">←</button>
-            <button type="button" class="ald-btn" id="arc-next" aria-label="Next stage">→</button>
-          </div>
-        </div>
-
-        <!-- BOTTOM DARK RULER ACT BAR -->
-        <div class="arc-ruler-footer" id="arc-ruler">
-          <button type="button" class="arf-act" data-act-step="0">ACT I · DISCOVERY</button>
-          <button type="button" class="arf-act is-active" data-act-step="2">ACT II · STRATEGY &amp; CRAFT</button>
-          <button type="button" class="arf-act" data-act-step="4">ACT III · GROWTH</button>
-        </div>
-      </div>
-    </section>
+    </div><!-- <-- THIS CLOSES .arc-board AROUND EVERYTHING -->
+  </section>
     <script>
       (function () {
         const arcStages = [

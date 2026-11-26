@@ -4765,3 +4765,56 @@ html {
     height: 94px;
   }
 }
+/* FIX TIMELINE DELIVERABLE CIRCLE ICONS (.ald-icon) */
+.ald-icon {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #191917 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  flex-shrink: 0;
+}
+
+.ald-icon svg {
+  width: 17px !important;
+  height: 17px !important;
+  stroke: #191917;
+  stroke-width: 1.8;
+  fill: none;
+  display: block;
+}
+/* FORCE .ald-controls TO STAY ON THE RIGHT INSIDE THE GREEN BAR */
+.ald-bar,
+.ald-panel,
+.arc-live-deck {
+  display: grid !important;
+  grid-template-columns: minmax(240px, 1fr) minmax(320px, 1.35fr) auto !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+
+.ald-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  justify-self: end !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .ald-bar,
+  .ald-panel,
+  .arc-live-deck {
+    grid-template-columns: 1fr !important;
+  }
+  .ald-controls {
+    justify-self: start !important;
+  }
+}
