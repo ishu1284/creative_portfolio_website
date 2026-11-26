@@ -142,39 +142,46 @@ const portfolio = {
           colors: [
             {
               name: "Warm Ivory",
-              hex: "#f5efe4",
-              role: "Primary Dark Canvas / Authority",
+              hex: "#fbf4e4",
+              role: "Light Reading Canvas & Carousel Backgrounds",
             },
             {
               name: "Deep Cocoa Brown",
               hex: "#3b241c",
-              role: "Light Reading Surface / Clarity",
+              role: "Primary Typography & Structural Anchors",
             },
             {
               name: "Terracotta Orange",
-              hex: "#c85a2e",
-              role: "Key Stat & Hook Highlights",
+              hex: "#c85a2a",
+              role: "Visual Hook, Focal Accents & Highlight Badges",
             },
             {
               name: "Muted Sand",
               hex: "#e9c59a",
-              role: "Tension & Contrast Accents",
+              role: "Warm Supporting Surfaces & Secondary Cards",
             },
           ],
+
           typography: [
             {
               role: "DISPLAY & HOOK HEADLINES",
-              fontName:
-                "Bold Geometric Sans (e.g., Montserrat / Inter ExtraBold)",
+              sample: "Aa Bb Cc — 0123",
+              name: "Canela Family (Canela Deck / Display)",
+              typeface: "Canela Family (Canela Deck / Display)",
+              title: "Canela Family (Canela Deck / Display)",
+              family: "Canela Family (Canela Deck / Display)",
               usage:
-                "Tight tracking, high-impact uppercase or sentence hooks built for 0.5-second mobile legibility.",
+                "High-contrast editorial serif that brings investigative journalism authority and human warmth to thumbnails and hook titles.",
             },
             {
               role: "EDITORIAL BODY & DATA CALLOUTS",
-              fontName:
-                "Clean Humanist Sans (e.g., DM Sans / Plus Jakarta Sans)",
+              sample: "Aa Bb Cc — 0123",
+              name: "Clean Humanist Sans (DM Sans / Inter)",
+              typeface: "Clean Humanist Sans (DM Sans / Inter)",
+              title: "Clean Humanist Sans (DM Sans / Inter)",
+              family: "Clean Humanist Sans (DM Sans / Inter)",
               usage:
-                "Generous line-height for effortless multi-slide carousel reading and chart annotations.",
+                "Crisp geometric legibility that balances Canela's editorial flair—built for fast scanning across dense carousel slides and data callouts.",
             },
           ],
         },
@@ -1168,8 +1175,16 @@ const portfolio = {
               caption: "Brand Application 03",
             },
             {
-              src: "roam/images/Brand Application 4.png",
+              src: "roam/images/campaign 4.png",
               caption: "Brand Application 04",
+            },
+            {
+              src: "roam/images/campaign 5.png",
+              caption: "Brand Application 05",
+            },
+            {
+              src: "roam/images/campaign 6.png",
+              caption: "Brand Application 06",
             },
           ],
         },

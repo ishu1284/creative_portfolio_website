@@ -387,16 +387,16 @@ function showProject(index) {
 
         <h4 class="sub-label">TYPOGRAPHY SYSTEM</h4>
         <div class="type-grid">
-          ${s.brandSystem.typography
+          ${(s.brandSystem.typography || [])
             .map(
               (t) => `
-            <div class="type-card">
-              <span class="type-role">${t.role}</span>
-              <div class="type-specimen">Aa Bb Cc — 0123</div>
-              <strong>${t.fontName}</strong>
-              <p>${t.usage}</p>
-            </div>
-          `,
+          <div class="typo-card">
+            <span class="typo-role">${t.role || ""}</span>
+            <div class="typo-sample">${t.sample || "Aa Bb Cc — 0123"}</div>
+            <strong>${t.name || t.family || t.font || ""}</strong>
+            <p>${t.usage || t.desc || ""}</p>
+          </div>
+        `,
             )
             .join("")}
         </div>
@@ -1494,17 +1494,6 @@ function showProject(index) {
               <span class="ms-eco-ftag">${s.ecosystem?.finale?.tag || "07 • POST-DELIVERY RETENTION LOOP"}</span>
               <h4>${s.ecosystem?.finale?.title || "Rate & Unlock ₹75 + Complete the Look"}</h4>
               <p>${s.ecosystem?.finale?.desc || ""}</p>
-
-              <button
-                type="button"
-                class="ms-eco-top-btn"
-                onclick="(function(btn){
-                  const scroller = btn.closest('.modal-card, .cs-modal, [role=&quot;dialog&quot;]') || window;
-                  if (scroller.scrollTo) scroller.scrollTo({ top: 0, behavior: 'smooth' });
-                })(this)"
-              >
-                ${s.ecosystem?.finale?.ctaLabel || "Back to Top ↑"}
-              </button>
             </div>
           </aside>
         </div>
