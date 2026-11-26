@@ -4554,3 +4554,214 @@ html {
     align-items: flex-start;
   }
 }
+/* REMOVE OLD "NICE TO MEET YOU" WATERMARK */
+.nice-to-meet,
+.about-watermark {
+  display: none !important;
+}
+
+/* ABOUT RIGHT COLUMN — READABLE BIO + MINI STICKER + ROLE PILLS */
+.about-intro-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.about-lead {
+  font: 500 20px/1.45 var(--sans);
+  color: #191917;
+  margin: 0;
+  max-width: 420px;
+}
+
+.about-lead strong {
+  font-weight: 700;
+}
+
+/* UNCLIPPED RIGHT STICKER (MATCHES LEFT POLAROID STYLE) */
+.about-mini-sticker {
+  width: 132px;
+  height: auto !important;
+  background: #ffffff;
+  border: 2px solid #191917;
+  border-radius: 18px;
+  padding: 6px 6px 9px;
+  box-shadow: 4px 6px 0px #191917;
+  transform: rotate(4.5deg);
+  flex-shrink: 0;
+  margin: 0;
+  overflow: visible;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.about-mini-sticker:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 6px 9px 0px #e06d53;
+}
+
+.about-mini-sticker img {
+  width: 100%;
+  height: 136px !important;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 12%;
+  display: block;
+}
+
+.about-mini-sticker figcaption {
+  display: block;
+  font: 700 8.5px/1 var(--mono);
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #191917;
+  margin-top: 7px;
+}
+
+/* CRISP, HIGH-READABILITY BIO PARAGRAPH */
+.about-bio {
+  font: 400 15px/1.68 var(--sans);
+  color: #363632;
+  max-width: 490px;
+  margin: 0 0 22px;
+}
+
+/* AVAILABLE ROLES PILLS */
+.about-roles-wrap {
+  margin-bottom: 24px;
+}
+
+.about-roles-label {
+  display: block;
+  font: 700 9.5px/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: #687067;
+  margin-bottom: 10px;
+}
+
+.about-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 490px;
+}
+
+.role-pill {
+  font: 600 12px/1 var(--sans);
+  color: #191917;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #cbc5b8;
+  border-radius: 99px;
+  padding: 9px 15px;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.role-pill:hover {
+  background: #ffffff;
+  border-color: #191917;
+}
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 13.5px/1 var(--sans);
+  color: #191917;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .about-intro-row {
+    flex-direction: column-reverse;
+  }
+  .about-mini-sticker {
+    width: 68px;
+    height: 68px;
+  }
+}
+/* LARGER CREATIVE RIGHT STICKER (POLAROID DIE-CUT CARD) */
+.about-mini-sticker {
+  width: 118px;
+  background: #ffffff;
+  border: 2px solid #191917;
+  border-radius: 18px;
+  padding: 6px 6px 8px;
+  box-shadow: 4px 6px 0px #191917;
+  transform: rotate(5deg);
+  flex-shrink: 0;
+  margin: 0;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.about-mini-sticker:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 6px 9px 0px #e06d53;
+}
+
+.about-mini-sticker img {
+  width: 100%;
+  height: 106px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 16%;
+  display: block;
+}
+
+.about-mini-sticker figcaption {
+  font: 700 8.5px/1 var(--mono);
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #191917;
+  margin-top: 7px;
+}
+
+/* NEW LEFT STICKER BELOW "ALWAYS CURIOUS." */
+.about-left-sticker {
+  width: 148px;
+  background: #ffffff;
+  border: 2px solid #191917;
+  border-radius: 20px;
+  padding: 7px 7px 9px;
+  box-shadow: -5px 7px 0px #191917;
+  transform: rotate(-4.5deg);
+  margin: 28px 0 0 12px;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.about-left-sticker:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: -6px 9px 0px #e06d53;
+}
+
+.about-left-sticker img {
+  width: 100%;
+  height: 132px;
+  border-radius: 13px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-left-sticker figcaption {
+  font: 700 9px/1 var(--mono);
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #191917;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .about-left-sticker {
+    width: 124px;
+    margin: 20px 0 24px 4px;
+  }
+  .about-left-sticker img {
+    height: 112px;
+  }
+  .about-mini-sticker {
+    width: 104px;
+  }
+  .about-mini-sticker img {
+    height: 94px;
+  }
+}
