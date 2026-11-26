@@ -49,6 +49,37 @@ const portfolio = {
             { value: "4+", label: "Core Visual Formats Built" },
           ],
         },
+        // MEASURED IMPACT & OUTCOMES (THINK SCHOOL SPECIFIC)
+        impact: {
+          tag: "06 / MEASURED IMPACT & OUTCOMES",
+          caption: "VISUAL SYSTEMS THAT SCALE ORGANIC REACH",
+          cards: [
+            {
+              variant: "is-lime",
+              kicker: "ORGANIC REACH",
+              metric: "11M+",
+              desc: "Total views generated across high-retention editorial carousels, thumbnails, and visual storytelling assets.",
+            },
+            {
+              variant: "is-ivory",
+              kicker: "AUDIENCE SCALE",
+              metric: "39K → 62K",
+              desc: "Follower growth (+56%) driven by a cohesive personal brand identity for Parsh Kothari and a unified feed system.",
+            },
+            {
+              variant: "is-terracotta",
+              kicker: "BREAKOUT PACKAGING",
+              metric: "3.5M Views",
+              desc: "Peak single-video reach unlocked through a high-contrast thumbnail redesign engineered for instant curiosity.",
+            },
+            {
+              variant: "is-dark",
+              kicker: "SYSTEM VELOCITY",
+              metric: "5× Faster",
+              desc: "Turnaround speed achieved by replacing one-off layouts with reusable editorial carousel and typography templates.",
+            },
+          ],
+        },
         // PAGE 03: Before & After Feed
         transformation: {
           tag: "03 / BREAKOUT REDESIGN · 3.5M+ VIEWS",

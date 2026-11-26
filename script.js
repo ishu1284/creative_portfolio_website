@@ -166,12 +166,47 @@ function showProject(index) {
         <span class="cs-tag">${s.homepage.tag}</span>
         <h3>${s.homepage.heading}</h3>
         <p class="dialog-body">${s.homepage.description}</p>
-        <figure class="cs-browser-frame">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
-          <img src="${s.homepage.image}" alt="Think School Homepage" onerror="this.style.display='none'">
-          <figcaption>${s.homepage.caption}</figcaption>
-        </figure>
+        ${
+          s.homepage.image || s.homepage.caption
+            ? `
+          <figure class="cs-browser-frame">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            ${s.homepage.image ? `<img src="${s.homepage.image}" alt="Think School Homepage" onerror="this.closest('figure').style.display='none'">` : ""}
+            ${s.homepage.caption ? `<figcaption>${s.homepage.caption}</figcaption>` : ""}
+          </figure>
+        `
+            : ""
+        }
       </section>
+
+      ${
+        s.impact
+          ? `
+        <section class="cs-block ts-impact-block">
+          <div class="ts-impact-head">
+            <span class="cs-tag">${s.impact.tag}</span>
+            <span class="ts-impact-sub">${s.impact.caption}</span>
+          </div>
+
+          <div class="ts-impact-grid">
+            ${(s.impact.cards || [])
+              .map(
+                (card) => `
+              <article class="ts-impact-card ${card.variant || ""}">
+                <span class="ts-ic-kicker">${card.kicker}</span>
+                <h4 class="ts-ic-metric">${card.metric}</h4>
+                <p class="ts-ic-desc">${card.desc}</p>
+              </article>
+            `,
+              )
+              .join("")}
+          </div>
+        </section>
+      `
+          : ""
+      }
+
+      <section class="cs-block cs-collab-card">
 
       <section class="cs-block cs-collab-card">
         <span class="cs-tag">${s.collaboration.tag}</span>
@@ -199,18 +234,6 @@ function showProject(index) {
             <h3>${s.profile.name}</h3>
             <p class="profile-role">${s.profile.title}</p>
             <p class="dialog-body">${s.profile.bio}</p>
-            <div class="profile-stats">
-              ${s.profile.stats
-                .map(
-                  (st) => `
-                <div class="stat-pill">
-                  <strong>${st.value}</strong>
-                  <span>${st.label}</span>
-                </div>
-              `,
-                )
-                .join("")}
-            </div>
           </div>
           <figure class="profile-proof-shot">
             <img src="${s.profile.avatarImage}" alt="@parsh_kothari Verified Profile Proof (62.6K Followers)">
@@ -218,7 +241,6 @@ function showProject(index) {
           </figure>
         </div>
       </section>
-
       ${(() => {
         const isThinkSchool =
           (p.id && p.id.toLowerCase().includes("think")) || index === 0;
